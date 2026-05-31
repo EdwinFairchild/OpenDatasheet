@@ -1,0 +1,139 @@
+{
+  "$schema": "https://opendatasheet.org/schema/v0.1/part.schema.json",
+  "spec_version": "0.1",
+  "type": "part",
+  "conformance": { "tiers": [1, 2], "profiles": ["register-map"], "authority": "community-provisional" },
+  "part": {
+    "mpn": "ACME-M0",
+    "manufacturer": "ACME Semiconductor",
+    "family": "ACME-M0",
+    "revision": "rev-A",
+    "lifecycle": "active",
+    "packages": ["LQFP48"],
+    "documents": [
+      { "id": "ACME-RM-M0", "kind": "reference-manual", "rev": "1", "url": "https://acme.example/docs/acme-rm-m0-r1.pdf" },
+      { "id": "ACME-DS-M0", "kind": "datasheet", "rev": "1", "url": "https://acme.example/docs/acme-ds-m0-r1.pdf" }
+    ],
+    "errata": [
+      { "id": "ACME-ES-M0-01", "rev": "1", "ref": "./acme-m0-errata.json" }
+    ]
+  },
+  "pinout": [
+    {
+      "package": "LQFP48",
+      "pins": [
+        {
+          "number": "23",
+          "name": "PA5",
+          "type": "io",
+          "default": "GPIO",
+          "alt_functions": [
+            { "signal": "SPI1_SCK", "interface": "SPI" },
+            { "signal": "TIM2_CH1", "interface": "TIM" }
+          ],
+          "provenance": { "doc": "ACME-DS-M0", "section": "4.4", "rev": "1" }
+        }
+      ]
+    }
+  ],
+  "electrical": [
+    {
+      "parameter": "f_SCK_max",
+      "symbol": "f_SCK",
+      "description": "SPI clock maximum frequency, master mode",
+      "values": [
+        { "min": null, "typ": null, "max": 24, "unit": "MHz", "conditions": { "vdd_v": 3.3, "temp_c": [-40, 85], "load_pf": 30 } },
+        { "min": null, "typ": null, "max": 12, "unit": "MHz", "conditions": { "vdd_v": 1.8, "temp_c": [-40, 85], "load_pf": 30 } }
+      ],
+      "provenance": { "doc": "ACME-DS-M0", "section": "6.3.2", "rev": "1" }
+    }
+  ],
+  "timing": [
+    {
+      "diagram_id": "spi_master_timing",
+      "title": "SPI master mode timing",
+      "parameters": [
+        {
+          "symbol": "t_su_MI",
+          "description": "MISO setup time before SCK capture edge",
+          "min": 5,
+          "typ": null,
+          "max": null,
+          "unit": "ns",
+          "edge": { "from": "MISO_valid", "to": "SCK_capture" },
+          "conditions": { "vdd_v": 3.3 }
+        }
+      ],
+      "waveform": {
+        "signal": [
+          { "name": "SCK", "wave": "0.1.0.1.0" },
+          { "name": "MISO", "wave": "x.=.=.=.x", "data": ["b0", "b1", "b2"] }
+        ]
+      },
+      "provenance": { "doc": "ACME-DS-M0", "section": "6.3.3", "rev": "1" }
+    }
+  ],
+  "limits": {
+    "absolute_maximum": [
+      { "parameter": "V_DD", "max": 4.0, "unit": "V", "provenance": { "doc": "ACME-DS-M0", "section": "6.2", "rev": "1" } }
+    ],
+    "recommended_operating": [
+      { "parameter": "V_DD", "min": 1.7, "typ": 3.3, "max": 3.6, "unit": "V", "provenance": { "doc": "ACME-DS-M0", "section": "6.1", "rev": "1" } }
+    ]
+  },
+  "sections": [],
+  "profiles": {
+    "register-map": {
+      "peripherals": [
+        {
+          "name": "SPI1",
+          "description": "Serial Peripheral Interface 1",
+          "base_address": "0x40013000",
+          "interrupts": [{ "name": "SPI1", "value": 35 }],
+          "registers": [
+            {
+              "name": "CR1",
+              "description": "Control register 1",
+              "offset": "0x00",
+              "size": 32,
+              "reset_value": "0x00000000",
+              "access": "read-write",
+              "fields": [
+                {
+                  "name": "CPHA",
+                  "description": "Clock phase",
+                  "bit_offset": 0,
+                  "bit_width": 1,
+                  "access": "read-write",
+                  "enum": [
+                    { "value": 0, "name": "FIRST_EDGE", "description": "Data captured on the first clock transition" },
+                    { "value": 1, "name": "SECOND_EDGE", "description": "Data captured on the second clock transition" }
+                  ],
+                  "provenance": { "doc": "ACME-RM-M0", "section": "28.5.1", "rev": "1" }
+                },
+                {
+                  "name": "BR",
+                  "description": "Baud rate control: f_PCLK prescaler",
+                  "bit_offset": 3,
+                  "bit_width": 3,
+                  "access": "read-write",
+                  "enum": [
+                    { "value": 0, "name": "DIV2", "description": "f_PCLK / 2" },
+                    { "value": 1, "name": "DIV4", "description": "f_PCLK / 4" },
+                    { "value": 2, "name": "DIV8", "description": "f_PCLK / 8" },
+                    { "value": 7, "name": "DIV256", "description": "f_PCLK / 256" }
+                  ],
+                  "provenance": { "doc": "ACME-RM-M0", "section": "28.5.1", "rev": "1" }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "memory_map": [
+        { "name": "FLASH", "base_address": "0x08000000", "size": "0x00040000", "access": "read-only", "kind": "flash", "provenance": { "doc": "ACME-RM-M0", "section": "3.3", "rev": "1" } },
+        { "name": "SRAM", "base_address": "0x20000000", "size": "0x00008000", "access": "read-write", "kind": "sram", "provenance": { "doc": "ACME-RM-M0", "section": "3.3", "rev": "1" } }
+      ]
+    }
+  }
+}

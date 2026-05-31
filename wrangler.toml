@@ -1,0 +1,9 @@
+# Cloudflare Worker configuration.
+# `name` becomes part of your public URL: https://<name>.<your-subdomain>.workers.dev
+name = "opendatasheet-mcp"
+main = "src/index.ts"
+compatibility_date = "2025-05-01"
+
+# This Worker uses only standard Web APIs (fetch, Request, Response, URL, JSON),
+# so it needs no Node compatibility flag, no Durable Objects, and no database.
+# The part data is plain JSON imported at build time (see src/lib.ts).

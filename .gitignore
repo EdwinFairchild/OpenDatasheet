@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+*.log
+.DS_Store
+
+# Local scratch / notes
+temp/
+notes.md

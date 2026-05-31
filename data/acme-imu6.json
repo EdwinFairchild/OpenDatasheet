@@ -1,0 +1,157 @@
+{
+  "$schema": "https://opendatasheet.org/schema/v0.1/part.schema.json",
+  "spec_version": "0.1",
+  "type": "part",
+  "conformance": { "tiers": [1, 2], "profiles": ["register-map", "sensor"], "authority": "community-provisional" },
+  "part": {
+    "mpn": "ACME-IMU6",
+    "manufacturer": "ACME Semiconductor",
+    "family": "ACME-IMU6",
+    "revision": "rev-B",
+    "lifecycle": "active",
+    "packages": ["LGA14"],
+    "documents": [
+      { "id": "ACME-DS-IMU6", "kind": "datasheet", "rev": "3", "url": "https://acme.example/docs/acme-ds-imu6-r3.pdf" }
+    ],
+    "errata": [
+      { "id": "ACME-ES-IMU6-01", "rev": "2", "ref": "./acme-imu6-errata.json" }
+    ]
+  },
+  "pinout": [
+    {
+      "package": "LGA14",
+      "pins": [
+        { "number": "1", "name": "SCL", "type": "io", "default": "I2C_SCL", "alt_functions": [{ "signal": "SPI_SCK", "interface": "SPI" }], "provenance": { "doc": "ACME-DS-IMU6", "section": "3.1", "rev": "3" } },
+        { "number": "2", "name": "SDA", "type": "io", "default": "I2C_SDA", "alt_functions": [{ "signal": "SPI_MOSI", "interface": "SPI" }], "provenance": { "doc": "ACME-DS-IMU6", "section": "3.1", "rev": "3" } }
+      ]
+    }
+  ],
+  "electrical": [
+    {
+      "parameter": "I_dd_active",
+      "symbol": "I_DD",
+      "description": "Active supply current, accelerometer + gyroscope enabled",
+      "values": [
+        { "min": null, "typ": 0.9, "max": 1.2, "unit": "mA", "conditions": { "vdd_v": 3.3, "temp_c": 25 } }
+      ],
+      "provenance": { "doc": "ACME-DS-IMU6", "section": "6.1", "rev": "3" }
+    }
+  ],
+  "timing": [
+    {
+      "diagram_id": "i2c_write",
+      "title": "I2C write timing",
+      "parameters": [
+        { "symbol": "t_SU_DAT", "description": "Data setup time", "min": 100, "typ": null, "max": null, "unit": "ns", "edge": { "from": "SDA_valid", "to": "SCL_rising" }, "conditions": {} }
+      ],
+      "waveform": {
+        "signal": [
+          { "name": "SCL", "wave": "0.1.0.1" },
+          { "name": "SDA", "wave": "x.=.=.x", "data": ["A6", "A5"] }
+        ]
+      },
+      "provenance": { "doc": "ACME-DS-IMU6", "section": "6.3", "rev": "3" }
+    }
+  ],
+  "limits": {
+    "absolute_maximum": [
+      { "parameter": "V_DD", "max": 4.0, "unit": "V", "provenance": { "doc": "ACME-DS-IMU6", "section": "5.1", "rev": "3" } }
+    ],
+    "recommended_operating": [
+      { "parameter": "V_DD", "min": 1.7, "typ": 3.3, "max": 3.6, "unit": "V", "provenance": { "doc": "ACME-DS-IMU6", "section": "5.2", "rev": "3" } }
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-7-sensor-overview",
+      "title": "Sensor functional description",
+      "doc": "ACME-DS-IMU6",
+      "section": "7",
+      "rev": "3",
+      "entities": ["sensor.accel", "register-map.CONFIG.FS_SEL"],
+      "text": "The accelerometer output is a 16-bit two's-complement value. The full-scale range is selected by the FS_SEL field; sensitivity scales inversely with the selected full-scale range.",
+      "xrefs": [{ "label": "see 8.4", "target": "register-map.peripherals[name=CONFIG]" }]
+    }
+  ],
+  "profiles": {
+    "register-map": {
+      "peripherals": [
+        {
+          "name": "CONFIG",
+          "description": "Configuration and data registers",
+          "base_address": "0x10",
+          "registers": [
+            {
+              "name": "ACCEL_CFG",
+              "description": "Accelerometer configuration",
+              "offset": "0x1C",
+              "size": 8,
+              "reset_value": "0x00",
+              "access": "read-write",
+              "fields": [
+                {
+                  "name": "FS_SEL",
+                  "description": "Accelerometer full-scale range select",
+                  "bit_offset": 3,
+                  "bit_width": 2,
+                  "access": "read-write",
+                  "enum": [
+                    { "value": 0, "name": "FS_2G", "description": "plus/minus 2 g" },
+                    { "value": 1, "name": "FS_4G", "description": "plus/minus 4 g" },
+                    { "value": 2, "name": "FS_8G", "description": "plus/minus 8 g" },
+                    { "value": 3, "name": "FS_16G", "description": "plus/minus 16 g" }
+                  ],
+                  "provenance": { "doc": "ACME-DS-IMU6", "section": "8.4", "rev": "3" }
+                }
+              ]
+            },
+            {
+              "name": "DATA0",
+              "description": "Accelerometer X-axis high byte (start of the data block)",
+              "offset": "0x3B",
+              "size": 8,
+              "reset_value": "0x00",
+              "access": "read-only",
+              "fields": [],
+              "provenance": { "doc": "ACME-DS-IMU6", "section": "8.6", "rev": "3" }
+            }
+          ]
+        }
+      ],
+      "memory_map": []
+    },
+    "sensor": {
+      "measurands": [
+        {
+          "id": "accel",
+          "quantity": "acceleration",
+          "axes": ["x", "y", "z"],
+          "unit": "g",
+          "ranges": [
+            { "name": "FS_2G", "full_scale": 2, "unit": "g", "sensitivity": { "value": 16384, "unit": "LSB/g" }, "selected_by": { "field": "register-map.peripherals[name=CONFIG].registers[name=ACCEL_CFG].fields[name=FS_SEL]", "value": "FS_2G" } },
+            { "name": "FS_4G", "full_scale": 4, "unit": "g", "sensitivity": { "value": 8192, "unit": "LSB/g" }, "selected_by": { "field": "register-map.peripherals[name=CONFIG].registers[name=ACCEL_CFG].fields[name=FS_SEL]", "value": "FS_4G" } },
+            { "name": "FS_8G", "full_scale": 8, "unit": "g", "sensitivity": { "value": 4096, "unit": "LSB/g" }, "selected_by": { "field": "register-map.peripherals[name=CONFIG].registers[name=ACCEL_CFG].fields[name=FS_SEL]", "value": "FS_8G" } },
+            { "name": "FS_16G", "full_scale": 16, "unit": "g", "sensitivity": { "value": 2048, "unit": "LSB/g" }, "selected_by": { "field": "register-map.peripherals[name=CONFIG].registers[name=ACCEL_CFG].fields[name=FS_SEL]", "value": "FS_16G" } }
+          ],
+          "output": {
+            "interface": "register",
+            "registers": ["register-map.peripherals[name=CONFIG].registers[name=DATA0]"],
+            "format": "int16",
+            "endianness": "big"
+          },
+          "conversion": {
+            "formula": "value_g = raw / sensitivity_LSB_per_g",
+            "note": "sensitivity depends on the selected FS_SEL range; resolve it via ranges[].selected_by"
+          },
+          "accuracy": [
+            { "parameter": "zero_g_offset", "max": 50, "unit": "mg", "conditions": { "temp_c": 25 }, "provenance": { "doc": "ACME-DS-IMU6", "section": "6.2", "rev": "3" } }
+          ],
+          "sample_rate": [
+            { "min": 4, "max": 8000, "unit": "Hz", "conditions": {}, "provenance": { "doc": "ACME-DS-IMU6", "section": "7.3", "rev": "3" } }
+          ],
+          "provenance": { "doc": "ACME-DS-IMU6", "section": "7.1", "rev": "3" }
+        }
+      ]
+    }
+  }
+}

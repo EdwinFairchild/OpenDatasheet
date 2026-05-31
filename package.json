@@ -1,0 +1,17 @@
+{
+  "name": "opendatasheet-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An MCP server that serves machine-readable embedded-part documentation (OpenDatasheet) over Streamable HTTP. Runs on Cloudflare Workers.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250101.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^4.0.0"
+  }
+}

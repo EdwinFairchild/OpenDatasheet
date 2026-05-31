@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opendatasheet.org/schema/v0.1/errata.schema.json",
+  "spec_version": "0.1",
+  "type": "errata",
+  "applies_to": { "mpn": "ACME-M0", "revision": "rev-A" },
+  "overrides": [
+    {
+      "target": "profiles.register-map.peripherals[name=SPI1].registers[name=CR1].fields[name=BR]",
+      "issue": "BR=DIV2 (f_PCLK/2) is unreliable in SPI master mode above 70 C ambient",
+      "effect": "constraint",
+      "constraint": { "when": { "value": "DIV2", "mode": "master" }, "max_temp_c": 70 },
+      "provenance": { "doc": "ACME-ES-M0-01", "section": "2.3", "rev": "1" }
+    }
+  ]
+}
