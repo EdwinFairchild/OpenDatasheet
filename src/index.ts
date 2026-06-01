@@ -13,6 +13,7 @@
 // All the domain logic (the tools) lives in tools.ts; the data + resolvers in lib.ts.
 
 import { TOOLS } from "./tools";
+import { getStaticFile, getCatalog } from "./lib";
 
 const PROTOCOL_VERSION = "2025-06-18";
 const SERVER_INFO = { name: "opendatasheet-mcp", version: "0.1.0" };
@@ -107,6 +108,32 @@ export default {
     }
 
     if (method === "GET") {
+      // Static raw-file route: serve whole part / errata documents by name.
+      // This is the non-MCP binding the BluePill harness uses to fetch, cache,
+      // and own the data offline. Must come before the SSE/banner logic.
+      const url = new URL(request.url);
+
+      // Discovery catalog: one row per part so a consumer can find a part by
+      // MPN/family without knowing the exact name, then fetch the full doc.
+      // Must precede the generic /parts/{file}.json match below.
+      if (url.pathname === "/parts/index.json") {
+        return json(
+          { parts: getCatalog() },
+          200,
+          { "cache-control": "public, max-age=3600" },
+        );
+      }
+
+      const m = url.pathname.match(/^\/parts\/(.+\.json)$/i);
+      if (m) {
+        const doc = getStaticFile(m[1]);
+        if (doc === undefined) {
+          return json({ error: `Unknown part file: ${m[1]}` }, 404);
+        }
+        // Part docs are immutable per revision, so cache them aggressively.
+        return json(doc, 200, { "cache-control": "public, max-age=86400" });
+      }
+
       const accept = request.headers.get("accept") ?? "";
       // A client probing for a server->client SSE stream. This stateless server
       // doesn't provide one; 405 tells compliant clients to proceed without it.

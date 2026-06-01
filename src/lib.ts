@@ -8,6 +8,7 @@ import m0 from "../data/acme-m0.json";
 import m0Errata from "../data/acme-m0-errata.json";
 import imu6 from "../data/acme-imu6.json";
 import imu6Errata from "../data/acme-imu6-errata.json";
+import g474 from "../data/stm32g474re.json";
 
 // Part shapes are loose (`any`) on purpose for this MVP. Real types can be
 // generated from the JSON Schema later; keeping it loose here means adding a
@@ -18,6 +19,7 @@ export type Errata = any;
 const PARTS: Record<string, Part> = {
   "ACME-M0": m0 as Part,
   "ACME-IMU6": imu6 as Part,
+  "STM32G474RE": g474 as Part,
 };
 
 const ERRATA: Record<string, Errata[]> = {
@@ -35,6 +37,68 @@ export function getRawPart(mpn: string): Part | undefined {
 
 export function getErrataOverlays(mpn: string): Errata[] {
   return ERRATA[mpn] ?? [];
+}
+
+// ---------------------------------------------------------------------------
+// Static raw-file map (for the GET /parts/{file}.json route in index.ts).
+//
+// The BluePill harness fetches whole documents by name, not via MCP. It uses
+// TWO kinds of name under /parts/, so the map covers both:
+//   - "<MPN>.json"          → the part document   (harness requests by MPN)
+//   - "<errata-file>.json"  → the errata overlay  (harness reads part.errata[].ref,
+//                                                   takes the basename, fetches that)
+// Keyed in lowercase so the lookup is case-insensitive: a request for
+// "/parts/ACME-IMU6.json" and "/parts/acme-imu6.json" both resolve.
+// ---------------------------------------------------------------------------
+const STATIC_FILES: Record<string, unknown> = (() => {
+  const out: Record<string, unknown> = {};
+  // Part documents, keyed by "<mpn>.json".
+  for (const mpn of listMpns()) {
+    const part = getRawPart(mpn);
+    if (part) out[`${mpn}.json`.toLowerCase()] = part;
+  }
+  // Errata overlays, keyed by the filename basename of each part's errata ref,
+  // so they resolve under the same origin the harness fetched the part from.
+  for (const mpn of listMpns()) {
+    const part: any = getRawPart(mpn);
+    const overlays = getErrataOverlays(mpn);
+    const refs = (part?.part?.errata ?? []).map((e: any) => e.ref);
+    refs.forEach((ref: string, i: number) => {
+      if (ref && overlays[i]) {
+        const base = ref.split("/").pop()!; // "./acme-imu6-errata.json" → "acme-imu6-errata.json"
+        out[base.toLowerCase()] = overlays[i];
+      }
+    });
+  }
+  return out;
+})();
+
+// Look up a raw document by its requested /parts/ filename (case-insensitive).
+// Returns undefined for unknown names so the route can answer 404.
+export function getStaticFile(name: string): unknown | undefined {
+  return STATIC_FILES[name.toLowerCase()];
+}
+
+// Catalog for the GET /parts/index.json discovery route. One row per part
+// (errata overlays excluded), with just enough to let a consumer find a part by
+// MPN/family/manufacturer and then fetch the full document. This is what lets
+// the BluePill harness answer "what STM32G4 parts exist here?" without knowing
+// the exact MPN, across many configured sources, with no blind fan-out.
+export function getCatalog(): Array<{
+  mpn: string;
+  family?: string;
+  manufacturer?: string;
+  profiles: string[];
+}> {
+  return listMpns().map((mpn) => {
+    const part: any = getRawPart(mpn);
+    return {
+      mpn,
+      family: part?.part?.family,
+      manufacturer: part?.part?.manufacturer,
+      profiles: part?.conformance?.profiles ?? [],
+    };
+  });
 }
 
 export function profile(part: Part, name: string): any {
