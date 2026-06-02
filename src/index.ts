@@ -1,4 +1,4 @@
-// OpenDatasheet MCP server — Cloudflare Worker.
+// OpenDatasheet MCP server: Cloudflare Worker.
 //
 // Speaks the Model Context Protocol over the "Streamable HTTP" transport, which
 // is just JSON-RPC 2.0 over HTTP POST. This server is stateless and requires no

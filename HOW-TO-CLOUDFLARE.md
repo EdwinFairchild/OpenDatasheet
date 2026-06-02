@@ -138,6 +138,14 @@ This opens your browser. If you don't have a Cloudflare account, you can create 
 npm run deploy
 ```
 
+> **Heads-up: `deploy` rebuilds the STM32 data first.** This project ships a real
+> part, `STM32G474RE`, whose `data/stm32g474re.json` is generated from a CMSIS-SVD
+> by a Python pipeline (see `tools/README.md`). A `predeploy` hook in
+> `package.json` regenerates it on every deploy, so the live data can never drift
+> from the source. That means **`npm run deploy` needs Python 3 installed**
+> (`python3 --version`). If you don't have Python and just want to ship the
+> committed JSON as-is, run `npx wrangler deploy` directly (it skips the rebuild).
+
 The first time, wrangler may ask to register a free `workers.dev` subdomain (pick anything  it's the `YOUR-SUBDOMAIN` part of your URL). When it finishes you'll see your live URL:
 
 ```

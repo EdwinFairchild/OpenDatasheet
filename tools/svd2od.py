@@ -77,6 +77,12 @@ class Svd:
     def base_address(self, pname):
         return hexstr(self.by_name[pname], "baseAddress")
 
+    def description(self, pname):
+        return clean(self.by_name[pname].findtext("description"))
+
+    def peripheral_names(self):
+        return [p.findtext("name") for p in self.root.iter("peripheral")]
+
     def interrupts(self, pname):
         out = []
         for it in self.by_name[pname].findall("interrupt"):

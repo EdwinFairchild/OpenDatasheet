@@ -1,5 +1,5 @@
 // Tool definitions. Each tool has a name, a description (the LLM reads this to
-// decide when to call it — keep them specific), a JSON Schema for its arguments
+// decide when to call it; keep them specific), a JSON Schema for its arguments
 // (this is what MCP tool discovery exposes), and a run() that does the lookup.
 
 import {
@@ -139,7 +139,7 @@ export const TOOLS: Tool[] = [
   {
     name: "get_register",
     description:
-      "Return the full breakdown of one register: every bit-field with its bit position, width, access type, reset value, and enumerated values — each with a source citation. Errata are applied automatically. Requires the 'register-map' profile.",
+      "Return the full breakdown of one register: every bit-field with its bit position, width, access type, reset value, and enumerated values, each with a source citation. Errata are applied automatically. Requires the 'register-map' profile.",
     inputSchema: {
       type: "object",
       required: ["mpn", "peripheral", "register"],

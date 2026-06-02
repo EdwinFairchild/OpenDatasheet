@@ -12,8 +12,14 @@ See **[HOW-TO-CLOUDFLARE.md](./HOW-TO-CLOUDFLARE.md)** for the full beginner wal
 npm install
 npm run dev      # runs locally at http://localhost:8787
 npx wrangler login
-npm run deploy   # gives you a public https://…workers.dev URL
+npm run deploy   # regenerates the STM32 data, then deploys → public https://…workers.dev URL
 ```
+
+> `npm run deploy` runs a `predeploy` hook that regenerates the part data from its
+> CMSIS-SVD + reference manual via a Python pipeline (`tools/chips/<id>.py`), so the
+> deployed data can't drift from source. It needs **Python 3**. To deploy the
+> committed JSON without rebuilding, use `npx wrangler deploy`. The pipeline is
+> natively multi-chip, see `tools/README.md` and `tools/ADDING-A-CHIP.md`.
 
 ## What it exposes
 
