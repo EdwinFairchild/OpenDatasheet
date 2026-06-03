@@ -74,7 +74,7 @@ about. The overlay carries the RM-verified facts, e.g.:
 
 **Tier 1: `register-map`** (`--all`): **83 peripherals, 1475 registers, 0 TBD.**
 Provenance: ~1215 register-precise + 260 chapter-level (RM0440 Rev 8).
-- **Curated** (verified access, RM enums, register-precise cites): all GPIO (A–G),
+- **Curated** (verified access, RM enums, register-precise cites): all GPIO (A-G),
   RCC, USART1/2/3, UART4/5, LPUART1, DMA1/2, DMAMUX, DBGMCU, all timers
   (TIM1/8/20 adv, TIM2/3/4/5 GP, TIM15/16/17, TIM6/7 basic).
 - **Auto** (SVD structure + access/enums as-is, generic provenance): ADC, DAC, SPI,

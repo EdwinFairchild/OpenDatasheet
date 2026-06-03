@@ -10,3 +10,8 @@ temp/
 notes.md
 __pycache__/
 *.pyc
+
+# Reference source material (datasheet PDFs, vendor CMSIS headers) — kept locally,
+# not committed. The repo ships only the structured part JSON in data/.
+docs/*.pdf
+*.h

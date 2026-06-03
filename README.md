@@ -1,6 +1,6 @@
 # OpenDatasheet MCP server
 
-A reference implementation of an **MCP server that serves machine-readable embedded-part documentation**  the queryable alternative to a PDF datasheet, for AI agents. It runs on Cloudflare Workers, has no database, and is free to host.
+A reference implementation of an **MCP server that serves machine-readable embedded-part documentation**, the queryable alternative to a PDF datasheet, for AI agents. It runs on Cloudflare Workers, has no database, and is free to host.
 
 It speaks the Model Context Protocol over the Streamable HTTP transport (JSON-RPC 2.0), stateless and no-auth, like a public read-only API.
 
@@ -40,7 +40,7 @@ Highlights worth seeing in action:
 
 Part documents are plain JSON in `data/`. Adding a part = drop a JSON file, import it in `src/lib.ts`, redeploy. The two included ACME parts are **fictional** examples that exercise every feature.
 
-The data model (the common core + composable capability profiles, extensions, authority levels) and the MCP interface design are specified in the OpenDatasheet doc set  see `03-SCHEMA.md` and `04-MCP-INTERFACE.md`.
+The data model (the common core + composable capability profiles, extensions, authority levels) and the MCP interface design are specified in the OpenDatasheet doc set in [`docs/`](./docs), see [`docs/03-SCHEMA.md`](./docs/03-SCHEMA.md) and [`docs/04-MCP-INTERFACE.md`](./docs/04-MCP-INTERFACE.md).
 
 ## Layout
 

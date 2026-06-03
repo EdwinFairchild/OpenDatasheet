@@ -36,7 +36,7 @@ or `svd2od.py`.
 
 One JSON file (`data/<mpn>.json`) with a `register-map` profile and, optionally,
 Tier-2 electrical/limits. Every value carries a `provenance` citation. Most of the
-chip lands in tiers 1–2 automatically:
+chip lands in tiers 1-2 automatically:
 
 | Tier | How | Access | Enums | Provenance |
 |---|---|---|---|---|

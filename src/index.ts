@@ -109,7 +109,7 @@ export default {
 
     if (method === "GET") {
       // Static raw-file route: serve whole part / errata documents by name.
-      // This is the non-MCP binding the BluePill harness uses to fetch, cache,
+      // This is the non-MCP binding external file consumers use to fetch, cache,
       // and own the data offline. Must come before the SSE/banner logic.
       const url = new URL(request.url);
 

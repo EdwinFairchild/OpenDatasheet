@@ -42,10 +42,10 @@ export function getErrataOverlays(mpn: string): Errata[] {
 // ---------------------------------------------------------------------------
 // Static raw-file map (for the GET /parts/{file}.json route in index.ts).
 //
-// The BluePill harness fetches whole documents by name, not via MCP. It uses
+// External file consumers fetch whole documents by name, not via MCP. They use
 // TWO kinds of name under /parts/, so the map covers both:
-//   - "<MPN>.json"          → the part document   (harness requests by MPN)
-//   - "<errata-file>.json"  → the errata overlay  (harness reads part.errata[].ref,
+//   - "<MPN>.json"          → the part document   (consumer requests by MPN)
+//   - "<errata-file>.json"  → the errata overlay  (consumer reads part.errata[].ref,
 //                                                   takes the basename, fetches that)
 // Keyed in lowercase so the lookup is case-insensitive: a request for
 // "/parts/ACME-IMU6.json" and "/parts/acme-imu6.json" both resolve.
@@ -82,7 +82,7 @@ export function getStaticFile(name: string): unknown | undefined {
 // Catalog for the GET /parts/index.json discovery route. One row per part
 // (errata overlays excluded), with just enough to let a consumer find a part by
 // MPN/family/manufacturer and then fetch the full document. This is what lets
-// the BluePill harness answer "what STM32G4 parts exist here?" without knowing
+// a consumer answer "what STM32G4 parts exist here?" without knowing
 // the exact MPN, across many configured sources, with no blind fan-out.
 export function getCatalog(): Array<{
   mpn: string;
