@@ -1,4 +1,4 @@
-# OpenDatasheet MCP server: get it running, then live
+# Running OpenDatasheet: from a fresh machine to a live server
 
 This walks you from a fresh machine to a public MCP server that Claude (or any MCP client) can call, assuming you've **never used Node tooling, Cloudflare, wrangler, or MCP** before. Every command is copy-pasteable.
 
@@ -257,7 +257,7 @@ That's the entire workflow. No database, no migrations.
 | Inspector / Claude won't connect | Make sure the transport is **Streamable HTTP** (not SSE). Confirm the URL opens in a browser and shows the info page. |
 | Claude doesn't show the tools | Did you **fully quit** and reopen the app? Check the JSON config is valid (no trailing commas) and the URL is exactly your deployed one. |
 | Deploy says you're not logged in | Run `npx wrangler login` again and complete the browser step. |
-| A tool returns an error like `Peripheral 'X' not found` | That's expected behavior  the message lists the valid names. Call `describe_part` first to see what's queryable. |
+| A tool returns an error like `Peripheral 'X' not found` | That's expected behavior; the message lists the valid names. Call `describe_part` first to see what's queryable. |
 | Need to see what's happening on the live server | `npx wrangler tail` streams your deployed worker's live logs. |
 
 ---
@@ -266,8 +266,9 @@ That's the entire workflow. No database, no migrations.
 
 ```
 opendatasheet-mcp/
-├── HOW-TO-CLOUDFLARE.md   ← you are here
-├── README.md              ← short project overview
+├── README.md              ← project front page + the mission
+├── DEV.md                 ← you are here (run it, deploy it, connect it)
+├── docs/                  ← the OpenDatasheet spec (mission, schema, MCP interface, roadmap)
 ├── package.json           ← dependencies + the dev/deploy scripts
 ├── tsconfig.json          ← TypeScript settings
 ├── wrangler.toml          ← Cloudflare Worker config (name, entry point)
@@ -275,7 +276,9 @@ opendatasheet-mcp/
 │   ├── index.ts           ← the Worker: CORS, routing, MCP JSON-RPC handling
 │   ├── tools.ts           ← the 11 tools (this is where the verbs live)
 │   └── lib.ts             ← data registry, errata resolver, path resolver
+├── tools/                 ← Python pipeline that builds part JSON from CMSIS-SVD + RM
 └── data/
+    ├── stm32g474re.json   ← real part (STM32G474RE), built by the pipeline
     ├── acme-m0.json       ← example MCU (register-map profile)
     ├── acme-m0-errata.json
     ├── acme-imu6.json     ← example IMU (register-map + sensor profiles)

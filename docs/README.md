@@ -2,7 +2,7 @@
 
 *Machine-readable documentation for embedded parts, and a query layer agents can actually use.*
 
-> **Name is a placeholder.** Bikeshed it after the schema stabilizes. "Part" throughout means *any* embedded component, MCU, MPU, sensor, power IC, interface chip, module, not just microcontrollers.
+> **The opendatasheet name is a placeholder.** We can tweak it after the schema stabilizes unless the comminuty iss fine with it. "Part" throughout means *any* embedded component, MCU, MPU, sensor, power IC, interface chip, module, not just microcontrollers.
 
 This folder is a foundational doc set. It defines the mission, the problem, the principles, the JSON schema, the MCP query interface, and the roadmap. It is written to be read by **either a human or an AI agent**: drop the folder into a repo, point your agent at it (or paste the files in order into its context), and it will understand what we are building and why.
 
