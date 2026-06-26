@@ -1,0 +1,15 @@
+{
+  "project": {
+    "chip": "STM32U575",
+    "parts": ["STM32G474RE", "STM32U575ZI"]
+  },
+  "permissions": {
+    "mode": "auto"
+  },
+  "claude_cli": {
+    "model": "sonnet",
+    "permission_mode": "bypassPermissions",
+    "use_subscription": true,
+    "timeout_s": 2700
+  }
+}

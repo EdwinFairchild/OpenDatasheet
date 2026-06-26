@@ -199,6 +199,14 @@ class ChipBuild:
         chip = self.chip
         profile_peripherals = []
         covered = set()
+        # Auto-mode emission filter. A chip module may declare SKIP_PERIPHERALS
+        # (exact SVD names) and/or SKIP_PREFIXES (name prefixes) to drop whole
+        # peripherals it doesn't want emitted. The canonical use: STM32 TrustZone
+        # parts (U5/L5/H5) expose every peripheral a second time as a SEC_ secure
+        # alias with identical registers — SKIP_PREFIXES=("SEC_",) drops the
+        # redundant duplicates. Curated PERIPHERALS specs are never skipped.
+        skip_names = set(getattr(chip, "SKIP_PERIPHERALS", ()))
+        skip_prefixes = tuple(getattr(chip, "SKIP_PREFIXES", ()))
         for spec in chip.PERIPHERALS:
             profile_peripherals.extend(self.build_peripheral(spec))
             covered.add(spec["svd_name"])
@@ -208,8 +216,21 @@ class ChipBuild:
             for per in self.svd.peripheral_names():
                 if per in covered or self.svd.registers_el(per) is None:
                     continue
+                if per in skip_names or (skip_prefixes and per.startswith(skip_prefixes)):
+                    continue
                 covered.add(per)
                 profile_peripherals.extend(self.build_peripheral(self.auto_spec(per)))
+
+        # Final skip pass: also drop skipped peripherals a *curated* spec may have
+        # emitted via its `emit` list (the in-loop check above only covers
+        # auto-mode). Hand-authored EXTRA_PERIPHERALS are added after, so they are
+        # never filtered.
+        if skip_names or skip_prefixes:
+            profile_peripherals = [
+                p for p in profile_peripherals
+                if p["name"] not in skip_names
+                and not (skip_prefixes and p["name"].startswith(skip_prefixes))
+            ]
 
         profile_peripherals.extend(chip.EXTRA_PERIPHERALS)
 

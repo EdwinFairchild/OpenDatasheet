@@ -1,0 +1,35 @@
+{
+  "id": "stm32u575",
+  "mpn": "STM32U575ZI",
+  "manufacturer": "STMicroelectronics",
+  "family": "STM32U5",
+  "core": "Cortex-M33",
+  "revision": "rev-X",
+  "lifecycle": "active",
+  "packages": [
+    "LQFP144"
+  ],
+  "out": "data/stm32u575zi.json",
+  "tiers": [
+    1,
+    2
+  ],
+  "svd": "STM32U575.svd",
+  "reference_manual": {
+    "doc": "RM0456",
+    "kind": "reference-manual",
+    "rev": "6",
+    "pdf": "RM0456.pdf",
+    "toc_pages": 95,
+    "url": "https://www.st.com/resource/en/reference_manual/rm0456-stm32u5-series-armbased-32bit-mcus-stmicroelectronics.pdf"
+  },
+  "datasheet": {
+    "doc": "DS13737",
+    "kind": "datasheet",
+    "rev": "10",
+    "pdf": "DS_STM32U575ZI.pdf",
+    "url": "https://www.st.com/resource/en/datasheet/stm32u575zi.pdf"
+  },
+  "_notes": "Inputs for the encode-datasheet workflow. The SVD came from STM32CubeCLT; RM0456 Rev 6 and DS13737 Rev 10 are the source PDFs. make_sections needs --toc-pages 95 for this RM (its TOC runs to ~page 90). `revision` (silicon rev) is provisional \u2014 the scaffold step should confirm it against the docs.",
+  "drop_secure_aliases": true
+}

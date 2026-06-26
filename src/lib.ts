@@ -9,6 +9,7 @@ import m0Errata from "../data/acme-m0-errata.json";
 import imu6 from "../data/acme-imu6.json";
 import imu6Errata from "../data/acme-imu6-errata.json";
 import g474 from "../data/stm32g474re.json";
+import u575 from "../data/stm32u575zi.json";
 
 // Part shapes are loose (`any`) on purpose for this MVP. Real types can be
 // generated from the JSON Schema later; keeping it loose here means adding a
@@ -20,6 +21,7 @@ const PARTS: Record<string, Part> = {
   "ACME-M0": m0 as Part,
   "ACME-IMU6": imu6 as Part,
   "STM32G474RE": g474 as Part,
+  "STM32U575ZI": u575 as Part,
 };
 
 const ERRATA: Record<string, Errata[]> = {

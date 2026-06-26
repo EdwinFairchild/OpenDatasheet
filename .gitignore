@@ -15,3 +15,14 @@ __pycache__/
 # not committed. The repo ships only the structured part JSON in data/.
 docs/*.pdf
 *.h
+
+# Workflow source inputs under datasheets/<id>/ stay local — the copyrighted RM/DS
+# PDFs (re-download from ST via the url in chip.json) and the large vendor SVD
+# (re-copy from STM32CubeCLT / vendor). Only chip.json + README are committed; the
+# build's working SVD copy lives committed at tools/chips/<id>.svd.
+datasheets/**/*.pdf
+datasheets/**/*.svd
+
+# Workflow runtime output (gate files, run logs)
+build/
+.va/runs/

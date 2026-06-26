@@ -1,0 +1,4234 @@
+{
+ "ADC12_CCR": {
+  "section": "33.7.2",
+  "title": "ADC system control register (ADC12_CCR) . . . . . . . . . . . . . . . . . . . 1370"
+ },
+ "ADC12_CDR": {
+  "section": "33.7.3",
+  "title": "ADC common regular data register for dual mode (ADC12_CDR) . . 1373"
+ },
+ "ADC12_CDR2": {
+  "section": "33.7.4",
+  "title": "ADC common regular data register for 32-bit dual mode (ADC12_CDR2) . . . . . . . . . . . ."
+ },
+ "ADC12_CSR": {
+  "section": "33.7.1",
+  "title": "ADC common status register (ADC12_CSR) . . . . . . . . . . . . . . . . . . 1368"
+ },
+ "ADC_AWD1TR": {
+  "section": "34.7.7",
+  "title": "ADC watchdog threshold register (ADC_AWD1TR) . . . . . . . . . . . . . 1432"
+ },
+ "ADC_AWD2CR": {
+  "section": "33.6.18",
+  "title": "ADC analog watchdog 2 configuration register (ADC_AWD2CR) . . . . . . . . . . . . . . . . "
+ },
+ "ADC_AWD2TR": {
+  "section": "34.7.8",
+  "title": "ADC watchdog threshold register (ADC_AWD2TR) . . . . . . . . . . . . . 1433"
+ },
+ "ADC_AWD3CR": {
+  "section": "33.6.19",
+  "title": "ADC analog watchdog 3 configuration register (ADC_AWD3CR) . . . . . . . . . . . . . . . . "
+ },
+ "ADC_AWD3TR": {
+  "section": "34.7.11",
+  "title": "ADC watchdog threshold register (ADC_AWD3TR) . . . . . . . . . . . . . 1436"
+ },
+ "ADC_CALFACT": {
+  "section": "33.6.27",
+  "title": "ADC user control register (ADC_CALFACT) . . . . . . . . . . . . . . . . . . . 1367"
+ },
+ "ADC_CALFACT2": {
+  "section": "33.6.28",
+  "title": "ADC calibration factor register (ADC_CALFACT2) . . . . . . . . . . . . . . 1367"
+ },
+ "ADC_CCR": {
+  "section": "34.7.18",
+  "title": "ADC common configuration register (ADC_CCR) . . . . . . . . . . . . . . . 1440"
+ },
+ "ADC_CFGR1": {
+  "section": "33.6.4",
+  "title": "ADC configuration register (ADC_CFGR1) . . . . . . . . . . . . . . . . . . . . 1347 RM0456"
+ },
+ "ADC_CFGR2": {
+  "section": "33.6.5",
+  "title": "ADC configuration register 2 (ADC_CFGR2) . . . . . . . . . . . . . . . . . . 1350"
+ },
+ "ADC_CHSELR": {
+  "section": "34.7.9",
+  "title": "ADC channel selection register [alternate] (ADC_CHSELR) . . . . . . . 1434"
+ },
+ "ADC_CR": {
+  "section": "33.6.3",
+  "title": "ADC control register (ADC_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1344"
+ },
+ "ADC_DIFSEL": {
+  "section": "33.6.26",
+  "title": "ADC differential mode selection register (ADC_DIFSEL) . . . . . . . . . 1366"
+ },
+ "ADC_DR": {
+  "section": "33.6.13",
+  "title": "ADC regular data register (ADC_DR) . . . . . . . . . . . . . . . . . . . . . . . . 1358"
+ },
+ "ADC_GCOMP": {
+  "section": "33.6.16",
+  "title": "ADC gain compensation register (ADC_GCOMP) . . . . . . . . . . . . . . 1361"
+ },
+ "ADC_HTR1": {
+  "section": "33.6.21",
+  "title": "ADC watchdog threshold register 1 (ADC_HTR1) . . . . . . . . . . . . . . . 1364"
+ },
+ "ADC_HTR2": {
+  "section": "33.6.23",
+  "title": "ADC watchdog higher threshold register 2 (ADC_HTR2) . . . . . . . . . 1365"
+ },
+ "ADC_HTR3": {
+  "section": "33.6.25",
+  "title": "ADC watchdog higher threshold register 3 (ADC_HTR3) . . . . . . . . . 1366"
+ },
+ "ADC_IER": {
+  "section": "33.6.2",
+  "title": "ADC interrupt enable register (ADC_IER) . . . . . . . . . . . . . . . . . . . . . 1342"
+ },
+ "ADC_ISR": {
+  "section": "33.6.1",
+  "title": "ADC interrupt and status register (ADC_ISR) . . . . . . . . . . . . . . . . . . 1340"
+ },
+ "ADC_JDRy": {
+  "section": "33.6.17",
+  "title": "ADC injected data register (ADC_JDRy) . . . . . . . . . . . . . . . . . . . . . . 1362"
+ },
+ "ADC_JSQR": {
+  "section": "33.6.14",
+  "title": "ADC injected sequence register (ADC_JSQR) . . . . . . . . . . . . . . . . . 1359"
+ },
+ "ADC_LTR1": {
+  "section": "33.6.20",
+  "title": "ADC watchdog threshold register 1 (ADC_LTR1) . . . . . . . . . . . . . . . 1363"
+ },
+ "ADC_LTR2": {
+  "section": "33.6.22",
+  "title": "ADC watchdog lower threshold register 2 (ADC_LTR2) . . . . . . . . . . 1364"
+ },
+ "ADC_LTR3": {
+  "section": "33.6.24",
+  "title": "ADC watchdog lower threshold register 3 (ADC_LTR3) . . . . . . . . . . 1365"
+ },
+ "ADC_OFRy": {
+  "section": "33.6.15",
+  "title": "ADC offset y register (ADC_OFRy) . . . . . . . . . . . . . . . . . . . . . . . . . . 1360"
+ },
+ "ADC_OR": {
+  "section": "34.7.17",
+  "title": "ADC option register (ADC_OR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144"
+ },
+ "ADC_PCSEL": {
+  "section": "33.4.12",
+  "title": "Channel preselection register (ADC_PCSEL) . . . . . . . . . . . . . . . . . . 1283"
+ },
+ "ADC_PWRR": {
+  "section": "34.7.13",
+  "title": "ADC power register (ADC_PWRR) . . . . . . . . . . . . . . . . . . . . . . . . . . 1437"
+ },
+ "ADC_SMPR": {
+  "section": "34.7.6",
+  "title": "ADC sampling time register (ADC_SMPR) . . . . . . . . . . . . . . . . . . . . 1431"
+ },
+ "ADC_SMPR1": {
+  "section": "33.6.6",
+  "title": "ADC sample time register 1 (ADC_SMPR1) . . . . . . . . . . . . . . . . . . . 1353"
+ },
+ "ADC_SMPR2": {
+  "section": "33.6.7",
+  "title": "ADC sample time register 2 (ADC_SMPR2) . . . . . . . . . . . . . . . . . . . 1354"
+ },
+ "ADC_SQR1": {
+  "section": "33.6.9",
+  "title": "ADC regular sequence register 1 (ADC_SQR1) . . . . . . . . . . . . . . . . 1355"
+ },
+ "ADC_SQR2": {
+  "section": "33.6.10",
+  "title": "ADC regular sequence register 2 (ADC_SQR2) . . . . . . . . . . . . . . . . 1356"
+ },
+ "ADC_SQR3": {
+  "section": "33.6.11",
+  "title": "ADC regular sequence register 3 (ADC_SQR3) . . . . . . . . . . . . . . . . 1357"
+ },
+ "ADC_SQR4": {
+  "section": "33.6.12",
+  "title": "ADC regular sequence register 4 (ADC_SQR4) . . . . . . . . . . . . . . . . 1358"
+ },
+ "ADF_BSMX0CR": {
+  "section": "40.8.4",
+  "title": "ADF bitstream matrix control register 0 (ADF_BSMX0CR) . . . . . . . . 1660"
+ },
+ "ADF_CKGCR": {
+  "section": "40.8.2",
+  "title": "ADF clock generator control register (ADF_CKGCR) . . . . . . . . . . . . 1657"
+ },
+ "ADF_DFLT0CICR": {
+  "section": "40.8.6",
+  "title": "ADF digital filer configuration register 0 (ADF_DFLT0CICR) . . . . . . . 1663"
+ },
+ "ADF_DFLT0CR": {
+  "section": "40.8.5",
+  "title": "ADF digital filter control register 0 (ADF_DFLT0CR) . . . . . . . . . . . . . 1661"
+ },
+ "ADF_DFLT0DR": {
+  "section": "40.8.15",
+  "title": "ADF digital filter data register 0 (ADF_DFLT0DR) . . . . . . . . . . . . . . . 1672 RM0456"
+ },
+ "ADF_DFLT0IER": {
+  "section": "40.8.9",
+  "title": "ADF DFLT0 interrupt enable register (ADF_DFLT0IER) . . . . . . . . . . 1666"
+ },
+ "ADF_DFLT0ISR": {
+  "section": "40.8.10",
+  "title": "ADF DFLT0 interrupt status register 0 (ADF_DFLT0ISR) . . . . . . . . . 1667"
+ },
+ "ADF_DFLT0RSFR": {
+  "section": "40.8.7",
+  "title": "ADF reshape filter configuration register 0 (ADF_DFLT0RSFR) . . . . 1664"
+ },
+ "ADF_DLY0CR": {
+  "section": "40.8.8",
+  "title": "ADF delay control register 0 (ADF_DLY0CR) . . . . . . . . . . . . . . . . . . 1665"
+ },
+ "ADF_GCR": {
+  "section": "40.8.1",
+  "title": "ADF global control register (ADF_GCR) . . . . . . . . . . . . . . . . . . . . . . 1656"
+ },
+ "ADF_SADANLVR": {
+  "section": "40.8.14",
+  "title": "ADF SAD ambient noise level register (ADF_SADANLVR) . . . . . . . . 1672"
+ },
+ "ADF_SADCFGR": {
+  "section": "40.8.12",
+  "title": "ADF SAD configuration register (ADF_SADCFGR) . . . . . . . . . . . . . 1670"
+ },
+ "ADF_SADCR": {
+  "section": "40.8.11",
+  "title": "ADF SAD control register (ADF_SADCR) . . . . . . . . . . . . . . . . . . . . . 1668"
+ },
+ "ADF_SADSDLVR": {
+  "section": "40.8.13",
+  "title": "ADF SAD sound level register (ADF_SADSDLVR) . . . . . . . . . . . . . . 1671"
+ },
+ "ADF_SITF0CR": {
+  "section": "40.8.3",
+  "title": "ADF serial interface control register 0 (ADF_SITF0CR) . . . . . . . . . . 1659"
+ },
+ "AES_CR": {
+  "section": "49.7.1",
+  "title": "AES control register (AES_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19"
+ },
+ "AES_DINR": {
+  "section": "49.7.3",
+  "title": "AES data input register (AES_DINR) . . . . . . . . . . . . . . . . . . . . . . . . 1964"
+ },
+ "AES_DOUTR": {
+  "section": "49.7.4",
+  "title": "AES data output register (AES_DOUTR) . . . . . . . . . . . . . . . . . . . . . 1964"
+ },
+ "AES_ICR": {
+  "section": "49.7.20",
+  "title": "AES interrupt clear register (AES_ICR) . . . . . . . . . . . . . . . . . . . . . . . 1971"
+ },
+ "AES_IER": {
+  "section": "49.7.18",
+  "title": "AES interrupt enable register (AES_IER) . . . . . . . . . . . . . . . . . . . . . 1970"
+ },
+ "AES_ISR": {
+  "section": "49.7.19",
+  "title": "AES interrupt status register (AES_ISR) . . . . . . . . . . . . . . . . . . . . . . 1970"
+ },
+ "AES_IVR0": {
+  "section": "49.7.9",
+  "title": "AES initialization vector register 0 (AES_IVR0) . . . . . . . . . . . . . . . . . 1966"
+ },
+ "AES_IVR1": {
+  "section": "49.7.10",
+  "title": "AES initialization vector register 1 (AES_IVR1) . . . . . . . . . . . . . . . . . 1967"
+ },
+ "AES_IVR2": {
+  "section": "49.7.11",
+  "title": "AES initialization vector register 2 (AES_IVR2) . . . . . . . . . . . . . . . . . 1967"
+ },
+ "AES_IVR3": {
+  "section": "49.7.12",
+  "title": "AES initialization vector register 3 (AES_IVR3) . . . . . . . . . . . . . . . . . 1967"
+ },
+ "AES_KEYR0": {
+  "section": "49.7.5",
+  "title": "AES key register 0 (AES_KEYR0) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1965"
+ },
+ "AES_KEYR1": {
+  "section": "49.7.6",
+  "title": "AES key register 1 (AES_KEYR1) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1965"
+ },
+ "AES_KEYR2": {
+  "section": "49.7.7",
+  "title": "AES key register 2 (AES_KEYR2) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1966"
+ },
+ "AES_KEYR3": {
+  "section": "49.7.8",
+  "title": "AES key register 3 (AES_KEYR3) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1966"
+ },
+ "AES_KEYR4": {
+  "section": "49.7.13",
+  "title": "AES key register 4 (AES_KEYR4) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1968"
+ },
+ "AES_KEYR5": {
+  "section": "49.7.14",
+  "title": "AES key register 5 (AES_KEYR5) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1968"
+ },
+ "AES_KEYR6": {
+  "section": "49.7.15",
+  "title": "AES key register 6 (AES_KEYR6) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1968"
+ },
+ "AES_KEYR7": {
+  "section": "49.7.16",
+  "title": "AES key register 7 (AES_KEYR7) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1969"
+ },
+ "AES_SR": {
+  "section": "49.7.2",
+  "title": "AES status register (AES_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 196"
+ },
+ "AES_SUSPxR": {
+  "section": "49.7.17",
+  "title": "AES suspend registers (AES_SUSPxR) . . . . . . . . . . . . . . . . . . . . . . 1969"
+ },
+ "COMP1_CSR": {
+  "section": "37.7.1",
+  "title": "COMP1 control and status register (COMP1_CSR) . . . . . . . . . . . . . 1497"
+ },
+ "COMP2_CSR": {
+  "section": "37.7.2",
+  "title": "COMP2 control and status register (COMP2_CSR) . . . . . . . . . . . . . 1498"
+ },
+ "CORDIC_CSR": {
+  "section": "25.4.1",
+  "title": "CORDIC control/status register (CORDIC_CSR) . . . . . . . . . . . . . . . . 957"
+ },
+ "CORDIC_RDATA": {
+  "section": "25.4.3",
+  "title": "CORDIC result register (CORDIC_RDATA) . . . . . . . . . . . . . . . . . . . . . 960"
+ },
+ "CORDIC_WDATA": {
+  "section": "25.4.2",
+  "title": "CORDIC argument register (CORDIC_WDATA) . . . . . . . . . . . . . . . . . 959"
+ },
+ "CRC_CR": {
+  "section": "24.4.3",
+  "title": "CRC control register (CRC_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94"
+ },
+ "CRC_DR": {
+  "section": "24.4.1",
+  "title": "CRC data register (CRC_DR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9"
+ },
+ "CRC_IDR": {
+  "section": "24.4.2",
+  "title": "CRC independent data register (CRC_IDR) . . . . . . . . . . . . . . . . . . . . 939 26/365"
+ },
+ "CRC_INIT": {
+  "section": "24.4.4",
+  "title": "CRC initial value (CRC_INIT) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+ },
+ "CRC_POL": {
+  "section": "24.4.5",
+  "title": "CRC polynomial (CRC_POL) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 941"
+ },
+ "CRS_CFGR": {
+  "section": "12.7.2",
+  "title": "CRS configuration register (CRS_CFGR) . . . . . . . . . . . . . . . . . . . . . . 617"
+ },
+ "CRS_CR": {
+  "section": "12.7.1",
+  "title": "CRS control register (CRS_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61"
+ },
+ "CRS_ICR": {
+  "section": "12.7.4",
+  "title": "CRS interrupt flag clear register (CRS_ICR) . . . . . . . . . . . . . . . . . . . . 620"
+ },
+ "CRS_ISR": {
+  "section": "12.7.3",
+  "title": "CRS interrupt and status register (CRS_ISR) . . . . . . . . . . . . . . . . . . . 618"
+ },
+ "DAC_AUTOCR": {
+  "section": "35.7.21",
+  "title": "DAC autonomous mode control register (DAC_AUTOCR) . . . . . . . . 1483"
+ },
+ "DAC_CCR": {
+  "section": "35.7.15",
+  "title": "DAC calibration control register (DAC_CCR) . . . . . . . . . . . . . . . . . . 1478"
+ },
+ "DAC_CR": {
+  "section": "35.7.1",
+  "title": "DAC control register (DAC_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1467"
+ },
+ "DAC_DHR12L1": {
+  "section": "35.7.4",
+  "title": "DAC channel1 12-bit left aligned data holding register (DAC_DHR12L1) . . . . . . . . . . ."
+ },
+ "DAC_DHR12L2": {
+  "section": "35.7.7",
+  "title": "DAC channel2 12-bit left aligned data holding register (DAC_DHR12L2) . . . . . . . . . . ."
+ },
+ "DAC_DHR12LD": {
+  "section": "35.7.10",
+  "title": "Dual DAC 12-bit left aligned data holding register (DAC_DHR12LD) . . . . . . . . . . . . ."
+ },
+ "DAC_DHR12R1": {
+  "section": "35.7.3",
+  "title": "DAC channel1 12-bit right-aligned data holding register (DAC_DHR12R1) . . . . . . . . . . "
+ },
+ "DAC_DHR12R2": {
+  "section": "35.7.6",
+  "title": "DAC channel2 12-bit right aligned data holding register (DAC_DHR12R2) . . . . . . . . . . "
+ },
+ "DAC_DHR12RD": {
+  "section": "35.7.9",
+  "title": "Dual DAC 12-bit right-aligned data holding register (DAC_DHR12RD) . . . . . . . . . . . . "
+ },
+ "DAC_DHR8R1": {
+  "section": "35.7.5",
+  "title": "DAC channel1 8-bit right aligned data holding register (DAC_DHR8R1) . . . . . . . . . . . "
+ },
+ "DAC_DHR8R2": {
+  "section": "35.7.8",
+  "title": "DAC channel2 8-bit right-aligned data holding register (DAC_DHR8R2) . . . . . . . . . . . "
+ },
+ "DAC_DHR8RD": {
+  "section": "35.7.11",
+  "title": "Dual DAC 8-bit right aligned data holding register (DAC_DHR8RD) . . . . . . . . . . . . . "
+ },
+ "DAC_DOR1": {
+  "section": "35.7.12",
+  "title": "DAC channel1 data output register (DAC_DOR1) . . . . . . . . . . . . . . . 1476"
+ },
+ "DAC_DOR2": {
+  "section": "35.7.13",
+  "title": "DAC channel2 data output register (DAC_DOR2) . . . . . . . . . . . . . . . 1476"
+ },
+ "DAC_MCR": {
+  "section": "35.7.16",
+  "title": "DAC mode control register (DAC_MCR) . . . . . . . . . . . . . . . . . . . . . . 1479"
+ },
+ "DAC_SHHR": {
+  "section": "35.7.19",
+  "title": "DAC sample and hold time register (DAC_SHHR) . . . . . . . . . . . . . . 1481"
+ },
+ "DAC_SHRR": {
+  "section": "35.7.20",
+  "title": "DAC sample and hold refresh time register (DAC_SHRR) . . . . . . . . 1482"
+ },
+ "DAC_SHSR1": {
+  "section": "35.7.17",
+  "title": "DAC channel1 sample and hold sample time register (DAC_SHSR1) . . . . . . . . . . . . . . "
+ },
+ "DAC_SHSR2": {
+  "section": "35.7.18",
+  "title": "DAC channel2 sample and hold sample time register (DAC_SHSR2) . . . . . . . . . . . . . . "
+ },
+ "DAC_SR": {
+  "section": "35.7.14",
+  "title": "DAC status register (DAC_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147"
+ },
+ "DAC_SWTRGR": {
+  "section": "35.7.2",
+  "title": "DAC software trigger register (DAC_SWTRGR) . . . . . . . . . . . . . . . . 1470"
+ },
+ "DCACHE_CMDREADDRR": {
+  "section": "9.7.10",
+  "title": "DCACHE command range end address register (DCACHE_CMDREADDRR) . . . . . . . . . . . . . . "
+ },
+ "DCACHE_CMDRSADDRR": {
+  "section": "9.7.9",
+  "title": "DCACHE command range start address register (DCACHE_CMDRSADDRR) . . . . . . . . . . . . . "
+ },
+ "DCACHE_CR": {
+  "section": "9.7.1",
+  "title": "DCACHE control register (DCACHE_CR) . . . . . . . . . . . . . . . . . . . . . . 394"
+ },
+ "DCACHE_FCR": {
+  "section": "9.7.4",
+  "title": "DCACHE flag clear register (DCACHE_FCR) . . . . . . . . . . . . . . . . . . . 397"
+ },
+ "DCACHE_IER": {
+  "section": "9.7.3",
+  "title": "DCACHE interrupt enable register (DCACHE_IER) . . . . . . . . . . . . . . 396"
+ },
+ "DCACHE_RHMONR": {
+  "section": "9.7.5",
+  "title": "DCACHE read-hit monitor register (DCACHE_RHMONR) . . . . . . . . . 397"
+ },
+ "DCACHE_RMMONR": {
+  "section": "9.7.6",
+  "title": "DCACHE read-miss monitor register (DCACHE_RMMONR) . . . . . . . 398"
+ },
+ "DCACHE_SR": {
+  "section": "9.7.2",
+  "title": "DCACHE status register (DCACHE_SR) . . . . . . . . . . . . . . . . . . . . . . 395"
+ },
+ "DCACHE_WHMONR": {
+  "section": "9.7.7",
+  "title": "DCACHE write-hit monitor register (DCACHE_WHMONR) . . . . . . . . 398"
+ },
+ "DCACHE_WMMONR": {
+  "section": "9.7.8",
+  "title": "DCACHE write-miss monitor register (DCACHE_WMMONR) . . . . . . 398"
+ },
+ "DCMI_CR": {
+  "section": "41.5.1",
+  "title": "DCMI control register (DCMI_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1686"
+ },
+ "DCMI_CWSIZE": {
+  "section": "41.5.10",
+  "title": "DCMI crop window size (DCMI_CWSIZE) . . . . . . . . . . . . . . . . . . . . . 1695"
+ },
+ "DCMI_CWSTRT": {
+  "section": "41.5.9",
+  "title": "DCMI crop window start (DCMI_CWSTRT) . . . . . . . . . . . . . . . . . . . . 1694"
+ },
+ "DCMI_DR": {
+  "section": "41.5.11",
+  "title": "DCMI data register (DCMI_DR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169"
+ },
+ "DCMI_ESCR": {
+  "section": "41.5.7",
+  "title": "DCMI embedded synchronization code register (DCMI_ESCR) . . . . 1693"
+ },
+ "DCMI_ESUR": {
+  "section": "41.5.8",
+  "title": "DCMI embedded synchronization unmask register (DCMI_ESUR) . 1693"
+ },
+ "DCMI_ICR": {
+  "section": "41.5.6",
+  "title": "DCMI interrupt clear register (DCMI_ICR) . . . . . . . . . . . . . . . . . . . . . 1692"
+ },
+ "DCMI_IER": {
+  "section": "41.5.4",
+  "title": "DCMI interrupt enable register (DCMI_IER) . . . . . . . . . . . . . . . . . . . 1690"
+ },
+ "DCMI_MIS": {
+  "section": "41.5.5",
+  "title": "DCMI masked interrupt status register (DCMI_MIS) . . . . . . . . . . . . . 1691"
+ },
+ "DCMI_RIS": {
+  "section": "41.5.3",
+  "title": "DCMI raw interrupt status register (DCMI_RIS) . . . . . . . . . . . . . . . . 1689"
+ },
+ "DCMI_SR": {
+  "section": "41.5.2",
+  "title": "DCMI status register (DCMI_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1689"
+ },
+ "DLYB_CFGR": {
+  "section": "32.5.2",
+  "title": "DLYB configuration register (DLYB_CFGR) . . . . . . . . . . . . . . . . . . . 1264"
+ },
+ "DLYB_CR": {
+  "section": "32.5.1",
+  "title": "DLYB control register (DLYB_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1263"
+ },
+ "DMA2D_AMTCR": {
+  "section": "19.5.23",
+  "title": "DMA2D AHB master timer configuration register (DMA2D_AMTCR) . 853"
+ },
+ "DMA2D_BGCLUTx": {
+  "section": "19.5.25",
+  "title": "DMA2D background CLUT (DMA2D_BGCLUTx) . . . . . . . . . . . . . . . . 854"
+ },
+ "DMA2D_BGCMAR": {
+  "section": "19.5.13",
+  "title": "DMA2D background CLUT memory address register (DMA2D_BGCMAR) . . . . . . . . . . . . . . ."
+ },
+ "DMA2D_BGCOLR": {
+  "section": "19.5.11",
+  "title": "DMA2D background color register (DMA2D_BGCOLR) . . . . . . . . . . . 847"
+ },
+ "DMA2D_BGMAR": {
+  "section": "19.5.6",
+  "title": "DMA2D background memory address register (DMA2D_BGMAR) . . 842"
+ },
+ "DMA2D_BGOR": {
+  "section": "19.5.7",
+  "title": "DMA2D background offset register (DMA2D_BGOR) . . . . . . . . . . . . . 842"
+ },
+ "DMA2D_BGPFCCR": {
+  "section": "19.5.10",
+  "title": "DMA2D background PFC control register (DMA2D_BGPFCCR) . . . . 845"
+ },
+ "DMA2D_CR": {
+  "section": "19.5.1",
+  "title": "DMA2D control register (DMA2D_CR) . . . . . . . . . . . . . . . . . . . . . . . . 838"
+ },
+ "DMA2D_FGCLUTx": {
+  "section": "19.5.24",
+  "title": "DMA2D foreground CLUT (DMA2D_FGCLUTx) . . . . . . . . . . . . . . . . . 854"
+ },
+ "DMA2D_FGCMAR": {
+  "section": "19.5.12",
+  "title": "DMA2D foreground CLUT memory address register (DMA2D_FGCMAR) . . . . . . . . . . . . . . ."
+ },
+ "DMA2D_FGCOLR": {
+  "section": "19.5.9",
+  "title": "DMA2D foreground color register (DMA2D_FGCOLR) . . . . . . . . . . . . 844"
+ },
+ "DMA2D_FGMAR": {
+  "section": "19.5.4",
+  "title": "DMA2D foreground memory address register (DMA2D_FGMAR) . . . 841"
+ },
+ "DMA2D_FGOR": {
+  "section": "19.5.5",
+  "title": "DMA2D foreground offset register (DMA2D_FGOR) . . . . . . . . . . . . . . 841"
+ },
+ "DMA2D_FGPFCCR": {
+  "section": "19.5.8",
+  "title": "DMA2D foreground PFC control register (DMA2D_FGPFCCR) . . . . . 843"
+ },
+ "DMA2D_IFCR": {
+  "section": "19.5.3",
+  "title": "DMA2D interrupt flag clear register (DMA2D_IFCR) . . . . . . . . . . . . . . 840"
+ },
+ "DMA2D_ISR": {
+  "section": "19.5.2",
+  "title": "DMA2D interrupt status register (DMA2D_ISR) . . . . . . . . . . . . . . . . . 839"
+ },
+ "DMA2D_LWR": {
+  "section": "19.5.22",
+  "title": "DMA2D line watermark register (DMA2D_LWR) . . . . . . . . . . . . . . . . . 853"
+ },
+ "DMA2D_NLR": {
+  "section": "19.5.21",
+  "title": "DMA2D number of line register (DMA2D_NLR) . . . . . . . . . . . . . . . . . 852"
+ },
+ "DMA2D_OCOLR": {
+  "section": "19.5.15",
+  "title": "DMA2D output color register (DMA2D_OCOLR) . . . . . . . . . . . . . . . . . 849"
+ },
+ "DMA2D_OMAR": {
+  "section": "19.5.19",
+  "title": "DMA2D output memory address register (DMA2D_OMAR) . . . . . . . . 851"
+ },
+ "DMA2D_OOR": {
+  "section": "19.5.20",
+  "title": "DMA2D output offset register (DMA2D_OOR) . . . . . . . . . . . . . . . . . . 852"
+ },
+ "DMA2D_OPFCCR": {
+  "section": "19.5.14",
+  "title": "DMA2D output PFC control register (DMA2D_OPFCCR) . . . . . . . . . . 848"
+ },
+ "DSI_BCFGR": {
+  "section": "44.17.1",
+  "title": "DSI bias configuration register (DSI_BCFGR) . . . . . . . . . . . . . . . . . . 1849"
+ },
+ "DSI_CCR": {
+  "section": "44.15.3",
+  "title": "DSI Host clock control register (DSI_CCR) . . . . . . . . . . . . . . . . . . . . 1803"
+ },
+ "DSI_CLCR": {
+  "section": "44.15.33",
+  "title": "DSI Host clock lane configuration register (DSI_CLCR) . . . . . . . . . . 1820"
+ },
+ "DSI_CLTCR": {
+  "section": "44.15.34",
+  "title": "DSI Host clock lane timer configuration register (DSI_CLTCR) . . . . . 1821"
+ },
+ "DSI_CMCR": {
+  "section": "44.15.23",
+  "title": "DSI Host command mode configuration register (DSI_CMCR) . . . . . 1813"
+ },
+ "DSI_CR": {
+  "section": "44.15.2",
+  "title": "DSI Host control register (DSI_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . 180"
+ },
+ "DSI_DLTCR": {
+  "section": "44.15.35",
+  "title": "DSI Host data lane timer configuration register (DSI_DLTCR) . . . . . 1821"
+ },
+ "DSI_DLTRCR": {
+  "section": "44.15.47",
+  "title": "DSI Host data lane timer read configuration register (DSI_DLTRCR) . . . . . . . . . . . . "
+ },
+ "DSI_DPCBCR": {
+  "section": "44.18.1",
+  "title": "DSI D-PHY clock band control register (DSI_DPCBCR) . . . . . . . . . . 1850"
+ },
+ "DSI_DPCSRCR": {
+  "section": "44.18.2",
+  "title": "DSI D-PHY clock skew rate control register (DSI_DPCSRCR) . . . . . 1850"
+ },
+ "DSI_DPDL0BCR": {
+  "section": "44.18.5",
+  "title": "DSI D-PHY data lane 0 band control register (DSI_DPDL0BCR) . . . . . . . . . . . . . . . ."
+ },
+ "DSI_DPDL0HSOCR": {
+  "section": "44.18.3",
+  "title": "DSI D-PHY data lane 0 HS offset control register (DSI_DPDL0HSOCR) . . . . . . . . . . . . "
+ },
+ "DSI_DPDL0LPXOCR": {
+  "section": "44.18.4",
+  "title": "DSI D-PHY data lane 0 HS LPX offset control register (DSI_DPDL0LPXOCR) . . . . . . . . . ."
+ },
+ "DSI_DPDL0SRCR": {
+  "section": "44.18.6",
+  "title": "DSI D-PHY data lane 0 skew rate control register (DSI_DPDL0SRCR) . . . . . . . . . . . . ."
+ },
+ "DSI_DPDL1BCR": {
+  "section": "44.18.9",
+  "title": "DSI D-PHY data lane 1 band control register (DSI_DPDL1BCR) . . . 1854"
+ },
+ "DSI_DPDL1HSOCR": {
+  "section": "44.18.7",
+  "title": "DSI D-PHY data lane 1 HS offset control register (DSI_DPDL1HSOCR) . . . . . . . . . . . . "
+ },
+ "DSI_DPDL1LPXOCR": {
+  "section": "44.18.8",
+  "title": "DSI D-PHY data lane 1 HS LPX offset control register (DSI_DPDL1LPXOCR) . . . . . . . . . ."
+ },
+ "DSI_DPDL1SRCR": {
+  "section": "44.18.10",
+  "title": "DSI D-PHY data lane 1 skew rate control register (DSI_DPDL1SRCR) . . . . . . . . . . . . ."
+ },
+ "DSI_FBSR": {
+  "section": "44.15.63",
+  "title": "DSI Host FIFO and buffer status register (DSI_FBSR) . . . . . . . . . . . 1841"
+ },
+ "DSI_FIR0": {
+  "section": "44.15.45",
+  "title": "DSI Host force interrupt register 0 (DSI_FIR0) . . . . . . . . . . . . . . . . . 1831"
+ },
+ "DSI_FIR1": {
+  "section": "44.15.46",
+  "title": "DSI Host force interrupt register 1 (DSI_FIR1) . . . . . . . . . . . . . . . . . 1832"
+ },
+ "DSI_GHCR": {
+  "section": "44.15.24",
+  "title": "DSI Host generic header configuration register (DSI_GHCR) . . . . . . 1815"
+ },
+ "DSI_GPDR": {
+  "section": "44.15.25",
+  "title": "DSI Host generic payload data register (DSI_GPDR) . . . . . . . . . . . . 1815"
+ },
+ "DSI_GPSR": {
+  "section": "44.15.26",
+  "title": "DSI Host generic packet status register (DSI_GPSR) . . . . . . . . . . . . 1816"
+ },
+ "DSI_GVCIDR": {
+  "section": "44.15.9",
+  "title": "DSI Host generic VCID register (DSI_GVCIDR) . . . . . . . . . . . . . . . . 1807"
+ },
+ "DSI_IER0": {
+  "section": "44.15.43",
+  "title": "DSI Host interrupt enable register 0 (DSI_IER0) . . . . . . . . . . . . . . . . 1827"
+ },
+ "DSI_IER1": {
+  "section": "44.15.44",
+  "title": "DSI Host interrupt enable register 1 (DSI_IER1) . . . . . . . . . . . . . . . . 1829"
+ },
+ "DSI_ISR0": {
+  "section": "44.15.41",
+  "title": "DSI Host interrupt and status register 0 (DSI_ISR0) . . . . . . . . . . . . . 1824"
+ },
+ "DSI_ISR1": {
+  "section": "44.15.42",
+  "title": "DSI Host interrupt and status register 1 (DSI_ISR1) . . . . . . . . . . . . . 1826"
+ },
+ "DSI_LCCCR": {
+  "section": "44.15.50",
+  "title": "DSI Host LTDC current color coding register (DSI_LCCCR) . . . . . . . 1834"
+ },
+ "DSI_LCCR": {
+  "section": "44.15.22",
+  "title": "DSI Host LTDC command configuration register (DSI_LCCR) . . . . . 1813"
+ },
+ "DSI_LCOLCR": {
+  "section": "44.15.5",
+  "title": "DSI Host LTDC color coding register (DSI_LCOLCR) . . . . . . . . . . . . 1804"
+ },
+ "DSI_LCVCIDR": {
+  "section": "44.15.49",
+  "title": "DSI Host LTDC current VCID register (DSI_LCVCIDR) . . . . . . . . . . 1834"
+ },
+ "DSI_LPCR": {
+  "section": "44.15.6",
+  "title": "DSI Host LTDC polarity configuration register (DSI_LPCR) . . . . . . . 1805"
+ },
+ "DSI_LPMCCR": {
+  "section": "44.15.51",
+  "title": "DSI Host low-power mode current configuration register (DSI_LPMCCR) . . . . . . . . . . . "
+ },
+ "DSI_LPMCR": {
+  "section": "44.15.7",
+  "title": "DSI Host low-power mode configuration register (DSI_LPMCR) . . . 1805"
+ },
+ "DSI_LVCIDR": {
+  "section": "44.15.4",
+  "title": "DSI Host LTDC VCID register (DSI_LVCIDR) . . . . . . . . . . . . . . . . . . 1804"
+ },
+ "DSI_MCR": {
+  "section": "44.15.10",
+  "title": "DSI Host mode configuration register (DSI_MCR) . . . . . . . . . . . . . . 1807"
+ },
+ "DSI_PCONFR": {
+  "section": "44.15.37",
+  "title": "DSI Host PHY configuration register (DSI_PCONFR) . . . . . . . . . . . . 1822"
+ },
+ "DSI_PCR": {
+  "section": "44.15.8",
+  "title": "DSI Host protocol configuration register (DSI_PCR) . . . . . . . . . . . . . 1806"
+ },
+ "DSI_PCTLR": {
+  "section": "44.15.36",
+  "title": "DSI Host PHY control register (DSI_PCTLR) . . . . . . . . . . . . . . . . . . 1821"
+ },
+ "DSI_PSR": {
+  "section": "44.15.40",
+  "title": "DSI Host PHY status register (DSI_PSR) . . . . . . . . . . . . . . . . . . . . . 1824"
+ },
+ "DSI_PTTCR": {
+  "section": "44.15.39",
+  "title": "DSI Host PHY TX triggers configuration register (DSI_PTTCR) . . . . 1823"
+ },
+ "DSI_PUCR": {
+  "section": "44.15.38",
+  "title": "DSI Host PHY ULPS control register (DSI_PUCR) . . . . . . . . . . . . . . 1823"
+ },
+ "DSI_TCCR0": {
+  "section": "44.15.27",
+  "title": "DSI Host timeout counter configuration register 0 (DSI_TCCR0) . . . 1817"
+ },
+ "DSI_TCCR1": {
+  "section": "44.15.28",
+  "title": "DSI Host timeout counter configuration register 1 (DSI_TCCR1) . . . 1818"
+ },
+ "DSI_TCCR2": {
+  "section": "44.15.29",
+  "title": "DSI Host timeout counter configuration register 2 (DSI_TCCR2) . . . 1818"
+ },
+ "DSI_TCCR3": {
+  "section": "44.15.30",
+  "title": "DSI Host timeout counter configuration register 3 (DSI_TCCR3) . . . 1819"
+ },
+ "DSI_TCCR4": {
+  "section": "44.15.31",
+  "title": "DSI Host timeout counter configuration register 4 (DSI_TCCR4) . . . 1819"
+ },
+ "DSI_TCCR5": {
+  "section": "44.15.32",
+  "title": "DSI Host timeout counter configuration register 5 (DSI_TCCR5) . . . 1820 48/3653 RM0456 Re"
+ },
+ "DSI_VCCCR": {
+  "section": "44.15.54",
+  "title": "DSI Host video chunks current configuration register (DSI_VCCCR) . . . . . . . . . . . . ."
+ },
+ "DSI_VCCR": {
+  "section": "44.15.13",
+  "title": "DSI Host video chunks configuration register (DSI_VCCR) . . . . . . . 1809"
+ },
+ "DSI_VHBPCCR": {
+  "section": "44.15.57",
+  "title": "DSI Host video HBP current configuration register (DSI_VHBPCCR) . . . . . . . . . . . . . "
+ },
+ "DSI_VHBPCR": {
+  "section": "44.15.16",
+  "title": "DSI Host video HBP configuration register (DSI_VHBPCR) . . . . . . . 1811"
+ },
+ "DSI_VHSACCR": {
+  "section": "44.15.56",
+  "title": "DSI Host video HSA current configuration register (DSI_VHSACCR) . . . . . . . . . . . . . "
+ },
+ "DSI_VHSACR": {
+  "section": "44.15.15",
+  "title": "DSI Host video HSA configuration register (DSI_VHSACR) . . . . . . . 1810"
+ },
+ "DSI_VLCCR": {
+  "section": "44.15.58",
+  "title": "DSI Host video line current configuration register (DSI_VLCCR) . . . 1839"
+ },
+ "DSI_VLCR": {
+  "section": "44.15.17",
+  "title": "DSI Host video line configuration register (DSI_VLCR) . . . . . . . . . . . 1811"
+ },
+ "DSI_VMCCR": {
+  "section": "44.15.52",
+  "title": "DSI Host video mode current configuration register (DSI_VMCCR) . . . . . . . . . . . . . ."
+ },
+ "DSI_VMCR": {
+  "section": "44.15.11",
+  "title": "DSI Host video mode configuration register (DSI_VMCR) . . . . . . . . 1808"
+ },
+ "DSI_VNPCCR": {
+  "section": "44.15.55",
+  "title": "DSI Host video null packet current configuration register (DSI_VNPCCR) . . . . . . . . . ."
+ },
+ "DSI_VNPCR": {
+  "section": "44.15.14",
+  "title": "DSI Host video null packet configuration register (DSI_VNPCR) . . . 1810"
+ },
+ "DSI_VPCCR": {
+  "section": "44.15.53",
+  "title": "DSI Host video packet current configuration register (DSI_VPCCR) . . . . . . . . . . . . ."
+ },
+ "DSI_VPCR": {
+  "section": "44.15.12",
+  "title": "DSI Host video packet configuration register (DSI_VPCR) . . . . . . . . 1809"
+ },
+ "DSI_VR": {
+  "section": "44.15.1",
+  "title": "DSI Host version register (DSI_VR) . . . . . . . . . . . . . . . . . . . . . . . . . 1803"
+ },
+ "DSI_VSCR": {
+  "section": "44.15.48",
+  "title": "DSI Host video shadow control register (DSI_VSCR) . . . . . . . . . . . . 1834"
+ },
+ "DSI_VVACCR": {
+  "section": "44.15.62",
+  "title": "DSI Host video VA current configuration register (DSI_VVACCR) . . . . . . . . . . . . . . "
+ },
+ "DSI_VVACR": {
+  "section": "44.15.21",
+  "title": "DSI Host video VA configuration register (DSI_VVACR) . . . . . . . . . . 1812"
+ },
+ "DSI_VVBPCCR": {
+  "section": "44.15.60",
+  "title": "DSI Host video VBP current configuration register (DSI_VVBPCCR) . . . . . . . . . . . . . "
+ },
+ "DSI_VVBPCR": {
+  "section": "44.15.19",
+  "title": "DSI Host video VBP configuration register (DSI_VVBPCR) . . . . . . . 1812"
+ },
+ "DSI_VVFPCCR": {
+  "section": "44.15.61",
+  "title": "DSI Host video VFP current configuration register (DSI_VVFPCCR) . . . . . . . . . . . . . "
+ },
+ "DSI_VVFPCR": {
+  "section": "44.15.20",
+  "title": "DSI Host video VFP configuration register (DSI_VVFPCR) . . . . . . . 1812"
+ },
+ "DSI_VVSACCR": {
+  "section": "44.15.59",
+  "title": "DSI Host video VSA current configuration register (DSI_VVSACCR) . . . . . . . . . . . . . "
+ },
+ "DSI_VVSACR": {
+  "section": "44.15.18",
+  "title": "DSI Host video VSA configuration register (DSI_VVSACR) . . . . . . . 1811"
+ },
+ "DSI_WCFGR": {
+  "section": "44.16.1",
+  "title": "DSI Wrapper configuration register (DSI_WCFGR) . . . . . . . . . . . . . . 1843"
+ },
+ "DSI_WCR": {
+  "section": "44.16.2",
+  "title": "DSI Wrapper control register (DSI_WCR) . . . . . . . . . . . . . . . . . . . . . 1844"
+ },
+ "DSI_WIER": {
+  "section": "44.16.3",
+  "title": "DSI Wrapper interrupt enable register (DSI_WIER) . . . . . . . . . . . . . 1844"
+ },
+ "DSI_WIFCR": {
+  "section": "44.16.5",
+  "title": "DSI Wrapper interrupt flag clear register (DSI_WIFCR) . . . . . . . . . . 1846"
+ },
+ "DSI_WISR": {
+  "section": "44.16.4",
+  "title": "DSI Wrapper interrupt and status register (DSI_WISR) . . . . . . . . . . . 1845"
+ },
+ "DSI_WPCR0": {
+  "section": "44.16.6",
+  "title": "DSI Wrapper PHY configuration register 0 (DSI_WPCR0) . . . . . . . . 1847"
+ },
+ "DSI_WPTR": {
+  "section": "44.16.8",
+  "title": "DSI Wrapper PLL tuning register (DSI_WPTR) . . . . . . . . . . . . . . . . . 1849"
+ },
+ "DSI_WRPCR": {
+  "section": "44.16.7",
+  "title": "DSI Wrapper regulator and PLL control register (DSI_WRPCR) . . . . 1848"
+ },
+ "EXTI_EMR1": {
+  "section": "23.6.11",
+  "title": "EXTI CPU wake-up with event mask register (EXTI_EMR1) . . . . . . . 933"
+ },
+ "EXTI_EXTICRm": {
+  "section": "23.6.8",
+  "title": "EXTI external interrupt selection register (EXTI_EXTICRm) . . . . . . . . 930"
+ },
+ "EXTI_FPR1": {
+  "section": "23.6.5",
+  "title": "EXTI falling edge pending register (EXTI_FPR1) . . . . . . . . . . . . . . . . 928"
+ },
+ "EXTI_FTSR1": {
+  "section": "23.6.2",
+  "title": "EXTI falling trigger selection register (EXTI_FTSR1) . . . . . . . . . . . . . 926"
+ },
+ "EXTI_IMR1": {
+  "section": "23.6.10",
+  "title": "EXTI CPU wake-up with interrupt mask register (EXTI_IMR1) . . . . . . 933"
+ },
+ "EXTI_LOCKR": {
+  "section": "23.6.9",
+  "title": "EXTI lock register (EXTI_LOCKR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93"
+ },
+ "EXTI_PRIVCFGR1": {
+  "section": "23.6.7",
+  "title": "EXTI privilege configuration register (EXTI_PRIVCFGR1) . . . . . . . . . 929"
+ },
+ "EXTI_RPR1": {
+  "section": "23.6.4",
+  "title": "EXTI rising edge pending register (EXTI_RPR1) . . . . . . . . . . . . . . . . 927"
+ },
+ "EXTI_RTSR1": {
+  "section": "23.6.1",
+  "title": "EXTI rising trigger selection register (EXTI_RTSR1) . . . . . . . . . . . . . . 925"
+ },
+ "EXTI_SECCFGR1": {
+  "section": "23.6.6",
+  "title": "EXTI security configuration register (EXTI_SECCFGR1) . . . . . . . . . . 928"
+ },
+ "EXTI_SWIER1": {
+  "section": "23.6.3",
+  "title": "EXTI software interrupt event register (EXTI_SWIER1) . . . . . . . . . . . 926"
+ },
+ "FDCAN_CCCR": {
+  "section": "70.4.6",
+  "title": "FDCAN CC control register (FDCAN_CCCR) . . . . . . . . . . . . . . . . . . 3057"
+ },
+ "FDCAN_CKDIV": {
+  "section": "70.4.37",
+  "title": "FDCAN CFG clock divider register (FDCAN_CKDIV) . . . . . . . . . . . . 3082"
+ },
+ "FDCAN_CREL": {
+  "section": "70.4.1",
+  "title": "FDCAN core release register (FDCAN_CREL) . . . . . . . . . . . . . . . . . 3054"
+ },
+ "FDCAN_DBTP": {
+  "section": "70.4.3",
+  "title": "FDCAN data bit timing and prescaler register (FDCAN_DBTP) . . . . 3054"
+ },
+ "FDCAN_ECR": {
+  "section": "70.4.12",
+  "title": "FDCAN error counter register (FDCAN_ECR) . . . . . . . . . . . . . . . . . 3062"
+ },
+ "FDCAN_ENDN": {
+  "section": "70.4.2",
+  "title": "FDCAN endian register (FDCAN_ENDN) . . . . . . . . . . . . . . . . . . . . . 3054"
+ },
+ "FDCAN_HPMS": {
+  "section": "70.4.21",
+  "title": "FDCAN high-priority message status register (FDCAN_HPMS) . . . . 3073"
+ },
+ "FDCAN_IE": {
+  "section": "70.4.16",
+  "title": "FDCAN interrupt enable register (FDCAN_IE) . . . . . . . . . . . . . . . . . 3068"
+ },
+ "FDCAN_ILE": {
+  "section": "70.4.18",
+  "title": "FDCAN interrupt line enable register (FDCAN_ILE) . . . . . . . . . . . . . 3071"
+ },
+ "FDCAN_ILS": {
+  "section": "70.4.17",
+  "title": "FDCAN interrupt line select register (FDCAN_ILS) . . . . . . . . . . . . . . 3070"
+ },
+ "FDCAN_IR": {
+  "section": "70.4.15",
+  "title": "FDCAN interrupt register (FDCAN_IR) . . . . . . . . . . . . . . . . . . . . . . . 3065"
+ },
+ "FDCAN_NBTP": {
+  "section": "70.4.7",
+  "title": "FDCAN nominal bit timing and prescaler register (FDCAN_NBTP) . 3058"
+ },
+ "FDCAN_PSR": {
+  "section": "70.4.13",
+  "title": "FDCAN protocol status register (FDCAN_PSR) . . . . . . . . . . . . . . . . 3063"
+ },
+ "FDCAN_RWD": {
+  "section": "70.4.5",
+  "title": "FDCAN RAM watchdog register (FDCAN_RWD) . . . . . . . . . . . . . . . 3056"
+ },
+ "FDCAN_RXF0A": {
+  "section": "70.4.23",
+  "title": "CAN Rx FIFO 0 acknowledge register (FDCAN_RXF0A) . . . . . . . . . 3075"
+ },
+ "FDCAN_RXF0S": {
+  "section": "70.4.22",
+  "title": "FDCAN Rx FIFO 0 status register (FDCAN_RXF0S) . . . . . . . . . . . . 3074"
+ },
+ "FDCAN_RXF1A": {
+  "section": "70.4.25",
+  "title": "FDCAN Rx FIFO 1 acknowledge register (FDCAN_RXF1A) . . . . . . 3076"
+ },
+ "FDCAN_RXF1S": {
+  "section": "70.4.24",
+  "title": "FDCAN Rx FIFO 1 status register (FDCAN_RXF1S) . . . . . . . . . . . . 3075"
+ },
+ "FDCAN_RXGFC": {
+  "section": "70.4.19",
+  "title": "FDCAN global filter configuration register (FDCAN_RXGFC) . . . . . . 3071"
+ },
+ "FDCAN_TDCR": {
+  "section": "70.4.14",
+  "title": "FDCAN transmitter delay compensation register (FDCAN_TDCR) . . 3065"
+ },
+ "FDCAN_TEST": {
+  "section": "70.4.4",
+  "title": "FDCAN test register (FDCAN_TEST) . . . . . . . . . . . . . . . . . . . . . . . . 3055"
+ },
+ "FDCAN_TOCC": {
+  "section": "70.4.10",
+  "title": "FDCAN timeout counter configuration register (FDCAN_TOCC) . . . 3061"
+ },
+ "FDCAN_TOCV": {
+  "section": "70.4.11",
+  "title": "FDCAN timeout counter value register (FDCAN_TOCV) . . . . . . . . . 3062"
+ },
+ "FDCAN_TSCC": {
+  "section": "70.4.8",
+  "title": "FDCAN timestamp counter configuration register (FDCAN_TSCC) . 3060"
+ },
+ "FDCAN_TSCV": {
+  "section": "70.4.9",
+  "title": "FDCAN timestamp counter value register (FDCAN_TSCV) . . . . . . . 3060 78/3653 RM0456 Rev "
+ },
+ "FDCAN_TXBAR": {
+  "section": "70.4.29",
+  "title": "FDCAN Tx buffer add request register (FDCAN_TXBAR) . . . . . . . . . 3078"
+ },
+ "FDCAN_TXBC": {
+  "section": "70.4.26",
+  "title": "FDCAN Tx buffer configuration register (FDCAN_TXBC) . . . . . . . . . 3076"
+ },
+ "FDCAN_TXBCF": {
+  "section": "70.4.32",
+  "title": "FDCAN Tx buffer cancellation finished register (FDCAN_TXBCF) . . 3080"
+ },
+ "FDCAN_TXBCIE": {
+  "section": "70.4.34",
+  "title": "FDCAN Tx buffer cancellation finished interrupt enable register (FDCAN_TXBCIE) . . . . . ."
+ },
+ "FDCAN_TXBCR": {
+  "section": "70.4.30",
+  "title": "FDCAN Tx buffer cancellation request register (FDCAN_TXBCR) . . 3079"
+ },
+ "FDCAN_TXBRP": {
+  "section": "70.4.28",
+  "title": "FDCAN Tx buffer request pending register (FDCAN_TXBRP) . . . . . 3077"
+ },
+ "FDCAN_TXBTIE": {
+  "section": "70.4.33",
+  "title": "FDCAN Tx buffer transmission interrupt enable register (FDCAN_TXBTIE) . . . . . . . . . . "
+ },
+ "FDCAN_TXBTO": {
+  "section": "70.4.31",
+  "title": "FDCAN Tx buffer transmission occurred register (FDCAN_TXBTO) 3079"
+ },
+ "FDCAN_TXEFA": {
+  "section": "70.4.36",
+  "title": "FDCAN Tx event FIFO acknowledge register (FDCAN_TXEFA) . . . 3082"
+ },
+ "FDCAN_TXEFS": {
+  "section": "70.4.35",
+  "title": "FDCAN Tx event FIFO status register (FDCAN_TXEFS) . . . . . . . . . 3081"
+ },
+ "FDCAN_TXFQS": {
+  "section": "70.4.27",
+  "title": "FDCAN Tx FIFO/queue status register (FDCAN_TXFQS) . . . . . . . . 3077"
+ },
+ "FDCAN_XIDAM": {
+  "section": "70.4.20",
+  "title": "FDCAN extended ID and mask register (FDCAN_XIDAM) . . . . . . . . 3073"
+ },
+ "FLASH_ACR": {
+  "section": "7.9.1",
+  "title": "FLASH access control register (FLASH_ACR) . . . . . . . . . . . . . . . . . . 329"
+ },
+ "FLASH_ECCR": {
+  "section": "7.9.11",
+  "title": "FLASH ECC register (FLASH_ECCR) . . . . . . . . . . . . . . . . . . . . . . . . 340"
+ },
+ "FLASH_NSBOOTADD0R": {
+  "section": "7.9.14",
+  "title": "FLASH nonsecure boot address 0 register (FLASH_NSBOOTADD0R) . . . . . . . . . . . . . . . "
+ },
+ "FLASH_NSBOOTADD1R": {
+  "section": "7.9.15",
+  "title": "FLASH nonsecure boot address 1 register (FLASH_NSBOOTADD1R) . . . . . . . . . . . . . . . "
+ },
+ "FLASH_NSCR": {
+  "section": "7.9.9",
+  "title": "FLASH nonsecure control register (FLASH_NSCR) . . . . . . . . . . . . . . 336"
+ },
+ "FLASH_NSKEYR": {
+  "section": "7.9.2",
+  "title": "FLASH nonsecure key register (FLASH_NSKEYR) . . . . . . . . . . . . . . 331"
+ },
+ "FLASH_NSSR": {
+  "section": "7.9.7",
+  "title": "FLASH nonsecure status register (FLASH_NSSR) . . . . . . . . . . . . . . . 333"
+ },
+ "FLASH_OEM1KEYR1": {
+  "section": "7.9.25",
+  "title": "FLASH OEM1 key register 1 (FLASH_OEM1KEYR1) . . . . . . . . . . . . 355"
+ },
+ "FLASH_OEM1KEYR2": {
+  "section": "7.9.26",
+  "title": "FLASH OEM1 key register 2 (FLASH_OEM1KEYR2) . . . . . . . . . . . . 355"
+ },
+ "FLASH_OEM2KEYR1": {
+  "section": "7.9.27",
+  "title": "FLASH OEM2 key register 1 (FLASH_OEM2KEYR1) . . . . . . . . . . . . 356"
+ },
+ "FLASH_OEM2KEYR2": {
+  "section": "7.9.28",
+  "title": "FLASH OEM2 key register 2 (FLASH_OEM2KEYR2) . . . . . . . . . . . . 356"
+ },
+ "FLASH_OPSR": {
+  "section": "7.9.12",
+  "title": "FLASH operation status register (FLASH_OPSR) . . . . . . . . . . . . . . . 341"
+ },
+ "FLASH_OPTKEYR": {
+  "section": "7.9.4",
+  "title": "FLASH option key register (FLASH_OPTKEYR) . . . . . . . . . . . . . . . . . 332"
+ },
+ "FLASH_OPTR": {
+  "section": "7.9.13",
+  "title": "FLASH option register (FLASH_OPTR) . . . . . . . . . . . . . . . . . . . . . . . 342"
+ },
+ "FLASH_PDKEY1R": {
+  "section": "7.9.5",
+  "title": "FLASH bank 1 power-down key register (FLASH_PDKEY1R) . . . . . . 332"
+ },
+ "FLASH_PDKEY2R": {
+  "section": "7.9.6",
+  "title": "FLASH bank 2 power-down key register (FLASH_PDKEY2R) . . . . . . 333"
+ },
+ "FLASH_PRIVBB1Rx": {
+  "section": "7.9.33",
+  "title": "FLASH privilege block based bank 1 register x (FLASH_PRIVBB1Rx) . . . . . . . . . . . . . "
+ },
+ "FLASH_PRIVBB2Rx": {
+  "section": "7.9.34",
+  "title": "FLASH privilege block based bank 2 register x (FLASH_PRIVBB2Rx) . . . . . . . . . . . . . "
+ },
+ "FLASH_PRIVCFGR": {
+  "section": "7.9.32",
+  "title": "FLASH privilege configuration register (FLASH_PRIVCFGR) . . . . . . . 358"
+ },
+ "FLASH_SECBB1Rx": {
+  "section": "7.9.29",
+  "title": "FLASH secure block based bank 1 register x (FLASH_SECBB1Rx) . 357"
+ },
+ "FLASH_SECBB2Rx": {
+  "section": "7.9.30",
+  "title": "FLASH secure block based bank 2 register x (FLASH_SECBB2Rx) . 357"
+ },
+ "FLASH_SECBOOTADD0R": {
+  "section": "7.9.16",
+  "title": "FLASH secure boot address 0 register (FLASH_SECBOOTADD0R) . 346"
+ },
+ "FLASH_SECCR": {
+  "section": "7.9.10",
+  "title": "FLASH secure control register (FLASH_SECCR) . . . . . . . . . . . . . . . . 338"
+ },
+ "FLASH_SECHDPCR": {
+  "section": "7.9.31",
+  "title": "FLASH secure HDP control register (FLASH_SECHDPCR) . . . . . . . . 358"
+ },
+ "FLASH_SECKEYR": {
+  "section": "7.9.3",
+  "title": "FLASH secure key register (FLASH_SECKEYR) . . . . . . . . . . . . . . . . 331 RM0456 Rev 6"
+ },
+ "FLASH_SECSR": {
+  "section": "7.9.8",
+  "title": "FLASH secure status register (FLASH_SECSR) . . . . . . . . . . . . . . . . 335"
+ },
+ "FLASH_SECWM1R1": {
+  "section": "7.9.17",
+  "title": "FLASH secure watermark1 register 1 (FLASH_SECWM1R1) . . . . . . 347"
+ },
+ "FLASH_SECWM1R2": {
+  "section": "7.9.18",
+  "title": "FLASH secure watermark1 register 2 (FLASH_SECWM1R2) . . . . . . 348"
+ },
+ "FLASH_SECWM2R1": {
+  "section": "7.9.21",
+  "title": "FLASH secure watermark2 register 1 (FLASH_SECWM2R1) . . . . . . 351"
+ },
+ "FLASH_SECWM2R2": {
+  "section": "7.9.22",
+  "title": "FLASH secure watermark2 register 2 (FLASH_SECWM2R2) . . . . . . 352"
+ },
+ "FLASH_WRP1AR": {
+  "section": "7.9.19",
+  "title": "FLASH WRP1 area A address register (FLASH_WRP1AR) . . . . . . . . 349"
+ },
+ "FLASH_WRP1BR": {
+  "section": "7.9.20",
+  "title": "FLASH WRP1 area B address register (FLASH_WRP1BR) . . . . . . . . 350"
+ },
+ "FLASH_WRP2AR": {
+  "section": "7.9.23",
+  "title": "FLASH WPR2 area A address register (FLASH_WRP2AR) . . . . . . . . 353"
+ },
+ "FLASH_WRP2BR": {
+  "section": "7.9.24",
+  "title": "FLASH WPR2 area B address register (FLASH_WRP2BR) . . . . . . . . 354"
+ },
+ "FMAC_CR": {
+  "section": "26.4.5",
+  "title": "FMAC control register (FMAC_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 984"
+ },
+ "FMAC_PARAM": {
+  "section": "26.4.4",
+  "title": "FMAC parameter register (FMAC_PARAM) . . . . . . . . . . . . . . . . . . . . 983"
+ },
+ "FMAC_RDATA": {
+  "section": "26.4.8",
+  "title": "FMAC read data register (FMAC_RDATA) . . . . . . . . . . . . . . . . . . . . . 987"
+ },
+ "FMAC_SR": {
+  "section": "26.4.6",
+  "title": "FMAC status register (FMAC_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 985"
+ },
+ "FMAC_WDATA": {
+  "section": "26.4.7",
+  "title": "FMAC write data register (FMAC_WDATA) . . . . . . . . . . . . . . . . . . . . . 986"
+ },
+ "FMAC_X1BUFCFG": {
+  "section": "26.4.1",
+  "title": "FMAC X1 buffer configuration register (FMAC_X1BUFCFG) . . . . . . . 981"
+ },
+ "FMAC_X2BUFCFG": {
+  "section": "26.4.2",
+  "title": "FMAC X2 buffer configuration register (FMAC_X2BUFCFG) . . . . . . . 981"
+ },
+ "FMAC_YBUFCFG": {
+  "section": "26.4.3",
+  "title": "FMAC Y buffer configuration register (FMAC_YBUFCFG) . . . . . . . . . 982"
+ },
+ "GFXMMU_B0CR": {
+  "section": "21.6.6",
+  "title": "GFXMMU buffer 0 configuration register (GFXMMU_B0CR) . . . . . . . 906"
+ },
+ "GFXMMU_B1CR": {
+  "section": "21.6.7",
+  "title": "GFXMMU buffer 1 configuration register (GFXMMU_B1CR) . . . . . . . 906"
+ },
+ "GFXMMU_B2CR": {
+  "section": "21.6.8",
+  "title": "GFXMMU buffer 2 configuration register (GFXMMU_B2CR) . . . . . . . 907"
+ },
+ "GFXMMU_B3CR": {
+  "section": "21.6.9",
+  "title": "GFXMMU buffer 3 configuration register (GFXMMU_B3CR) . . . . . . . 907"
+ },
+ "GFXMMU_CCR": {
+  "section": "21.6.4",
+  "title": "GFXMMU cache control register (GFXMMU_CCR) . . . . . . . . . . . . . . 905"
+ },
+ "GFXMMU_CR": {
+  "section": "21.6.1",
+  "title": "GFXMMU configuration register (GFXMMU_CR) . . . . . . . . . . . . . . . . 902"
+ },
+ "GFXMMU_DVR": {
+  "section": "21.6.5",
+  "title": "GFXMMU default value register (GFXMMU_DVR) . . . . . . . . . . . . . . . 905"
+ },
+ "GFXMMU_FCR": {
+  "section": "21.6.3",
+  "title": "GFXMMU flag clear register (GFXMMU_FCR) . . . . . . . . . . . . . . . . . . 904"
+ },
+ "GFXMMU_LUTxH": {
+  "section": "21.6.11",
+  "title": "GFXMMU LUT entry x high (GFXMMU_LUTxH) . . . . . . . . . . . . . . . . . 908"
+ },
+ "GFXMMU_LUTxL": {
+  "section": "21.6.10",
+  "title": "GFXMMU LUT entry x low (GFXMMU_LUTxL) . . . . . . . . . . . . . . . . . . 908"
+ },
+ "GFXMMU_SR": {
+  "section": "21.6.2",
+  "title": "GFXMMU status register (GFXMMU_SR) . . . . . . . . . . . . . . . . . . . . . . 904"
+ },
+ "GFXTIM_AFCC1R": {
+  "section": "59.5.17",
+  "title": "GFXTIM absolute frame counter compare 1 register (GFXTIM_AFCC1R) . . . . . . . . . . . . ."
+ },
+ "GFXTIM_AFCR": {
+  "section": "59.5.15",
+  "title": "GFXTIM absolute frame counter register (GFXTIM_AFCR) . . . . . . . 2556"
+ },
+ "GFXTIM_ALCC1R": {
+  "section": "59.5.18",
+  "title": "GFXTIM absolute line counter compare 1 register (GFXTIM_ALCC1R) . . . . . . . . . . . . . "
+ },
+ "GFXTIM_ALCC2R": {
+  "section": "59.5.19",
+  "title": "GFXTIM absolute line counter compare 2 register (GFXTIM_ALCC2R) . . . . . . . . . . . . . "
+ },
+ "GFXTIM_ALCR": {
+  "section": "59.5.16",
+  "title": "GFXTIM absolute line counter register (GFXTIM_ALCR) . . . . . . . . . 2556"
+ },
+ "GFXTIM_ATR": {
+  "section": "59.5.14",
+  "title": "GFXTIM absolute time register (GFXTIM_ATR) . . . . . . . . . . . . . . . . 2555"
+ },
+ "GFXTIM_CGCR": {
+  "section": "59.5.2",
+  "title": "GFXTIM clock generator configuration register (GFXTIM_CGCR) . . 2541"
+ },
+ "GFXTIM_CR": {
+  "section": "59.5.1",
+  "title": "GFXTIM configuration register (GFXTIM_CR) . . . . . . . . . . . . . . . . . 2540"
+ },
+ "GFXTIM_EVCR": {
+  "section": "59.5.5",
+  "title": "GFXTIM events control register (GFXTIM_EVCR) . . . . . . . . . . . . . . 2545"
+ },
+ "GFXTIM_EVSR": {
+  "section": "59.5.6",
+  "title": "GFXTIM events selection register (GFXTIM_EVSR) . . . . . . . . . . . . . 2545"
+ },
+ "GFXTIM_FCCRR": {
+  "section": "59.5.13",
+  "title": "GFXTIM frame clock counter reload register (GFXTIM_FCCRR) . . . 2555 RM0456 Rev 6 67/3653"
+ },
+ "GFXTIM_ICR": {
+  "section": "59.5.9",
+  "title": "GFXTIM interrupt clear register (GFXTIM_ICR) . . . . . . . . . . . . . . . . 2550"
+ },
+ "GFXTIM_IER": {
+  "section": "59.5.10",
+  "title": "GFXTIM interrupt enable register (GFXTIM_IER) . . . . . . . . . . . . . . . 2552"
+ },
+ "GFXTIM_ISR": {
+  "section": "59.5.8",
+  "title": "GFXTIM interrupt status register (GFXTIM_ISR) . . . . . . . . . . . . . . . 2549"
+ },
+ "GFXTIM_LCCRR": {
+  "section": "59.5.12",
+  "title": "GFXTIM line clock counter reload register (GFXTIM_LCCRR) . . . . . 2555"
+ },
+ "GFXTIM_RFC1R": {
+  "section": "59.5.20",
+  "title": "GFXTIM relative frame counter 1 register (GFXTIM_RFC1R) . . . . . 2558"
+ },
+ "GFXTIM_RFC1RR": {
+  "section": "59.5.21",
+  "title": "GFXTIM relative frame counter 1 reload register (GFXTIM_RFC1RR) . . . . . . . . . . . . . "
+ },
+ "GFXTIM_RFC2R": {
+  "section": "59.5.22",
+  "title": "GFXTIM relative frame counter 2 register (GFXTIM_RFC2R) . . . . . 2559"
+ },
+ "GFXTIM_RFC2RR": {
+  "section": "59.5.23",
+  "title": "GFXTIM relative frame counter 2 reload register (GFXTIM_RFC2RR) . . . . . . . . . . . . . "
+ },
+ "GFXTIM_TCR": {
+  "section": "59.5.3",
+  "title": "GFXTIM timers configuration register (GFXTIM_TCR) . . . . . . . . . . . 2543"
+ },
+ "GFXTIM_TDR": {
+  "section": "59.5.4",
+  "title": "GFXTIM timers disable register (GFXTIM_TDR) . . . . . . . . . . . . . . . . 2544"
+ },
+ "GFXTIM_TSR": {
+  "section": "59.5.11",
+  "title": "GFXTIM timers status register (GFXTIM_TSR) . . . . . . . . . . . . . . . . . 2554"
+ },
+ "GFXTIM_WDGCR": {
+  "section": "59.5.24",
+  "title": "GFXTIM watchdog counter register (GFXTIM_WDGCR) . . . . . . . . . 2559"
+ },
+ "GFXTIM_WDGPAR": {
+  "section": "59.5.26",
+  "title": "GFXTIM watchdog pre-alarm register (GFXTIM_WDGPAR) . . . . . . . 2560"
+ },
+ "GFXTIM_WDGRR": {
+  "section": "59.5.25",
+  "title": "GFXTIM watchdog reload register (GFXTIM_WDGRR) . . . . . . . . . . 2560"
+ },
+ "GFXTIM_WDGTCR": {
+  "section": "59.5.7",
+  "title": "GFXTIM watchdog timer configuration register (GFXTIM_WDGTCR) . . . . . . . . . . . . . . ."
+ },
+ "GPDMA_CxBR1": {
+  "section": "17.8.12",
+  "title": "GPDMA channel x block register 1 (GPDMA_CxBR1) . . . . . . . . . . . . 750"
+ },
+ "GPDMA_CxBR2": {
+  "section": "17.8.17",
+  "title": "GPDMA channel x block register 2 (GPDMA_CxBR2) . . . . . . . . . . . . 758"
+ },
+ "GPDMA_CxCR": {
+  "section": "17.8.9",
+  "title": "GPDMA channel x control register (GPDMA_CxCR) . . . . . . . . . . . . . 740"
+ },
+ "GPDMA_CxDAR": {
+  "section": "17.8.15",
+  "title": "GPDMA channel x destination address register (GPDMA_CxDAR) . . 756"
+ },
+ "GPDMA_CxFCR": {
+  "section": "17.8.7",
+  "title": "GPDMA channel x flag clear register (GPDMA_CxFCR) . . . . . . . . . . 738"
+ },
+ "GPDMA_CxLBAR": {
+  "section": "17.8.6",
+  "title": "GPDMA channel x linked-list base address register (GPDMA_CxLBAR) . . . . . . . . . . . . ."
+ },
+ "GPDMA_CxLLR": {
+  "section": "17.8.18",
+  "title": "GPDMA channel x linked-list address register (GPDMA_CxLLR) . . . . 759"
+ },
+ "GPDMA_CxSAR": {
+  "section": "17.8.14",
+  "title": "GPDMA channel x source address register (GPDMA_CxSAR) . . . . . 754"
+ },
+ "GPDMA_CxSR": {
+  "section": "17.8.8",
+  "title": "GPDMA channel x status register (GPDMA_CxSR) . . . . . . . . . . . . . . 739"
+ },
+ "GPDMA_CxTR1": {
+  "section": "17.8.10",
+  "title": "GPDMA channel x transfer register 1 (GPDMA_CxTR1) . . . . . . . . . . 742"
+ },
+ "GPDMA_CxTR2": {
+  "section": "17.8.11",
+  "title": "GPDMA channel x transfer register 2 (GPDMA_CxTR2) . . . . . . . . . . 746"
+ },
+ "GPDMA_CxTR3": {
+  "section": "17.8.16",
+  "title": "GPDMA channel x transfer register 3 (GPDMA_CxTR3) . . . . . . . . . . 757"
+ },
+ "GPDMA_MISR": {
+  "section": "17.8.4",
+  "title": "GPDMA nonsecure masked interrupt status register (GPDMA_MISR) . . . . . . . . . . . . . . "
+ },
+ "GPDMA_PRIVCFGR": {
+  "section": "17.8.2",
+  "title": "GPDMA privileged configuration register (GPDMA_PRIVCFGR) . . . . 735"
+ },
+ "GPDMA_RCFGLOCKR": {
+  "section": "17.8.3",
+  "title": "GPDMA configuration lock register (GPDMA_RCFGLOCKR) . . . . . . . 735"
+ },
+ "GPDMA_SECCFGR": {
+  "section": "17.8.1",
+  "title": "GPDMA secure configuration register (GPDMA_SECCFGR) . . . . . . . 734"
+ },
+ "GPDMA_SMISR": {
+  "section": "17.8.5",
+  "title": "GPDMA secure masked interrupt status register (GPDMA_SMISR) . . 737"
+ },
+ "GPIOx_AFRH": {
+  "section": "13.4.10",
+  "title": "GPIO alternate function high register (GPIOx_AFRH) (x = A to J) . . . 638"
+ },
+ "GPIOx_AFRL": {
+  "section": "13.4.9",
+  "title": "GPIO alternate function low register (GPIOx_AFRL) (x = A to J) . . . . 638"
+ },
+ "GPIOx_BRR": {
+  "section": "13.4.11",
+  "title": "GPIO port bit reset register (GPIOx_BRR) (x = A to J) . . . . . . . . . . . . 639"
+ },
+ "GPIOx_BSRR": {
+  "section": "13.4.7",
+  "title": "GPIO port bit set/reset register (GPIOx_BSRR) (x = A to J) . . . . . . . . 636"
+ },
+ "GPIOx_HSLVR": {
+  "section": "13.4.12",
+  "title": "GPIO high-speed low-voltage register (GPIOx_HSLVR) (x = A to J) . . 640"
+ },
+ "GPIOx_IDR": {
+  "section": "13.4.5",
+  "title": "GPIO port input data register (GPIOx_IDR) (x = A to J) . . . . . . . . . . . 635"
+ },
+ "GPIOx_LCKR": {
+  "section": "13.4.8",
+  "title": "GPIO port configuration lock register (GPIOx_LCKR) (x = A to J) . . . . 637"
+ },
+ "GPIOx_MODER": {
+  "section": "13.4.1",
+  "title": "GPIO port mode register (GPIOx_MODER) (x = A to J) . . . . . . . . . . . 633"
+ },
+ "GPIOx_ODR": {
+  "section": "13.4.6",
+  "title": "GPIO port output data register (GPIOx_ODR) (x = A to J) . . . . . . . . . 636"
+ },
+ "GPIOx_OSPEEDR": {
+  "section": "13.4.3",
+  "title": "GPIO port output speed register (GPIOx_OSPEEDR) (x = A to J) . . . 634"
+ },
+ "GPIOx_OTYPER": {
+  "section": "13.4.2",
+  "title": "GPIO port output type register (GPIOx_OTYPER) (x = A to J) . . . . . . 634"
+ },
+ "GPIOx_PUPDR": {
+  "section": "13.4.4",
+  "title": "GPIO port pull-up/pull-down register (GPIOx_PUPDR) (x = A to J) . . . 635"
+ },
+ "GPIOx_SECCFGR": {
+  "section": "13.4.13",
+  "title": "GPIO secure configuration register (GPIOx_SECCFGR) (x = A to J) . 641"
+ },
+ "GTZC1_MPCBBz_CFGLOCKR1": {
+  "section": "5.8.2",
+  "title": "GTZC1 SRAMz MPCBB configuration lock register 1 (GTZC1_MPCBBz_CFGLOCKR1) (z = 1, 2, 3, 5, "
+ },
+ "GTZC1_MPCBBz_CFGLOCKR2": {
+  "section": "5.8.3",
+  "title": "GTZC1 SRAMz MPCBB configuration lock register 2 (GTZC1_MPCBBz_CFGLOCKR2) (z = 1, 2, 3, 5, "
+ },
+ "GTZC1_MPCBBz_CR": {
+  "section": "5.8.1",
+  "title": "GTZC1 SRAMz MPCBB control register (GTZC1_MPCBBz_CR) (z = 1, 2, 3, 5, 6) . . . . . . . . ."
+ },
+ "GTZC1_MPCBBz_PRIVCFGRx": {
+  "section": "5.8.5",
+  "title": "GTZC1 SRAMz MPCBB privileged configuration for super-block x register (GTZC1_MPCBBz_PRIVCF"
+ },
+ "GTZC1_MPCBBz_SECCFGRx": {
+  "section": "5.8.4",
+  "title": "GTZC1 SRAMz MPCBB security configuration for super-block x register (GTZC1_MPCBBz_SECCFGRx"
+ },
+ "GTZC1_TZIC_FCR1": {
+  "section": "5.7.9",
+  "title": "GTZC1 TZIC flag clear register 1 (GTZC1_TZIC_FCR1) . . . . . . . . . . 245"
+ },
+ "GTZC1_TZIC_FCR2": {
+  "section": "5.7.10",
+  "title": "GTZC1 TZIC flag clear register 2 (GTZC1_TZIC_FCR2) . . . . . . . . . . 247"
+ },
+ "GTZC1_TZIC_FCR3": {
+  "section": "5.7.11",
+  "title": "GTZC1 TZIC flag clear register 3 (GTZC1_TZIC_FCR3) . . . . . . . . . . 248"
+ },
+ "GTZC1_TZIC_FCR4": {
+  "section": "5.7.12",
+  "title": "GTZC1 TZIC flag clear register 4 (GTZC1_TZIC_FCR4) . . . . . . . . . . 252"
+ },
+ "GTZC1_TZIC_IER1": {
+  "section": "5.7.1",
+  "title": "GTZC1 TZIC interrupt enable register 1 (GTZC1_TZIC_IER1) . . . . . . 225 4/3653 RM0456 Rev"
+ },
+ "GTZC1_TZIC_IER2": {
+  "section": "5.7.2",
+  "title": "GTZC1 TZIC interrupt enable register 2 (GTZC1_TZIC_IER2) . . . . . . 227"
+ },
+ "GTZC1_TZIC_IER3": {
+  "section": "5.7.3",
+  "title": "GTZC1 TZIC interrupt enable register 3 (GTZC1_TZIC_IER3) . . . . . . 229"
+ },
+ "GTZC1_TZIC_IER4": {
+  "section": "5.7.4",
+  "title": "GTZC1 TZIC interrupt enable register 4 (GTZC1_TZIC_IER4) . . . . . . 232"
+ },
+ "GTZC1_TZIC_SR1": {
+  "section": "5.7.5",
+  "title": "GTZC1 TZIC status register 1 (GTZC1_TZIC_SR1) . . . . . . . . . . . . . . 235"
+ },
+ "GTZC1_TZIC_SR2": {
+  "section": "5.7.6",
+  "title": "GTZC1 TZIC status register 2 (GTZC1_TZIC_SR2) . . . . . . . . . . . . . . 237"
+ },
+ "GTZC1_TZIC_SR3": {
+  "section": "5.7.7",
+  "title": "GTZC1 TZIC status register 3 (GTZC1_TZIC_SR3) . . . . . . . . . . . . . . 239"
+ },
+ "GTZC1_TZIC_SR4": {
+  "section": "5.7.8",
+  "title": "GTZC1 TZIC status register 4 (GTZC1_TZIC_SR4) . . . . . . . . . . . . . . 242"
+ },
+ "GTZC1_TZSC_CR": {
+  "section": "5.6.1",
+  "title": "GTZC1 TZSC control register (GTZC1_TZSC_CR) . . . . . . . . . . . . . . 204"
+ },
+ "GTZC1_TZSC_MPCWMxAR": {
+  "section": "5.6.9",
+  "title": "GTZC1 TZSC memory x sub-region A watermark register (GTZC1_TZSC_MPCWMxAR) . . . . . . . . "
+ },
+ "GTZC1_TZSC_MPCWMxBR": {
+  "section": "5.6.10",
+  "title": "GTZC1 TZSC memory x sub-region B watermark register (GTZC1_TZSC_MPCWMxBR) . . . . . . . . "
+ },
+ "GTZC1_TZSC_MPCWMxzCFGR": {
+  "section": "5.6.8",
+  "title": "GTZC1 TZSC memory x sub-region z watermark configuration register (GTZC1_TZSC_MPCWMxzCFGR)"
+ },
+ "GTZC1_TZSC_PRIVCFGR1": {
+  "section": "5.6.5",
+  "title": "GTZC1 TZSC privilege configuration register 1 (GTZC1_TZSC_PRIVCFGR1) . . . . . . . . . . ."
+ },
+ "GTZC1_TZSC_PRIVCFGR2": {
+  "section": "5.6.6",
+  "title": "GTZC1 TZSC privilege configuration register 2 (GTZC1_TZSC_PRIVCFGR2) . . . . . . . . . . ."
+ },
+ "GTZC1_TZSC_PRIVCFGR3": {
+  "section": "5.6.7",
+  "title": "GTZC1 TZSC privilege configuration register 3 (GTZC1_TZSC_PRIVCFGR3) . . . . . . . . . . ."
+ },
+ "GTZC1_TZSC_SECCFGR1": {
+  "section": "5.6.2",
+  "title": "GTZC1 TZSC secure configuration register 1 (GTZC1_TZSC_SECCFGR1) . . . . . . . . . . . . ."
+ },
+ "GTZC1_TZSC_SECCFGR2": {
+  "section": "5.6.3",
+  "title": "GTZC1 TZSC secure configuration register 2 (GTZC1_TZSC_SECCFGR2) . . . . . . . . . . . . ."
+ },
+ "GTZC1_TZSC_SECCFGR3": {
+  "section": "5.6.4",
+  "title": "GTZC1 TZSC secure configuration register 3 (GTZC1_TZSC_SECCFGR3) . . . . . . . . . . . . ."
+ },
+ "GTZC2_MPCBB4_CFGLOCKR1": {
+  "section": "5.11.2",
+  "title": "GTZC2 SRAM4 MPCBB configuration lock register 1 (GTZC2_MPCBB4_CFGLOCKR1) . . . . . . . . ."
+ },
+ "GTZC2_MPCBB4_CR": {
+  "section": "5.11.1",
+  "title": "GTZC2 SRAM4 MPCBB control register (GTZC2_MPCBB4_CR) . . . 272"
+ },
+ "GTZC2_MPCBB4_PRIVCFGR0": {
+  "section": "5.11.4",
+  "title": "GTZC2 SRAM4 MPCBB privileged configuration for super-block 0 register (GTZC2_MPCBB4_PRIVCF"
+ },
+ "GTZC2_MPCBB4_SECCFGR0": {
+  "section": "5.11.3",
+  "title": "GTZC2 SRAM4 MPCBB security configuration for super-block 0 register (GTZC2_MPCBB4_SECCFGR0"
+ },
+ "GTZC2_TZIC_FCR1": {
+  "section": "5.10.5",
+  "title": "GTZC2 TZIC flag clear register 1 (GTZC2_TZIC_FCR1) . . . . . . . . . . 269"
+ },
+ "GTZC2_TZIC_FCR2": {
+  "section": "5.10.6",
+  "title": "GTZC2 TZIC flag clear register 2 (GTZC2_TZIC_FCR2) . . . . . . . . . . 270"
+ },
+ "GTZC2_TZIC_IER1": {
+  "section": "5.10.1",
+  "title": "GTZC2 TZIC interrupt enable register 1 (GTZC2_TZIC_IER1) . . . . . . 264"
+ },
+ "GTZC2_TZIC_IER2": {
+  "section": "5.10.2",
+  "title": "GTZC2 TZIC interrupt enable register 2 (GTZC2_TZIC_IER2) . . . . . . 265"
+ },
+ "GTZC2_TZIC_SR1": {
+  "section": "5.10.3",
+  "title": "GTZC2 TZIC status register 1 (GTZC2_TZIC_SR1) . . . . . . . . . . . . . . 266"
+ },
+ "GTZC2_TZIC_SR2": {
+  "section": "5.10.4",
+  "title": "GTZC2 TZIC status register 2 (GTZC2_TZIC_SR2) . . . . . . . . . . . . . . 267"
+ },
+ "GTZC2_TZSC_CR": {
+  "section": "5.9.1",
+  "title": "GTZC2 TZSC control register (GTZC2_TZSC_CR) . . . . . . . . . . . . . . 260"
+ },
+ "GTZC2_TZSC_PRIVCFGR1": {
+  "section": "5.9.3",
+  "title": "GTZC2 TZSC privilege configuration register 1 (GTZC2_TZSC_PRIVCFGR1) . . . . . . . . . . ."
+ },
+ "GTZC2_TZSC_SECCFGR1": {
+  "section": "5.9.2",
+  "title": "GTZC2 TZSC secure configuration register 1 (GTZC2_TZSC_SECCFGR1) . . . . . . . . . . . . ."
+ },
+ "HASH_CR": {
+  "section": "51.6.1",
+  "title": "HASH control register (HASH_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . 2029"
+ },
+ "HASH_DIN": {
+  "section": "51.6.2",
+  "title": "HASH data input register (HASH_DIN) . . . . . . . . . . . . . . . . . . . . . . . 2030"
+ },
+ "HASH_IMR": {
+  "section": "51.6.5",
+  "title": "HASH interrupt enable register (HASH_IMR) . . . . . . . . . . . . . . . . . . 2033"
+ },
+ "HASH_SR": {
+  "section": "51.6.6",
+  "title": "HASH status register (HASH_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 2034"
+ },
+ "HASH_STR": {
+  "section": "51.6.3",
+  "title": "HASH start register (HASH_STR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 2031"
+ },
+ "HSPI_ABR": {
+  "section": "30.7.17",
+  "title": "HSPI alternate bytes register (HSPI_ABR) . . . . . . . . . . . . . . . . . . . . 1163"
+ },
+ "HSPI_AR": {
+  "section": "30.7.9",
+  "title": "HSPI address register (HSPI_AR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1157"
+ },
+ "HSPI_CALFCR": {
+  "section": "30.7.28",
+  "title": "HSPI full-cycle calibration configuration (HSPI_CALFCR) . . . . . . . . 1171"
+ },
+ "HSPI_CALMR": {
+  "section": "30.7.29",
+  "title": "HSPI DLL master calibration configuration (HSPI_CALMR) . . . . . . . 1172"
+ },
+ "HSPI_CALSIR": {
+  "section": "30.7.31",
+  "title": "HSPI DLL slave input calibration configuration (HSPI_CALSIR) . . . . 1174"
+ },
+ "HSPI_CALSOR": {
+  "section": "30.7.30",
+  "title": "HSPI DLL slave output calibration configuration (HSPI_CALSOR) . . . . . . . . . . . . . . "
+ },
+ "HSPI_CCR": {
+  "section": "30.7.14",
+  "title": "HSPI communication configuration register (HSPI_CCR) . . . . . . . . . 1160"
+ },
+ "HSPI_CR": {
+  "section": "30.7.1",
+  "title": "HSPI control register (HSPI_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11"
+ },
+ "HSPI_DCR1": {
+  "section": "30.7.2",
+  "title": "HSPI device configuration register 1 (HSPI_DCR1) . . . . . . . . . . . . . 1152 RM0456 Rev"
+ },
+ "HSPI_DCR2": {
+  "section": "30.7.3",
+  "title": "HSPI device configuration register 2 (HSPI_DCR2) . . . . . . . . . . . . . 1153"
+ },
+ "HSPI_DCR3": {
+  "section": "30.7.4",
+  "title": "HSPI device configuration register 3 (HSPI_DCR3) . . . . . . . . . . . . . 1154"
+ },
+ "HSPI_DCR4": {
+  "section": "30.7.5",
+  "title": "HSPI device configuration register 4 (HSPI_DCR4) . . . . . . . . . . . . . 1155"
+ },
+ "HSPI_DLR": {
+  "section": "30.7.8",
+  "title": "HSPI data length register (HSPI_DLR) . . . . . . . . . . . . . . . . . . . . . . . 1157"
+ },
+ "HSPI_DR": {
+  "section": "30.7.10",
+  "title": "HSPI data register (HSPI_DR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115"
+ },
+ "HSPI_FCR": {
+  "section": "30.7.7",
+  "title": "HSPI flag clear register (HSPI_FCR) . . . . . . . . . . . . . . . . . . . . . . . . . 1156"
+ },
+ "HSPI_HLCR": {
+  "section": "30.7.27",
+  "title": "HSPI HyperBus latency configuration register (HSPI_HLCR) . . . . . . 1171"
+ },
+ "HSPI_IR": {
+  "section": "30.7.16",
+  "title": "HSPI instruction register (HSPI_IR) . . . . . . . . . . . . . . . . . . . . . . . . . . 11"
+ },
+ "HSPI_LPTR": {
+  "section": "30.7.18",
+  "title": "HSPI low-power timeout register (HSPI_LPTR) . . . . . . . . . . . . . . . . 1163"
+ },
+ "HSPI_PIR": {
+  "section": "30.7.13",
+  "title": "HSPI polling interval register (HSPI_PIR) . . . . . . . . . . . . . . . . . . . . . 1160"
+ },
+ "HSPI_PSMAR": {
+  "section": "30.7.12",
+  "title": "HSPI polling status match register (HSPI_PSMAR) . . . . . . . . . . . . . 1159"
+ },
+ "HSPI_PSMKR": {
+  "section": "30.7.11",
+  "title": "HSPI polling status mask register (HSPI_PSMKR) . . . . . . . . . . . . . . 1159"
+ },
+ "HSPI_SR": {
+  "section": "30.7.6",
+  "title": "HSPI status register (HSPI_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115"
+ },
+ "HSPI_TCR": {
+  "section": "30.7.15",
+  "title": "HSPI timing configuration register (HSPI_TCR) . . . . . . . . . . . . . . . . 1162"
+ },
+ "HSPI_WABR": {
+  "section": "30.7.26",
+  "title": "HSPI write alternate byte register (HSPI_WABR) . . . . . . . . . . . . . . . 1170"
+ },
+ "HSPI_WCCR": {
+  "section": "30.7.23",
+  "title": "HSPI write communication configuration register (HSPI_WCCR) . . . . . . . . . . . . . . . "
+ },
+ "HSPI_WIR": {
+  "section": "30.7.25",
+  "title": "HSPI write instruction register (HSPI_WIR) . . . . . . . . . . . . . . . . . . . . 1170"
+ },
+ "HSPI_WPABR": {
+  "section": "30.7.22",
+  "title": "HSPI wrap alternate byte register (HSPI_WPABR) . . . . . . . . . . . . . . 1167"
+ },
+ "HSPI_WPCCR": {
+  "section": "30.7.19",
+  "title": "HSPI wrap communication configuration register (HSPI_WPCCR) . . . . . . . . . . . . . . . "
+ },
+ "HSPI_WPIR": {
+  "section": "30.7.21",
+  "title": "HSPI wrap instruction register (HSPI_WPIR) . . . . . . . . . . . . . . . . . . 1167"
+ },
+ "HSPI_WPTCR": {
+  "section": "30.7.20",
+  "title": "HSPI wrap timing configuration register (HSPI_WPTCR) . . . . . . . . . 1166"
+ },
+ "HSPI_WTCR": {
+  "section": "30.7.24",
+  "title": "HSPI write timing configuration register (HSPI_WTCR) . . . . . . . . . . 1169"
+ },
+ "I2C_AUTOCR": {
+  "section": "65.9.12",
+  "title": "I2C autonomous mode control register (I2C_AUTOCR) . . . . . . . . . . 2753"
+ },
+ "I2C_CR1": {
+  "section": "65.9.1",
+  "title": "I2C control register 1 (I2C_CR1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+ },
+ "I2C_CR2": {
+  "section": "65.9.2",
+  "title": "I2C control register 2 (I2C_CR2) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+ },
+ "I2C_ICR": {
+  "section": "65.9.8",
+  "title": "I2C interrupt clear register (I2C_ICR) . . . . . . . . . . . . . . . . . . . . . . . . 275"
+ },
+ "I2C_ISR": {
+  "section": "65.9.7",
+  "title": "I2C interrupt and status register (I2C_ISR) . . . . . . . . . . . . . . . . . . . . 2748"
+ },
+ "I2C_OAR1": {
+  "section": "65.9.3",
+  "title": "I2C own address 1 register (I2C_OAR1) . . . . . . . . . . . . . . . . . . . . . . 2745"
+ },
+ "I2C_OAR2": {
+  "section": "65.9.4",
+  "title": "I2C own address 2 register (I2C_OAR2) . . . . . . . . . . . . . . . . . . . . . . 2745"
+ },
+ "I2C_PECR": {
+  "section": "65.9.9",
+  "title": "I2C PEC register (I2C_PECR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27"
+ },
+ "I2C_RXDR": {
+  "section": "65.9.10",
+  "title": "I2C receive data register (I2C_RXDR) . . . . . . . . . . . . . . . . . . . . . . . 2752"
+ },
+ "I2C_TIMEOUTR": {
+  "section": "65.9.6",
+  "title": "I2C timeout register (I2C_TIMEOUTR) . . . . . . . . . . . . . . . . . . . . . . . 2747"
+ },
+ "I2C_TIMINGR": {
+  "section": "65.9.5",
+  "title": "I2C timing register (I2C_TIMINGR) . . . . . . . . . . . . . . . . . . . . . . . . . . 2746"
+ },
+ "I2C_TXDR": {
+  "section": "65.9.11",
+  "title": "I2C transmit data register (I2C_TXDR) . . . . . . . . . . . . . . . . . . . . . . . 2753"
+ },
+ "ICACHE_CR": {
+  "section": "8.7.1",
+  "title": "ICACHE control register (ICACHE_CR) . . . . . . . . . . . . . . . . . . . . . . . 376"
+ },
+ "ICACHE_CRRx": {
+  "section": "8.7.7",
+  "title": "ICACHE region x configuration register (ICACHE_CRRx) . . . . . . . . . 379"
+ },
+ "ICACHE_FCR": {
+  "section": "8.7.4",
+  "title": "ICACHE flag clear register (ICACHE_FCR) . . . . . . . . . . . . . . . . . . . . 378"
+ },
+ "ICACHE_HMONR": {
+  "section": "8.7.5",
+  "title": "ICACHE hit monitor register (ICACHE_HMONR) . . . . . . . . . . . . . . . . 379"
+ },
+ "ICACHE_IER": {
+  "section": "8.7.3",
+  "title": "ICACHE interrupt enable register (ICACHE_IER) . . . . . . . . . . . . . . . . 378"
+ },
+ "ICACHE_MMONR": {
+  "section": "8.7.6",
+  "title": "ICACHE miss monitor register (ICACHE_MMONR) . . . . . . . . . . . . . . 379"
+ },
+ "ICACHE_SR": {
+  "section": "8.7.2",
+  "title": "ICACHE status register (ICACHE_SR) . . . . . . . . . . . . . . . . . . . . . . . . 377"
+ },
+ "IWDG_EWCR": {
+  "section": "61.7.6",
+  "title": "IWDG early wake-up interrupt register (IWDG_EWCR) . . . . . . . . . . 2576"
+ },
+ "IWDG_KR": {
+  "section": "61.7.1",
+  "title": "IWDG key register (IWDG_KR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2572"
+ },
+ "IWDG_PR": {
+  "section": "61.7.2",
+  "title": "IWDG prescaler register (IWDG_PR) . . . . . . . . . . . . . . . . . . . . . . . . 2573 68/"
+ },
+ "IWDG_RLR": {
+  "section": "61.7.3",
+  "title": "IWDG reload register (IWDG_RLR) . . . . . . . . . . . . . . . . . . . . . . . . . . 2574"
+ },
+ "IWDG_SR": {
+  "section": "61.7.4",
+  "title": "IWDG status register (IWDG_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 2574"
+ },
+ "IWDG_WINR": {
+  "section": "61.7.5",
+  "title": "IWDG window register (IWDG_WINR) . . . . . . . . . . . . . . . . . . . . . . . 2575"
+ },
+ "JPEG_CFR": {
+  "section": "46.5.8",
+  "title": "JPEG clear flag register (JPEG_CFR) . . . . . . . . . . . . . . . . . . . . . . . . 1878"
+ },
+ "JPEG_CONFR0": {
+  "section": "46.5.1",
+  "title": "JPEG codec control register (JPEG_CONFR0) . . . . . . . . . . . . . . . . 1872"
+ },
+ "JPEG_CONFR1": {
+  "section": "46.5.2",
+  "title": "JPEG codec configuration register 1 (JPEG_CONFR1) . . . . . . . . . . 1873"
+ },
+ "JPEG_CONFR2": {
+  "section": "46.5.3",
+  "title": "JPEG codec configuration register 2 (JPEG_CONFR2) . . . . . . . . . . 1874"
+ },
+ "JPEG_CONFR3": {
+  "section": "46.5.4",
+  "title": "JPEG codec configuration register 3 (JPEG_CONFR3) . . . . . . . . . . 1874"
+ },
+ "JPEG_CONFRx": {
+  "section": "46.5.5",
+  "title": "JPEG codec configuration register x (JPEG_CONFRx) . . . . . . . . . . 1875"
+ },
+ "JPEG_CR": {
+  "section": "46.5.6",
+  "title": "JPEG control register (JPEG_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1876"
+ },
+ "JPEG_DHTMEMx": {
+  "section": "46.5.16",
+  "title": "JPEG DHT memory (JPEG_DHTMEMx) . . . . . . . . . . . . . . . . . . . . . . 1883"
+ },
+ "JPEG_DIR": {
+  "section": "46.5.9",
+  "title": "JPEG data input register (JPEG_DIR) . . . . . . . . . . . . . . . . . . . . . . . . 1879"
+ },
+ "JPEG_DOR": {
+  "section": "46.5.10",
+  "title": "JPEG data output register (JPEG_DOR) . . . . . . . . . . . . . . . . . . . . . . 1879"
+ },
+ "JPEG_HUFFBASEx": {
+  "section": "46.5.14",
+  "title": "JPEG Huffman base (JPEG_HUFFBASEx) . . . . . . . . . . . . . . . . . . . 1881"
+ },
+ "JPEG_HUFFENC_ACx_y": {
+  "section": "46.5.17",
+  "title": "JPEG Huffman encoder ACx (JPEG_HUFFENC_ACx_y) . . . . . . . . . 1883"
+ },
+ "JPEG_HUFFENC_DCx_y": {
+  "section": "46.5.18",
+  "title": "JPEG Huffman encoder DCx (JPEG_HUFFENC_DCx_y) . . . . . . . . 1884"
+ },
+ "JPEG_HUFFMINx_y": {
+  "section": "46.5.12",
+  "title": "JPEG Huffman min (JPEG_HUFFMINx_y) . . . . . . . . . . . . . . . . . . . . 1880"
+ },
+ "JPEG_HUFFSYMBx": {
+  "section": "46.5.15",
+  "title": "JPEG Huffman symbol (JPEG_HUFFSYMBx) . . . . . . . . . . . . . . . . . 1882"
+ },
+ "JPEG_QMEMx_y": {
+  "section": "46.5.11",
+  "title": "JPEG quantization memory x (JPEG_QMEMx_y) . . . . . . . . . . . . . . . 1880"
+ },
+ "JPEG_SR": {
+  "section": "46.5.7",
+  "title": "JPEG status register (JPEG_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1877"
+ },
+ "LPDMA_CxBR1": {
+  "section": "18.8.12",
+  "title": "LPDMA channel x block register 1 (LPDMA_CxBR1) . . . . . . . . . . . . . 816"
+ },
+ "LPDMA_CxCR": {
+  "section": "18.8.9",
+  "title": "LPDMA channel x control register (LPDMA_CxCR) . . . . . . . . . . . . . . 809"
+ },
+ "LPDMA_CxDAR": {
+  "section": "18.8.14",
+  "title": "LPDMA channel x destination address register (LPDMA_CxDAR) . . . 818"
+ },
+ "LPDMA_CxFCR": {
+  "section": "18.8.7",
+  "title": "LPDMA channel x flag clear register (LPDMA_CxFCR) . . . . . . . . . . . 806"
+ },
+ "LPDMA_CxLBAR": {
+  "section": "18.8.6",
+  "title": "LPDMA channel x linked-list base address register (LPDMA_CxLBAR) . . . . . . . . . . . . ."
+ },
+ "LPDMA_CxLLR": {
+  "section": "18.8.15",
+  "title": "LPDMA channel x linked-list address register (LPDMA_CxLLR) . . . . . 819"
+ },
+ "LPDMA_CxSAR": {
+  "section": "18.8.13",
+  "title": "LPDMA channel x source address register (LPDMA_CxSAR) . . . . . . 817"
+ },
+ "LPDMA_CxSR": {
+  "section": "18.8.8",
+  "title": "LPDMA channel x status register (LPDMA_CxSR) . . . . . . . . . . . . . . . 807"
+ },
+ "LPDMA_CxTR1": {
+  "section": "18.8.10",
+  "title": "LPDMA channel x transfer register 1 (LPDMA_CxTR1) . . . . . . . . . . . 811"
+ },
+ "LPDMA_CxTR2": {
+  "section": "18.8.11",
+  "title": "LPDMA channel x transfer register 2 (LPDMA_CxTR2) . . . . . . . . . . . 813"
+ },
+ "LPDMA_MISR": {
+  "section": "18.8.4",
+  "title": "LPDMA nonsecure masked interrupt status register (LPDMA_MISR) . . . . . . . . . . . . . . "
+ },
+ "LPDMA_PRIVCFGR": {
+  "section": "18.8.2",
+  "title": "LPDMA privileged configuration register (LPDMA_PRIVCFGR) . . . . . 803"
+ },
+ "LPDMA_RCFGLOCKR": {
+  "section": "18.8.3",
+  "title": "LPDMA configuration lock register (LPDMA_RCFGLOCKR) . . . . . . . 804"
+ },
+ "LPDMA_SECCFGR": {
+  "section": "18.8.1",
+  "title": "LPDMA secure configuration register (LPDMA_SECCFGR) . . . . . . . . 802"
+ },
+ "LPDMA_SMISR": {
+  "section": "18.8.5",
+  "title": "LPDMA secure masked interrupt status register (LPDMA_SMISR) . . 805"
+ },
+ "LPGPIO_BRR": {
+  "section": "14.4.5",
+  "title": "LPGPIO port bit reset register (LPGPIO_BRR) . . . . . . . . . . . . . . . . . . 646"
+ },
+ "LPGPIO_BSRR": {
+  "section": "14.4.4",
+  "title": "LPGPIO port bit set/reset register (LPGPIO_BSRR) . . . . . . . . . . . . . . 646"
+ },
+ "LPGPIO_IDR": {
+  "section": "14.4.2",
+  "title": "LPGPIO port input data register (LPGPIO_IDR) . . . . . . . . . . . . . . . . . 645"
+ },
+ "LPGPIO_MODER": {
+  "section": "14.4.1",
+  "title": "LPGPIO port mode register (LPGPIO_MODER) . . . . . . . . . . . . . . . . . 644"
+ },
+ "LPGPIO_ODR": {
+  "section": "14.4.3",
+  "title": "LPGPIO port output data register (LPGPIO_ODR) . . . . . . . . . . . . . . . 645"
+ },
+ "LPTIM4_DIER": {
+  "section": "58.7.7",
+  "title": "LPTIM4 interrupt enable register (LPTIM4_DIER) . . . . . . . . . . . . . . . 2509"
+ },
+ "LPTIM4_ICR": {
+  "section": "58.7.4",
+  "title": "LPTIM4 interrupt clear register (LPTIM4_ICR) . . . . . . . . . . . . . . . . . 2506"
+ },
+ "LPTIM4_ISR": {
+  "section": "58.7.1",
+  "title": "LPTIM4 interrupt and status register (LPTIM4_ISR) . . . . . . . . . . . . . 2501"
+ },
+ "LPTIM_ARR": {
+  "section": "58.7.13",
+  "title": "LPTIM autoreload register (LPTIM_ARR) . . . . . . . . . . . . . . . . . . . . . 2519"
+ },
+ "LPTIM_CCMR1": {
+  "section": "58.7.17",
+  "title": "LPTIM capture/compare mode register 1 (LPTIM_CCMR1) . . . . . . . 2521"
+ },
+ "LPTIM_CCR1": {
+  "section": "58.7.12",
+  "title": "LPTIM compare register 1 (LPTIM_CCR1) . . . . . . . . . . . . . . . . . . . . 2518 66/3653"
+ },
+ "LPTIM_CCR2": {
+  "section": "58.7.18",
+  "title": "LPTIM compare register 2 (LPTIM_CCR2) . . . . . . . . . . . . . . . . . . . . 2524"
+ },
+ "LPTIM_CFGR": {
+  "section": "58.7.10",
+  "title": "LPTIM configuration register (LPTIM_CFGR) . . . . . . . . . . . . . . . . . . 2514"
+ },
+ "LPTIM_CFGR2": {
+  "section": "58.7.15",
+  "title": "LPTIM configuration register 2 (LPTIM_CFGR2) . . . . . . . . . . . . . . . 2520"
+ },
+ "LPTIM_CNT": {
+  "section": "58.7.14",
+  "title": "LPTIM counter register (LPTIM_CNT) . . . . . . . . . . . . . . . . . . . . . . . . 2519"
+ },
+ "LPTIM_CR": {
+  "section": "58.7.11",
+  "title": "LPTIM control register (LPTIM_CR) . . . . . . . . . . . . . . . . . . . . . . . . . 2517"
+ },
+ "LPTIM_RCR": {
+  "section": "58.7.16",
+  "title": "LPTIM repetition register (LPTIM_RCR) . . . . . . . . . . . . . . . . . . . . . . 2521"
+ },
+ "LPTIMx_DIER": {
+  "section": "58.7.8",
+  "title": "LPTIMx interrupt enable register [alternate] (LPTIMx_DIER) (x = 1 to 3) . . . . . . . . . "
+ },
+ "LPTIMx_ICR": {
+  "section": "58.7.5",
+  "title": "LPTIMx interrupt clear register [alternate] (LPTIMx_ICR) (x = 1 to 3) . . . . . . . . . . "
+ },
+ "LPTIMx_ISR": {
+  "section": "58.7.2",
+  "title": "LPTIMx interrupt and status register [alternate] (LPTIMx_ISR) (x = 1 to 3) . . . . . . . ."
+ },
+ "LPUART_AUTOCR": {
+  "section": "67.7.14",
+  "title": "LPUART autonomous mode control register (LPUART_AUTOCR) . . 2900"
+ },
+ "LPUART_BRR": {
+  "section": "67.7.6",
+  "title": "LPUART baud rate register (LPUART_BRR) . . . . . . . . . . . . . . . . . . 2888"
+ },
+ "LPUART_CR1": {
+  "section": "67.7.1",
+  "title": "LPUART control register 1 (LPUART_CR1) . . . . . . . . . . . . . . . . . . . 2876"
+ },
+ "LPUART_CR2": {
+  "section": "67.7.3",
+  "title": "LPUART control register 2 (LPUART_CR2) . . . . . . . . . . . . . . . . . . . 2882"
+ },
+ "LPUART_CR3": {
+  "section": "67.7.4",
+  "title": "LPUART control register 3 (LPUART_CR3) . . . . . . . . . . . . . . . . . . . 2884"
+ },
+ "LPUART_ICR": {
+  "section": "67.7.10",
+  "title": "LPUART interrupt flag clear register (LPUART_ICR) . . . . . . . . . . . . 2897"
+ },
+ "LPUART_ISR": {
+  "section": "67.7.8",
+  "title": "LPUART interrupt and status register (LPUART_ISR) . . . . . . . . . . . 2889"
+ },
+ "LPUART_PRESC": {
+  "section": "67.7.13",
+  "title": "LPUART prescaler register (LPUART_PRESC) . . . . . . . . . . . . . . . . 2899"
+ },
+ "LPUART_RDR": {
+  "section": "67.7.11",
+  "title": "LPUART receive data register (LPUART_RDR) . . . . . . . . . . . . . . . . 2898"
+ },
+ "LPUART_RQR": {
+  "section": "67.7.7",
+  "title": "LPUART request register (LPUART_RQR) . . . . . . . . . . . . . . . . . . . . 2888"
+ },
+ "LPUART_TDR": {
+  "section": "67.7.12",
+  "title": "LPUART transmit data register (LPUART_TDR) . . . . . . . . . . . . . . . . 2898"
+ },
+ "LTDC_AWCR": {
+  "section": "43.7.3",
+  "title": "LTDC active width configuration register (LTDC_AWCR) . . . . . . . . . 1724"
+ },
+ "LTDC_BCCR": {
+  "section": "43.7.7",
+  "title": "LTDC background color configuration register (LTDC_BCCR) . . . . . 1727 RM0456 Rev 6 45/36"
+ },
+ "LTDC_BPCR": {
+  "section": "43.7.2",
+  "title": "LTDC back porch configuration register (LTDC_BPCR) . . . . . . . . . . 1723"
+ },
+ "LTDC_CDSR": {
+  "section": "43.7.13",
+  "title": "LTDC current display status register (LTDC_CDSR) . . . . . . . . . . . . . 1731"
+ },
+ "LTDC_CPSR": {
+  "section": "43.7.12",
+  "title": "LTDC current position status register (LTDC_CPSR) . . . . . . . . . . . . 1730"
+ },
+ "LTDC_GCR": {
+  "section": "43.7.5",
+  "title": "LTDC global control register (LTDC_GCR) . . . . . . . . . . . . . . . . . . . . 1725"
+ },
+ "LTDC_ICR": {
+  "section": "43.7.10",
+  "title": "LTDC interrupt clear register (LTDC_ICR) . . . . . . . . . . . . . . . . . . . . . 1729"
+ },
+ "LTDC_IER": {
+  "section": "43.7.8",
+  "title": "LTDC interrupt enable register (LTDC_IER) . . . . . . . . . . . . . . . . . . . 1728"
+ },
+ "LTDC_ISR": {
+  "section": "43.7.9",
+  "title": "LTDC interrupt status register (LTDC_ISR) . . . . . . . . . . . . . . . . . . . . 1729"
+ },
+ "LTDC_LIPCR": {
+  "section": "43.7.11",
+  "title": "LTDC line interrupt position configuration register (LTDC_LIPCR) . . 1730"
+ },
+ "LTDC_LxBFCR": {
+  "section": "43.7.21",
+  "title": "LTDC layer x blending factors configuration register (LTDC_LxBFCR) . . . . . . . . . . . ."
+ },
+ "LTDC_LxCACR": {
+  "section": "43.7.19",
+  "title": "LTDC layer x constant alpha configuration register (LTDC_LxCACR) . . . . . . . . . . . . ."
+ },
+ "LTDC_LxCFBAR": {
+  "section": "43.7.22",
+  "title": "LTDC layer x color frame buffer address register (LTDC_LxCFBAR) . . . . . . . . . . . . . "
+ },
+ "LTDC_LxCFBLNR": {
+  "section": "43.7.24",
+  "title": "LTDC layer x color frame buffer line number register (LTDC_LxCFBLNR) . . . . . . . . . . ."
+ },
+ "LTDC_LxCFBLR": {
+  "section": "43.7.23",
+  "title": "LTDC layer x color frame buffer length register (LTDC_LxCFBLR) . . . . . . . . . . . . . ."
+ },
+ "LTDC_LxCKCR": {
+  "section": "43.7.17",
+  "title": "LTDC layer x color keying configuration register (LTDC_LxCKCR) . . . . . . . . . . . . . ."
+ },
+ "LTDC_LxCLUTWR": {
+  "section": "43.7.25",
+  "title": "LTDC layer x CLUT write register (LTDC_LxCLUTWR) . . . . . . . . . . 1738"
+ },
+ "LTDC_LxCR": {
+  "section": "43.7.14",
+  "title": "LTDC layer x control register (LTDC_LxCR) . . . . . . . . . . . . . . . . . . . 1731"
+ },
+ "LTDC_LxDCCR": {
+  "section": "43.7.20",
+  "title": "LTDC layer x default color configuration register (LTDC_LxDCCR) . . . . . . . . . . . . . "
+ },
+ "LTDC_LxPFCR": {
+  "section": "43.7.18",
+  "title": "LTDC layer x pixel format configuration register (LTDC_LxPFCR) . . . . . . . . . . . . . ."
+ },
+ "LTDC_LxWHPCR": {
+  "section": "43.7.15",
+  "title": "LTDC layer x window horizontal position configuration register (LTDC_LxWHPCR) . . . . . . "
+ },
+ "LTDC_LxWVPCR": {
+  "section": "43.7.16",
+  "title": "LTDC layer x window vertical position configuration register (LTDC_LxWVPCR) . . . . . . . "
+ },
+ "LTDC_SRCR": {
+  "section": "43.7.6",
+  "title": "LTDC shadow reload configuration register (LTDC_SRCR) . . . . . . . 1727"
+ },
+ "LTDC_SSCR": {
+  "section": "43.7.1",
+  "title": "LTDC synchronization size configuration register (LTDC_SSCR) . . . 1723"
+ },
+ "LTDC_TWCR": {
+  "section": "43.7.4",
+  "title": "LTDC total width configuration register (LTDC_TWCR) . . . . . . . . . . . 1725"
+ },
+ "MDF_BSMXxCR": {
+  "section": "39.8.4",
+  "title": "MDF bitstream matrix control register x (MDF_BSMXxCR) . . . . . . . 1580"
+ },
+ "MDF_CKGCR": {
+  "section": "39.8.2",
+  "title": "MDF clock generator control register (MDF_CKGCR) . . . . . . . . . . . 1576"
+ },
+ "MDF_DFLT0IER": {
+  "section": "39.8.14",
+  "title": "MDF DFLT0 interrupt enable register 0 (MDF_DFLT0IER) . . . . . . . . 1590"
+ },
+ "MDF_DFLT0ISR": {
+  "section": "39.8.16",
+  "title": "MDF DFLT0 interrupt status register 0 (MDF_DFLT0ISR) . . . . . . . . . 1593"
+ },
+ "MDF_DFLTxCICR": {
+  "section": "39.8.6",
+  "title": "MDF digital filter configuration register x (MDF_DFLTxCICR) . . . . . . 1583"
+ },
+ "MDF_DFLTxCR": {
+  "section": "39.8.5",
+  "title": "MDF digital filter control register x (MDF_DFLTxCR) . . . . . . . . . . . . 1581"
+ },
+ "MDF_DFLTxDR": {
+  "section": "39.8.20",
+  "title": "MDF digital filter data register x (MDF_DFLTxDR) . . . . . . . . . . . . . . 1597"
+ },
+ "MDF_DFLTxIER": {
+  "section": "39.8.15",
+  "title": "MDF DFLTx interrupt enable register x (MDF_DFLTxIER) . . . . . . . . 1592"
+ },
+ "MDF_DFLTxINTR": {
+  "section": "39.8.8",
+  "title": "MDF integrator configuration register x (MDF_DFLTxINTR) . . . . . . . 1585"
+ },
+ "MDF_DFLTxISR": {
+  "section": "39.8.17",
+  "title": "MDF DFLTx interrupt status register x (MDF_DFLTxISR) . . . . . . . . . 1595"
+ },
+ "MDF_DFLTxRSFR": {
+  "section": "39.8.7",
+  "title": "MDF reshape filter configuration register x (MDF_DFLTxRSFR) . . . 1584"
+ },
+ "MDF_DLYxCR": {
+  "section": "39.8.12",
+  "title": "MDF delay control register x (MDF_DLYxCR) . . . . . . . . . . . . . . . . . . 1589"
+ },
+ "MDF_GCR": {
+  "section": "39.8.1",
+  "title": "MDF global control register (MDF_GCR) . . . . . . . . . . . . . . . . . . . . . 1576"
+ },
+ "MDF_OECxCR": {
+  "section": "39.8.18",
+  "title": "MDF offset error compensation control register x (MDF_OECxCR) . 1596"
+ },
+ "MDF_OLDxCR": {
+  "section": "39.8.9",
+  "title": "MDF out-of limit detector control register x (MDF_OLDxCR) . . . . . . 1586"
+ },
+ "MDF_OLDxTHHR": {
+  "section": "39.8.11",
+  "title": "MDF OLDx high threshold register x (MDF_OLDxTHHR) . . . . . . . . . 1588"
+ },
+ "MDF_OLDxTHLR": {
+  "section": "39.8.10",
+  "title": "MDF OLDx low threshold register x (MDF_OLDxTHLR) . . . . . . . . . . 1588"
+ },
+ "MDF_SCDxCR": {
+  "section": "39.8.13",
+  "title": "MDF short circuit detector control register x (MDF_SCDxCR) . . . . . 1589"
+ },
+ "MDF_SITFxCR": {
+  "section": "39.8.3",
+  "title": "MDF serial interface control register x (MDF_SITFxCR) . . . . . . . . . . 1579"
+ },
+ "MDF_SNPSxDR": {
+  "section": "39.8.19",
+  "title": "MDF snapshot data register x (MDF_SNPSxDR) . . . . . . . . . . . . . . . 1597"
+ },
+ "OCTOSPIM_CR": {
+  "section": "29.5.1",
+  "title": "OCTOSPIM control register (OCTOSPIM_CR) . . . . . . . . . . . . . . . . . 1109"
+ },
+ "OCTOSPIM_PnCR": {
+  "section": "29.5.2",
+  "title": "OCTOSPIM Port n configuration register (OCTOSPIM_PnCR) . . . . . . . . . . . . . . . . . ."
+ },
+ "OCTOSPI_ABR": {
+  "section": "28.7.17",
+  "title": "OCTOSPI alternate bytes register (OCTOSPI_ABR) . . . . . . . . . . . . 1093"
+ },
+ "OCTOSPI_AR": {
+  "section": "28.7.9",
+  "title": "OCTOSPI address register (OCTOSPI_AR) . . . . . . . . . . . . . . . . . . . 1087"
+ },
+ "OCTOSPI_CCR": {
+  "section": "28.7.14",
+  "title": "OCTOSPI communication configuration register (OCTOSPI_CCR) . 1089"
+ },
+ "OCTOSPI_CR": {
+  "section": "28.7.1",
+  "title": "OCTOSPI control register (OCTOSPI_CR) . . . . . . . . . . . . . . . . . . . . 1078"
+ },
+ "OCTOSPI_DCR1": {
+  "section": "28.7.2",
+  "title": "OCTOSPI device configuration register 1 (OCTOSPI_DCR1) . . . . . 1081"
+ },
+ "OCTOSPI_DCR2": {
+  "section": "28.7.3",
+  "title": "OCTOSPI device configuration register 2 (OCTOSPI_DCR2) . . . . . 1083 RM0456 Rev 6 29/3653"
+ },
+ "OCTOSPI_DCR3": {
+  "section": "28.7.4",
+  "title": "OCTOSPI device configuration register 3 (OCTOSPI_DCR3) . . . . . 1084"
+ },
+ "OCTOSPI_DCR4": {
+  "section": "28.7.5",
+  "title": "OCTOSPI device configuration register 4 (OCTOSPI_DCR4) . . . . . 1084"
+ },
+ "OCTOSPI_DLR": {
+  "section": "28.7.8",
+  "title": "OCTOSPI data length register (OCTOSPI_DLR) . . . . . . . . . . . . . . . 1086"
+ },
+ "OCTOSPI_DR": {
+  "section": "28.7.10",
+  "title": "OCTOSPI data register (OCTOSPI_DR) . . . . . . . . . . . . . . . . . . . . . . 1087"
+ },
+ "OCTOSPI_FCR": {
+  "section": "28.7.7",
+  "title": "OCTOSPI flag clear register (OCTOSPI_FCR) . . . . . . . . . . . . . . . . . 1086"
+ },
+ "OCTOSPI_HLCR": {
+  "section": "28.7.27",
+  "title": "OCTOSPI HyperBus latency configuration register (OCTOSPI_HLCR) . . . . . . . . . . . . . ."
+ },
+ "OCTOSPI_IR": {
+  "section": "28.7.16",
+  "title": "OCTOSPI instruction register (OCTOSPI_IR) . . . . . . . . . . . . . . . . . . 1092"
+ },
+ "OCTOSPI_LPTR": {
+  "section": "28.7.18",
+  "title": "OCTOSPI low-power timeout register (OCTOSPI_LPTR) . . . . . . . . . 1093"
+ },
+ "OCTOSPI_PIR": {
+  "section": "28.7.13",
+  "title": "OCTOSPI polling interval register (OCTOSPI_PIR) . . . . . . . . . . . . . 1089"
+ },
+ "OCTOSPI_PSMAR": {
+  "section": "28.7.12",
+  "title": "OCTOSPI polling status match register (OCTOSPI_PSMAR) . . . . . . 1089"
+ },
+ "OCTOSPI_PSMKR": {
+  "section": "28.7.11",
+  "title": "OCTOSPI polling status mask register (OCTOSPI_PSMKR) . . . . . . 1088"
+ },
+ "OCTOSPI_SR": {
+  "section": "28.7.6",
+  "title": "OCTOSPI status register (OCTOSPI_SR) . . . . . . . . . . . . . . . . . . . . . 1085"
+ },
+ "OCTOSPI_TCR": {
+  "section": "28.7.15",
+  "title": "OCTOSPI timing configuration register (OCTOSPI_TCR) . . . . . . . . . 1092"
+ },
+ "OCTOSPI_WABR": {
+  "section": "28.7.26",
+  "title": "OCTOSPI write alternate bytes register (OCTOSPI_WABR) . . . . . . 1100"
+ },
+ "OCTOSPI_WCCR": {
+  "section": "28.7.23",
+  "title": "OCTOSPI write communication configuration register (OCTOSPI_WCCR) . . . . . . . . . . . . "
+ },
+ "OCTOSPI_WIR": {
+  "section": "28.7.25",
+  "title": "OCTOSPI write instruction register (OCTOSPI_WIR) . . . . . . . . . . . . 1100"
+ },
+ "OCTOSPI_WPABR": {
+  "section": "28.7.22",
+  "title": "OCTOSPI wrap alternate bytes register (OCTOSPI_WPABR) . . . . . 1097"
+ },
+ "OCTOSPI_WPCCR": {
+  "section": "28.7.19",
+  "title": "OCTOSPI wrap communication configuration register (OCTOSPI_WPCCR) . . . . . . . . . . . . "
+ },
+ "OCTOSPI_WPIR": {
+  "section": "28.7.21",
+  "title": "OCTOSPI wrap instruction register (OCTOSPI_WPIR) . . . . . . . . . . . 1096"
+ },
+ "OCTOSPI_WPTCR": {
+  "section": "28.7.20",
+  "title": "OCTOSPI wrap timing configuration register (OCTOSPI_WPTCR) . 1096"
+ },
+ "OCTOSPI_WTCR": {
+  "section": "28.7.24",
+  "title": "OCTOSPI write timing configuration register (OCTOSPI_WTCR) . . . 1099"
+ },
+ "OPAMP1_CSR": {
+  "section": "38.5.1",
+  "title": "OPAMP1 control/status register (OPAMP1_CSR) . . . . . . . . . . . . . . . 1508"
+ },
+ "OPAMP1_LPOTR": {
+  "section": "38.5.3",
+  "title": "OPAMP1 offset trimming register in low-power mode (OPAMP1_LPOTR) . . . . . . . . . . . . ."
+ },
+ "OPAMP1_OTR": {
+  "section": "38.5.2",
+  "title": "OPAMP1 offset trimming register in normal mode (OPAMP1_OTR) . 1510"
+ },
+ "OPAMP2_CRS": {
+  "section": "38.5.4",
+  "title": "OPAMP2 control/status register (OPAMP2_CRS) . . . . . . . . . . . . . . . 1511"
+ },
+ "OPAMP2_LPOTR": {
+  "section": "38.5.6",
+  "title": "OPAMP2 offset trimming register in low-power mode (OPAMP2_LPOTR) . . . . . . . . . . . . ."
+ },
+ "OPAMP2_OTR": {
+  "section": "38.5.5",
+  "title": "OPAMP2 offset trimming register in normal mode (OPAMP2_OTR) . 1512"
+ },
+ "OTFDEC_CR": {
+  "section": "52.6.1",
+  "title": "OTFDEC control register (OTFDEC_CR) . . . . . . . . . . . . . . . . . . . . . 2047"
+ },
+ "OTFDEC_ICR": {
+  "section": "52.6.13",
+  "title": "OTFDEC interrupt clear register (OTFDEC_ICR) . . . . . . . . . . . . . . . 2055"
+ },
+ "OTFDEC_IER": {
+  "section": "52.6.14",
+  "title": "OTFDEC interrupt enable register (OTFDEC_IER) . . . . . . . . . . . . . . 2056"
+ },
+ "OTFDEC_ISR": {
+  "section": "52.6.12",
+  "title": "OTFDEC interrupt status register (OTFDEC_ISR) . . . . . . . . . . . . . . 2054"
+ },
+ "OTFDEC_PRIVCFGR": {
+  "section": "52.6.2",
+  "title": "OTFDEC privileged access control configuration register (OTFDEC_PRIVCFGR) . . . . . . . . "
+ },
+ "OTFDEC_RxCFGR": {
+  "section": "52.6.3",
+  "title": "OTFDEC region x configuration register (OTFDEC_RxCFGR) . . . . . 2048"
+ },
+ "OTFDEC_RxENDADDR": {
+  "section": "52.6.5",
+  "title": "OTFDEC region x end address register (OTFDEC_RxENDADDR) . 2050"
+ },
+ "OTFDEC_RxKEYR0": {
+  "section": "52.6.8",
+  "title": "OTFDEC region x key register 0 (OTFDEC_RxKEYR0) . . . . . . . . . . 2052"
+ },
+ "OTFDEC_RxKEYR1": {
+  "section": "52.6.9",
+  "title": "OTFDEC region x key register 1 (OTFDEC_RxKEYR1) . . . . . . . . . . 2053"
+ },
+ "OTFDEC_RxKEYR2": {
+  "section": "52.6.10",
+  "title": "OTFDEC region x key register 2 (OTFDEC_RxKEYR2) . . . . . . . . . . 2053"
+ },
+ "OTFDEC_RxKEYR3": {
+  "section": "52.6.11",
+  "title": "OTFDEC region x key register 3 (OTFDEC_RxKEYR3) . . . . . . . . . . 2054"
+ },
+ "OTFDEC_RxNONCER0": {
+  "section": "52.6.6",
+  "title": "OTFDEC region x nonce register 0 (OTFDEC_RxNONCER0) . . . . . 2051"
+ },
+ "OTFDEC_RxNONCER1": {
+  "section": "52.6.7",
+  "title": "OTFDEC region x nonce register 1 (OTFDEC_RxNONCER1) . . . . . 2052"
+ },
+ "OTFDEC_RxSTARTADDR": {
+  "section": "52.6.4",
+  "title": "OTFDEC region x start address register (OTFDEC_RxSTARTADDR) . . . . . . . . . . . . . . . "
+ },
+ "OTG_CID": {
+  "section": "72.15.16",
+  "title": "OTG core ID register (OTG_CID) . . . . . . . . . . . . . . . . . . . . . . . . . . . 3190"
+ },
+ "OTG_DAINT": {
+  "section": "72.15.38",
+  "title": "OTG device all endpoints interrupt register (OTG_DAINT) . . . . . . . . 3213"
+ },
+ "OTG_DAINTMSK": {
+  "section": "72.15.39",
+  "title": "OTG all endpoints interrupt mask register (OTG_DAINTMSK) . . . . . . . . . . . . . . . . ."
+ },
+ "OTG_DCFG": {
+  "section": "72.15.33",
+  "title": "OTG device configuration register (OTG_DCFG) . . . . . . . . . . . . . . . 3206"
+ },
+ "OTG_DCTL": {
+  "section": "72.15.34",
+  "title": "OTG device control register (OTG_DCTL) . . . . . . . . . . . . . . . . . . . . 3208"
+ },
+ "OTG_DIEPCTL0": {
+  "section": "72.15.43",
+  "title": "OTG device control IN endpoint 0 control register (OTG_DIEPCTL0) . . . . . . . . . . . . ."
+ },
+ "OTG_DIEPCTLx": {
+  "section": "72.15.44",
+  "title": "OTG device IN endpoint x control register (OTG_DIEPCTLx) . . . . . 3217"
+ },
+ "OTG_DIEPDMAx": {
+  "section": "73.14.51",
+  "title": "OTG device IN endpoint x DMA address register (OTG_DIEPDMAx) . . . . . . . . . . . . . . ."
+ },
+ "OTG_DIEPEMPMSK": {
+  "section": "72.15.42",
+  "title": "OTG device IN endpoint FIFO empty interrupt mask register (OTG_DIEPEMPMSK) . . . . . . . ."
+ },
+ "OTG_DIEPINTx": {
+  "section": "72.15.45",
+  "title": "OTG device IN endpoint x interrupt register (OTG_DIEPINTx) . . . . . 3220"
+ },
+ "OTG_DIEPMSK": {
+  "section": "72.15.36",
+  "title": "OTG device IN endpoint common interrupt mask register (OTG_DIEPMSK) . . . . . . . . . . . "
+ },
+ "OTG_DIEPTSIZ0": {
+  "section": "72.15.46",
+  "title": "OTG device IN endpoint 0 transfer size register (OTG_DIEPTSIZ0) . . . . . . . . . . . . . "
+ },
+ "OTG_DIEPTSIZx": {
+  "section": "72.15.48",
+  "title": "OTG device IN endpoint x transfer size register (OTG_DIEPTSIZx) . 3223"
+ },
+ "OTG_DIEPTXF0": {
+  "section": "72.15.13",
+  "title": "OTG host non-periodic transmit FIFO size register (OTG_HNPTXFSIZ)/Endpoint 0 Transmit FIFO"
+ },
+ "OTG_DIEPTXFx": {
+  "section": "72.15.19",
+  "title": "OTG device IN endpoint transmit FIFO x size register (OTG_DIEPTXFx) . . . . . . . . . . . "
+ },
+ "OTG_DOEPCTL0": {
+  "section": "72.15.49",
+  "title": "OTG device control OUT endpoint 0 control register (OTG_DOEPCTL0) . . . . . . . . . . . . "
+ },
+ "OTG_DOEPCTLx": {
+  "section": "72.15.52",
+  "title": "OTG device OUT endpoint x control register (OTG_DOEPCTLx) . . . . . . . . . . . . . . . . "
+ },
+ "OTG_DOEPDMAx": {
+  "section": "73.14.57",
+  "title": "OTG device OUT endpoint x DMA address register (OTG_DOEPDMAx) . . . . . . . . . . . . . . "
+ },
+ "OTG_DOEPINTx": {
+  "section": "72.15.50",
+  "title": "OTG device OUT endpoint x interrupt register (OTG_DOEPINTx) . . 3225"
+ },
+ "OTG_DOEPMSK": {
+  "section": "72.15.37",
+  "title": "OTG device OUT endpoint common interrupt mask register (OTG_DOEPMSK) . . . . . . . . . . ."
+ },
+ "OTG_DOEPTSIZ0": {
+  "section": "72.15.51",
+  "title": "OTG device OUT endpoint 0 transfer size register (OTG_DOEPTSIZ0) . . . . . . . . . . . . ."
+ },
+ "OTG_DOEPTSIZx": {
+  "section": "72.15.53",
+  "title": "OTG device OUT endpoint x transfer size register (OTG_DOEPTSIZx) . . . . . . . . . . . . ."
+ },
+ "OTG_DSTS": {
+  "section": "72.15.35",
+  "title": "OTG device status register (OTG_DSTS) . . . . . . . . . . . . . . . . . . . . . 3210"
+ },
+ "OTG_DTHRCTL": {
+  "section": "73.14.45",
+  "title": "OTG device threshold control register (OTG_DTHRCTL) . . . . . . . . . 3375"
+ },
+ "OTG_DTXFSTSx": {
+  "section": "72.15.47",
+  "title": "OTG device IN endpoint transmit FIFO status register (OTG_DTXFSTSx) . . . . . . . . . . . "
+ },
+ "OTG_DVBUSDIS": {
+  "section": "72.15.40",
+  "title": "OTG device VBUS discharge time register (OTG_DVBUSDIS) . . . . . . . . . . . . . . . . . ."
+ },
+ "OTG_DVBUSPULSE": {
+  "section": "72.15.41",
+  "title": "OTG device VBUS pulsing time register (OTG_DVBUSPULSE) . . . . . . . . . . . . . . . . . ."
+ },
+ "OTG_GAHBCFG": {
+  "section": "72.15.3",
+  "title": "OTG AHB configuration register (OTG_GAHBCFG) . . . . . . . . . . . . . 3170"
+ },
+ "OTG_GCCFG": {
+  "section": "72.15.15",
+  "title": "OTG general core configuration register (OTG_GCCFG) . . . . . . . . . 3188"
+ },
+ "OTG_GINTMSK": {
+  "section": "72.15.7",
+  "title": "OTG interrupt mask register (OTG_GINTMSK) . . . . . . . . . . . . . . . . . 3179"
+ },
+ "OTG_GINTSTS": {
+  "section": "72.15.6",
+  "title": "OTG core interrupt register (OTG_GINTSTS) . . . . . . . . . . . . . . . . . . 3175"
+ },
+ "OTG_GLPMCFG": {
+  "section": "72.15.17",
+  "title": "OTG core LPM configuration register (OTG_GLPMCFG) . . . . . . . . . 3190"
+ },
+ "OTG_GOTGCTL": {
+  "section": "72.15.1",
+  "title": "OTG control and status register (OTG_GOTGCTL) . . . . . . . . . . . . . 3166"
+ },
+ "OTG_GOTGINT": {
+  "section": "72.15.2",
+  "title": "OTG interrupt register (OTG_GOTGINT) . . . . . . . . . . . . . . . . . . . . . 3169"
+ },
+ "OTG_GRSTCTL": {
+  "section": "72.15.5",
+  "title": "OTG reset register (OTG_GRSTCTL) . . . . . . . . . . . . . . . . . . . . . . . . 3173"
+ },
+ "OTG_GRXFSIZ": {
+  "section": "72.15.12",
+  "title": "OTG receive FIFO size register (OTG_GRXFSIZ) . . . . . . . . . . . . . . 3186"
+ },
+ "OTG_GRXSTSP": {
+  "section": "72.15.10",
+  "title": "OTG status read and pop registers (OTG_GRXSTSP) . . . . . . . . . . . 3184"
+ },
+ "OTG_GRXSTSR": {
+  "section": "72.15.8",
+  "title": "OTG receive status debug read register (OTG_GRXSTSR) . . . . . . . 3182"
+ },
+ "OTG_GUSBCFG": {
+  "section": "72.15.4",
+  "title": "OTG USB configuration register (OTG_GUSBCFG) . . . . . . . . . . . . . 3171"
+ },
+ "OTG_HAINT": {
+  "section": "72.15.25",
+  "title": "OTG host all channels interrupt register (OTG_HAINT) . . . . . . . . . . 3198"
+ },
+ "OTG_HAINTMSK": {
+  "section": "72.15.26",
+  "title": "OTG host all channels interrupt mask register (OTG_HAINTMSK) . . . . . . . . . . . . . . ."
+ },
+ "OTG_HCCHARx": {
+  "section": "72.15.28",
+  "title": "OTG host channel x characteristics register (OTG_HCCHARx) . . . . 3202"
+ },
+ "OTG_HCDMAx": {
+  "section": "73.14.36",
+  "title": "OTG host channel x DMA address register(OTG_HCDMAx) . . . . . . 3367"
+ },
+ "OTG_HCFG": {
+  "section": "72.15.21",
+  "title": "OTG host configuration register (OTG_HCFG) . . . . . . . . . . . . . . . . . 3195"
+ },
+ "OTG_HCINTMSKx": {
+  "section": "72.15.30",
+  "title": "OTG host channel x interrupt mask register (OTG_HCINTMSKx) . . 3204 82/3653 RM0456 Rev 6 R"
+ },
+ "OTG_HCINTx": {
+  "section": "72.15.29",
+  "title": "OTG host channel x interrupt register (OTG_HCINTx) . . . . . . . . . . . 3203"
+ },
+ "OTG_HCSPLTx": {
+  "section": "73.14.32",
+  "title": "OTG host channel x split control register (OTG_HCSPLTx) . . . . . . . 3363"
+ },
+ "OTG_HCTSIZx": {
+  "section": "72.15.31",
+  "title": "OTG host channel x transfer size register (OTG_HCTSIZx) . . . . . . . 3205"
+ },
+ "OTG_HFIR": {
+  "section": "72.15.22",
+  "title": "OTG host frame interval register (OTG_HFIR) . . . . . . . . . . . . . . . . . 3196"
+ },
+ "OTG_HFNUM": {
+  "section": "72.15.23",
+  "title": "OTG host frame number/frame time remaining register (OTG_HFNUM) . . . . . . . . . . . . . "
+ },
+ "OTG_HNPTXFSIZ": {
+  "section": "72.15.13",
+  "title": "OTG host non-periodic transmit FIFO size register (OTG_HNPTXFSIZ)/Endpoint 0 Transmit FIFO"
+ },
+ "OTG_HNPTXSTS": {
+  "section": "72.15.14",
+  "title": "OTG non-periodic transmit FIFO/queue status register (OTG_HNPTXSTS) . . . . . . . . . . . "
+ },
+ "OTG_HPRT": {
+  "section": "72.15.27",
+  "title": "OTG host port control and status register (OTG_HPRT) . . . . . . . . . . 3200"
+ },
+ "OTG_HPTXFSIZ": {
+  "section": "72.15.18",
+  "title": "OTG host periodic transmit FIFO size register (OTG_HPTXFSIZ) . . . . . . . . . . . . . . ."
+ },
+ "OTG_HPTXSTS": {
+  "section": "72.15.24",
+  "title": "OTG_Host periodic transmit FIFO/queue status register (OTG_HPTXSTS) . . . . . . . . . . . "
+ },
+ "OTG_PCGCCTL": {
+  "section": "72.15.54",
+  "title": "OTG power and clock gating control register (OTG_PCGCCTL) . . . 3231"
+ },
+ "OTG_PCGCCTL1": {
+  "section": "73.14.62",
+  "title": "OTG power and clock gating control register 1 (OTG_PCGCCTL1) . 3395"
+ },
+ "PKA_CLRFR": {
+  "section": "53.7.3",
+  "title": "PKA clear flag register (PKA_CLRFR) . . . . . . . . . . . . . . . . . . . . . . . . 2092"
+ },
+ "PKA_CR": {
+  "section": "53.7.1",
+  "title": "PKA control register (PKA_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20"
+ },
+ "PKA_SR": {
+  "section": "53.7.2",
+  "title": "PKA status register (PKA_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+ },
+ "PSSI_CR": {
+  "section": "42.5.1",
+  "title": "PSSI control register (PSSI_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17"
+ },
+ "PSSI_DR": {
+  "section": "42.5.7",
+  "title": "PSSI data register (PSSI_DR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1"
+ },
+ "PSSI_ICR": {
+  "section": "42.5.6",
+  "title": "PSSI interrupt clear register (PSSI_ICR) . . . . . . . . . . . . . . . . . . . . . . 1709"
+ },
+ "PSSI_IER": {
+  "section": "42.5.4",
+  "title": "PSSI interrupt enable register (PSSI_IER) . . . . . . . . . . . . . . . . . . . . 1708"
+ },
+ "PSSI_MIS": {
+  "section": "42.5.5",
+  "title": "PSSI masked interrupt status register (PSSI_MIS) . . . . . . . . . . . . . . 1708"
+ },
+ "PSSI_RIS": {
+  "section": "42.5.3",
+  "title": "PSSI raw interrupt status register (PSSI_RIS) . . . . . . . . . . . . . . . . . 1707"
+ },
+ "PSSI_SR": {
+  "section": "42.5.2",
+  "title": "PSSI status register (PSSI_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 170"
+ },
+ "PWR_APCR": {
+  "section": "10.10.20",
+  "title": "PWR apply pull configuration register (PWR_APCR) . . . . . . . . . . . . . 466"
+ },
+ "PWR_BDCR1": {
+  "section": "10.10.9",
+  "title": "PWR backup domain control register 1 (PWR_BDCR1) . . . . . . . . . . . 456"
+ },
+ "PWR_BDCR2": {
+  "section": "10.10.10",
+  "title": "PWR backup domain control register 2 (PWR_BDCR2) . . . . . . . . . . . 457"
+ },
+ "PWR_BDSR": {
+  "section": "10.10.17",
+  "title": "PWR backup domain status register (PWR_BDSR) . . . . . . . . . . . . . . 463"
+ },
+ "PWR_CR1": {
+  "section": "10.10.1",
+  "title": "PWR control register 1 (PWR_CR1) . . . . . . . . . . . . . . . . . . . . . . . . . . 443"
+ },
+ "PWR_CR2": {
+  "section": "10.10.2",
+  "title": "PWR control register 2 (PWR_CR2) . . . . . . . . . . . . . . . . . . . . . . . . . . 445"
+ },
+ "PWR_CR3": {
+  "section": "10.10.3",
+  "title": "PWR control register 3 (PWR_CR3) . . . . . . . . . . . . . . . . . . . . . . . . . . 449"
+ },
+ "PWR_CR4": {
+  "section": "10.10.41",
+  "title": "PWR control register 4 (PWR_CR4) . . . . . . . . . . . . . . . . . . . . . . . . . . 477"
+ },
+ "PWR_CR5": {
+  "section": "10.10.42",
+  "title": "PWR control register 5 (PWR_CR5) . . . . . . . . . . . . . . . . . . . . . . . . . . 478"
+ },
+ "PWR_DBPR": {
+  "section": "10.10.11",
+  "title": "PWR disable backup domain register (PWR_DBPR) . . . . . . . . . . . . . 458"
+ },
+ "PWR_PDCRA": {
+  "section": "10.10.22",
+  "title": "PWR port A pull-down control register (PWR_PDCRA) . . . . . . . . . . . . 467"
+ },
+ "PWR_PDCRB": {
+  "section": "10.10.24",
+  "title": "PWR port B pull-down control register (PWR_PDCRB) . . . . . . . . . . . 468"
+ },
+ "PWR_PDCRC": {
+  "section": "10.10.26",
+  "title": "PWR port C pull-down control register (PWR_PDCRC) . . . . . . . . . . . 469"
+ },
+ "PWR_PDCRD": {
+  "section": "10.10.28",
+  "title": "PWR port D pull-down control register (PWR_PDCRD) . . . . . . . . . . . 470"
+ },
+ "PWR_PDCRE": {
+  "section": "10.10.30",
+  "title": "PWR port E pull-down control register (PWR_PDCRE) . . . . . . . . . . . 471"
+ },
+ "PWR_PDCRF": {
+  "section": "10.10.32",
+  "title": "PWR port F pull-down control register (PWR_PDCRF) . . . . . . . . . . . . 472"
+ },
+ "PWR_PDCRG": {
+  "section": "10.10.34",
+  "title": "PWR port G pull-down control register (PWR_PDCRG) . . . . . . . . . . . 473"
+ },
+ "PWR_PDCRH": {
+  "section": "10.10.36",
+  "title": "PWR port H pull-down control register (PWR_PDCRH) . . . . . . . . . . . 474"
+ },
+ "PWR_PDCRI": {
+  "section": "10.10.38",
+  "title": "PWR port I pull-down control register (PWR_PDCRI) . . . . . . . . . . . . . 475"
+ },
+ "PWR_PDCRJ": {
+  "section": "10.10.40",
+  "title": "PWR port J pull-down control register (PWR_PDCRJ) . . . . . . . . . . . . 477"
+ },
+ "PWR_PRIVCFGR": {
+  "section": "10.10.14",
+  "title": "PWR privilege control register (PWR_PRIVCFGR) . . . . . . . . . . . . . . . 461"
+ },
+ "PWR_PUCRA": {
+  "section": "10.10.21",
+  "title": "PWR port A pull-up control register (PWR_PUCRA) . . . . . . . . . . . . . . 466"
+ },
+ "PWR_PUCRB": {
+  "section": "10.10.23",
+  "title": "PWR port B pull-up control register (PWR_PUCRB) . . . . . . . . . . . . . . 468"
+ },
+ "PWR_PUCRC": {
+  "section": "10.10.25",
+  "title": "PWR port C pull-up control register (PWR_PUCRC) . . . . . . . . . . . . . 469"
+ },
+ "PWR_PUCRD": {
+  "section": "10.10.27",
+  "title": "PWR port D pull-up control register (PWR_PUCRD) . . . . . . . . . . . . . 470"
+ },
+ "PWR_PUCRE": {
+  "section": "10.10.29",
+  "title": "PWR port E pull-up control register (PWR_PUCRE) . . . . . . . . . . . . . . 471"
+ },
+ "PWR_PUCRF": {
+  "section": "10.10.31",
+  "title": "PWR port F pull-up control register (PWR_PUCRF) . . . . . . . . . . . . . . 472"
+ },
+ "PWR_PUCRG": {
+  "section": "10.10.33",
+  "title": "PWR port G pull-up control register (PWR_PUCRG) . . . . . . . . . . . . . 473"
+ },
+ "PWR_PUCRH": {
+  "section": "10.10.35",
+  "title": "PWR port H pull-up control register (PWR_PUCRH) . . . . . . . . . . . . . 474"
+ },
+ "PWR_PUCRI": {
+  "section": "10.10.37",
+  "title": "PWR port I pull-up control register (PWR_PUCRI) . . . . . . . . . . . . . . . 475"
+ },
+ "PWR_PUCRJ": {
+  "section": "10.10.39",
+  "title": "PWR port J pull-up control register (PWR_PUCRJ) . . . . . . . . . . . . . . 476"
+ },
+ "PWR_SECCFGR": {
+  "section": "10.10.13",
+  "title": "PWR security configuration register (PWR_SECCFGR) . . . . . . . . . . . 459"
+ },
+ "PWR_SR": {
+  "section": "10.10.15",
+  "title": "PWR status register (PWR_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 461"
+ },
+ "PWR_SVMCR": {
+  "section": "10.10.5",
+  "title": "PWR supply voltage monitoring control register (PWR_SVMCR) . . . . 451"
+ },
+ "PWR_SVMSR": {
+  "section": "10.10.16",
+  "title": "PWR supply voltage monitoring status register (PWR_SVMSR) . . . . 462"
+ },
+ "PWR_UCPDR": {
+  "section": "10.10.12",
+  "title": "PWR UCPD register (PWR_UCPDR) . . . . . . . . . . . . . . . . . . . . . . . . . 458"
+ },
+ "PWR_VOSR": {
+  "section": "10.10.4",
+  "title": "PWR voltage scaling register (PWR_VOSR) . . . . . . . . . . . . . . . . . . . . 449"
+ },
+ "PWR_WUCR1": {
+  "section": "10.10.6",
+  "title": "PWR wake-up control register 1 (PWR_WUCR1) . . . . . . . . . . . . . . . . 452 RM0456 Rev "
+ },
+ "PWR_WUCR2": {
+  "section": "10.10.7",
+  "title": "PWR wake-up control register 2 (PWR_WUCR2) . . . . . . . . . . . . . . . . 453"
+ },
+ "PWR_WUCR3": {
+  "section": "10.10.8",
+  "title": "PWR wake-up control register 3 (PWR_WUCR3) . . . . . . . . . . . . . . . . 455"
+ },
+ "PWR_WUSCR": {
+  "section": "10.10.19",
+  "title": "PWR wake-up status clear register (PWR_WUSCR) . . . . . . . . . . . . . 465"
+ },
+ "PWR_WUSR": {
+  "section": "10.10.18",
+  "title": "PWR wake-up status register (PWR_WUSR) . . . . . . . . . . . . . . . . . . . 464"
+ },
+ "RAMCFG_M2WPR1": {
+  "section": "6.6.7",
+  "title": "RAMCFG memory 2 write protection register 1 (RAMCFG_M2WPR1) . . . . . . . . . . . . . . . "
+ },
+ "RAMCFG_M2WPR2": {
+  "section": "6.6.8",
+  "title": "RAMCFG memory 2 write protection register 2 (RAMCFG_M2WPR2) . . . . . . . . . . . . . . . "
+ },
+ "RAMCFG_MxCR": {
+  "section": "6.6.1",
+  "title": "RAMCFG memory x control register (RAMCFG_MxCR) . . . . . . . . . . . 282"
+ },
+ "RAMCFG_MxDEAR": {
+  "section": "6.6.5",
+  "title": "RAMCFG memory x ECC double error address register (RAMCFG_MxDEAR) . . . . . . . . . . . . "
+ },
+ "RAMCFG_MxECCKEYR": {
+  "section": "6.6.9",
+  "title": "RAMCFG memory x ECC key register (RAMCFG_MxECCKEYR) . . . 286"
+ },
+ "RAMCFG_MxERKEYR": {
+  "section": "6.6.10",
+  "title": "RAMCFG memory x erase key register (RAMCFG_MxERKEYR) . . . 287"
+ },
+ "RAMCFG_MxICR": {
+  "section": "6.6.6",
+  "title": "RAMCFG memory x interrupt clear register x (RAMCFG_MxICR) . . . 285"
+ },
+ "RAMCFG_MxIER": {
+  "section": "6.6.2",
+  "title": "RAMCFG memory x interrupt enable register (RAMCFG_MxIER) . . . 283"
+ },
+ "RAMCFG_MxISR": {
+  "section": "6.6.3",
+  "title": "RAMCFG memory interrupt status register (RAMCFG_MxISR) . . . . . 283"
+ },
+ "RAMCFG_MxSEAR": {
+  "section": "6.6.4",
+  "title": "RAMCFG memory x ECC single error address register (RAMCFG_MxSEAR) . . . . . . . . . . . . "
+ },
+ "RCC_AHB1ENR": {
+  "section": "11.8.29",
+  "title": "RCC AHB1 peripheral clock enable register (RCC_AHB1ENR) . . . . . 553"
+ },
+ "RCC_AHB1RSTR": {
+  "section": "11.8.21",
+  "title": "RCC AHB1 peripheral reset register (RCC_AHB1RSTR) . . . . . . . . . . 540"
+ },
+ "RCC_AHB1SMENR": {
+  "section": "11.8.37",
+  "title": "RCC AHB1 peripheral clock enable in Sleep and Stop modes register (RCC_AHB1SMENR) . . . . "
+ },
+ "RCC_AHB2ENR1": {
+  "section": "11.8.30",
+  "title": "RCC AHB2 peripheral clock enable register 1 (RCC_AHB2ENR1) . . . 556"
+ },
+ "RCC_AHB2ENR2": {
+  "section": "11.8.31",
+  "title": "RCC AHB2 peripheral clock enable register 2 (RCC_AHB2ENR2) . . . 560"
+ },
+ "RCC_AHB2RSTR1": {
+  "section": "11.8.22",
+  "title": "RCC AHB2 peripheral reset register 1 (RCC_AHB2RSTR1) . . . . . . . 542"
+ },
+ "RCC_AHB2RSTR2": {
+  "section": "11.8.23",
+  "title": "RCC AHB2 peripheral reset register 2 (RCC_AHB2RSTR2) . . . . . . . 545"
+ },
+ "RCC_AHB2SMENR1": {
+  "section": "11.8.38",
+  "title": "RCC AHB2 peripheral clock enable in Sleep and Stop modes register 1 (RCC_AHB2SMENR1) . . ."
+ },
+ "RCC_AHB2SMENR2": {
+  "section": "11.8.39",
+  "title": "RCC AHB2 peripheral clock enable in Sleep and Stop modes register 2 (RCC_AHB2SMENR2) . . ."
+ },
+ "RCC_AHB3ENR": {
+  "section": "11.8.32",
+  "title": "RCC AHB3 peripheral clock enable register (RCC_AHB3ENR) . . . . . 561"
+ },
+ "RCC_AHB3RSTR": {
+  "section": "11.8.24",
+  "title": "RCC AHB3 peripheral reset register (RCC_AHB3RSTR) . . . . . . . . . . 546"
+ },
+ "RCC_AHB3SMENR": {
+  "section": "11.8.40",
+  "title": "RCC AHB3 peripheral clock enable in Sleep and Stop modes register (RCC_AHB3SMENR) . . . . "
+ },
+ "RCC_APB1ENR1": {
+  "section": "11.8.33",
+  "title": "RCC APB1 peripheral clock enable register 1 (RCC_APB1ENR1) . . . 562"
+ },
+ "RCC_APB1ENR2": {
+  "section": "11.8.34",
+  "title": "RCC APB1 peripheral clock enable register 2 (RCC_APB1ENR2) . . . 564"
+ },
+ "RCC_APB1RSTR1": {
+  "section": "11.8.25",
+  "title": "RCC APB1 peripheral reset register 1 (RCC_APB1RSTR1) . . . . . . . . 547"
+ },
+ "RCC_APB1RSTR2": {
+  "section": "11.8.26",
+  "title": "RCC APB1 peripheral reset register 2 (RCC_APB1RSTR2) . . . . . . . . 549"
+ },
+ "RCC_APB1SMENR1": {
+  "section": "11.8.41",
+  "title": "RCC APB1 peripheral clock enable in Sleep and Stop modes register 1 (RCC_APB1SMENR1) . . ."
+ },
+ "RCC_APB1SMENR2": {
+  "section": "11.8.42",
+  "title": "RCC APB1 peripheral clocks enable in Sleep and Stop modes register 2 (RCC_APB1SMENR2) . . "
+ },
+ "RCC_APB2ENR": {
+  "section": "11.8.35",
+  "title": "RCC APB2 peripheral clock enable register (RCC_APB2ENR) . . . . . 566 14/3653 RM0456 Rev 6"
+ },
+ "RCC_APB2RSTR": {
+  "section": "11.8.27",
+  "title": "RCC APB2 peripheral reset register (RCC_APB2RSTR) . . . . . . . . . . 550"
+ },
+ "RCC_APB2SMENR": {
+  "section": "11.8.43",
+  "title": "RCC APB2 peripheral clocks enable in Sleep and Stop modes register (RCC_APB2SMENR) . . . ."
+ },
+ "RCC_APB3ENR": {
+  "section": "11.8.36",
+  "title": "RCC APB3 peripheral clock enable register (RCC_APB3ENR) . . . . . 568"
+ },
+ "RCC_APB3RSTR": {
+  "section": "11.8.28",
+  "title": "RCC APB3 peripheral reset register (RCC_APB3RSTR) . . . . . . . . . . 552"
+ },
+ "RCC_APB3SMENR": {
+  "section": "11.8.44",
+  "title": "RCC APB3 peripheral clock enable in Sleep and Stop modes register (RCC_APB3SMENR) . . . . "
+ },
+ "RCC_BDCR": {
+  "section": "11.8.49",
+  "title": "RCC backup domain control register (RCC_BDCR) . . . . . . . . . . . . . . 597"
+ },
+ "RCC_CCIPR1": {
+  "section": "11.8.46",
+  "title": "RCC peripherals independent clock configuration register 1 (RCC_CCIPR1) . . . . . . . . . "
+ },
+ "RCC_CCIPR2": {
+  "section": "11.8.47",
+  "title": "RCC peripherals independent clock configuration register 2 (RCC_CCIPR2) . . . . . . . . . "
+ },
+ "RCC_CCIPR3": {
+  "section": "11.8.48",
+  "title": "RCC peripherals independent clock configuration register 3 (RCC_CCIPR3) . . . . . . . . . "
+ },
+ "RCC_CFGR1": {
+  "section": "11.8.6",
+  "title": "RCC clock configuration register 1 (RCC_CFGR1) . . . . . . . . . . . . . . . 520"
+ },
+ "RCC_CFGR2": {
+  "section": "11.8.7",
+  "title": "RCC clock configuration register 2 (RCC_CFGR2) . . . . . . . . . . . . . . . 522"
+ },
+ "RCC_CFGR3": {
+  "section": "11.8.8",
+  "title": "RCC clock configuration register 3 (RCC_CFGR3) . . . . . . . . . . . . . . . 524"
+ },
+ "RCC_CICR": {
+  "section": "11.8.20",
+  "title": "RCC clock interrupt clear register (RCC_CICR) . . . . . . . . . . . . . . . . . 539"
+ },
+ "RCC_CIER": {
+  "section": "11.8.18",
+  "title": "RCC clock interrupt enable register (RCC_CIER) . . . . . . . . . . . . . . . . 536"
+ },
+ "RCC_CIFR": {
+  "section": "11.8.19",
+  "title": "RCC clock interrupt flag register (RCC_CIFR) . . . . . . . . . . . . . . . . . . 537"
+ },
+ "RCC_CR": {
+  "section": "11.8.1",
+  "title": "RCC clock control register (RCC_CR) . . . . . . . . . . . . . . . . . . . . . . . . . 512"
+ },
+ "RCC_CRRCR": {
+  "section": "11.8.5",
+  "title": "RCC clock recovery RC register (RCC_CRRCR) . . . . . . . . . . . . . . . . 520"
+ },
+ "RCC_CSR": {
+  "section": "11.8.50",
+  "title": "RCC control/status register (RCC_CSR) . . . . . . . . . . . . . . . . . . . . . . . 600"
+ },
+ "RCC_ICSCR1": {
+  "section": "11.8.2",
+  "title": "RCC internal clock sources calibration register 1 (RCC_ICSCR1) . . . 516"
+ },
+ "RCC_ICSCR2": {
+  "section": "11.8.3",
+  "title": "RCC internal clock sources calibration register 2 (RCC_ICSCR2) . . . 518"
+ },
+ "RCC_ICSCR3": {
+  "section": "11.8.4",
+  "title": "RCC internal clock sources calibration register 3 (RCC_ICSCR3) . . . 519"
+ },
+ "RCC_PLL1CFGR": {
+  "section": "11.8.9",
+  "title": "RCC PLL1 configuration register (RCC_PLL1CFGR) . . . . . . . . . . . . . 525"
+ },
+ "RCC_PLL1DIVR": {
+  "section": "11.8.12",
+  "title": "RCC PLL1 dividers register (RCC_PLL1DIVR) . . . . . . . . . . . . . . . . . . 530"
+ },
+ "RCC_PLL1FRACR": {
+  "section": "11.8.13",
+  "title": "RCC PLL1 fractional divider register (RCC_PLL1FRACR) . . . . . . . . . 531"
+ },
+ "RCC_PLL2CFGR": {
+  "section": "11.8.10",
+  "title": "RCC PLL2 configuration register (RCC_PLL2CFGR) . . . . . . . . . . . . . 527"
+ },
+ "RCC_PLL2DIVR": {
+  "section": "11.8.14",
+  "title": "RCC PLL2 dividers configuration register (RCC_PLL2DIVR) . . . . . . . 532"
+ },
+ "RCC_PLL2FRACR": {
+  "section": "11.8.15",
+  "title": "RCC PLL2 fractional divider register (RCC_PLL2FRACR) . . . . . . . . . 533"
+ },
+ "RCC_PLL3CFGR": {
+  "section": "11.8.11",
+  "title": "RCC PLL3 configuration register (RCC_PLL3CFGR) . . . . . . . . . . . . . 528"
+ },
+ "RCC_PLL3DIVR": {
+  "section": "11.8.16",
+  "title": "RCC PLL3 dividers configuration register (RCC_PLL3DIVR) . . . . . . . 534"
+ },
+ "RCC_PLL3FRACR": {
+  "section": "11.8.17",
+  "title": "RCC PLL3 fractional divider register (RCC_PLL3FRACR) . . . . . . . . . 535"
+ },
+ "RCC_PRIVCFGR": {
+  "section": "11.8.52",
+  "title": "RCC privilege configuration register (RCC_PRIVCFGR) . . . . . . . . . . 603"
+ },
+ "RCC_SECCFGR": {
+  "section": "11.8.51",
+  "title": "RCC secure configuration register (RCC_SECCFGR) . . . . . . . . . . . . 602"
+ },
+ "RCC_SRDAMR": {
+  "section": "11.8.45",
+  "title": "RCC SmartRun domain peripheral autonomous mode register (RCC_SRDAMR) . . . . . . . . . . ."
+ },
+ "RNG_CR": {
+  "section": "48.7.1",
+  "title": "RNG control register (RNG_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1916"
+ },
+ "RNG_DR": {
+  "section": "48.7.3",
+  "title": "RNG data register (RNG_DR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191"
+ },
+ "RNG_HTCR": {
+  "section": "48.7.5",
+  "title": "RNG health test control register (RNG_HTCR) . . . . . . . . . . . . . . . . . 1921"
+ },
+ "RNG_NSCR": {
+  "section": "48.7.4",
+  "title": "RNG noise source control register (RNG_NSCR) . . . . . . . . . . . . . . . 1920"
+ },
+ "RNG_SR": {
+  "section": "48.7.2",
+  "title": "RNG status register (RNG_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191"
+ },
+ "RTC_ALRABINR": {
+  "section": "63.6.24",
+  "title": "RTC alarm A binary mode register (RTC_ALRABINR) . . . . . . . . . . . 2636"
+ },
+ "RTC_ALRBBINR": {
+  "section": "63.6.25",
+  "title": "RTC alarm B binary mode register (RTC_ALRBBINR) . . . . . . . . . . . 2637"
+ },
+ "RTC_ALRMAR": {
+  "section": "63.6.16",
+  "title": "RTC alarm A register (RTC_ALRMAR) . . . . . . . . . . . . . . . . . . . . . . . 2627"
+ },
+ "RTC_ALRMASSR": {
+  "section": "63.6.17",
+  "title": "RTC alarm A subsecond register (RTC_ALRMASSR) . . . . . . . . . . . . 2629"
+ },
+ "RTC_ALRMBR": {
+  "section": "63.6.18",
+  "title": "RTC alarm B register (RTC_ALRMBR) . . . . . . . . . . . . . . . . . . . . . . . 2630"
+ },
+ "RTC_ALRMBSSR": {
+  "section": "63.6.19",
+  "title": "RTC alarm B subsecond register (RTC_ALRMBSSR) . . . . . . . . . . . 2631"
+ },
+ "RTC_CALR": {
+  "section": "63.6.11",
+  "title": "RTC calibration register (RTC_CALR) . . . . . . . . . . . . . . . . . . . . . . . . 2623"
+ },
+ "RTC_CR": {
+  "section": "63.6.7",
+  "title": "RTC control register (RTC_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26"
+ },
+ "RTC_DR": {
+  "section": "63.6.2",
+  "title": "RTC date register (RTC_DR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+ },
+ "RTC_ICSR": {
+  "section": "63.6.4",
+  "title": "RTC initialization control and status register (RTC_ICSR) . . . . . . . . 2612"
+ },
+ "RTC_MISR": {
+  "section": "63.6.21",
+  "title": "RTC nonsecure masked interrupt status register (RTC_MISR) . . . . . 2633"
+ },
+ "RTC_PRER": {
+  "section": "63.6.5",
+  "title": "RTC prescaler register (RTC_PRER) . . . . . . . . . . . . . . . . . . . . . . . . 2614"
+ },
+ "RTC_PRIVCFGR": {
+  "section": "63.6.8",
+  "title": "RTC privilege mode control register (RTC_PRIVCFGR) . . . . . . . . . . 2619"
+ },
+ "RTC_SCR": {
+  "section": "63.6.23",
+  "title": "RTC status clear register (RTC_SCR) . . . . . . . . . . . . . . . . . . . . . . . . 2635 7"
+ },
+ "RTC_SECCFGR": {
+  "section": "63.6.9",
+  "title": "RTC secure configuration register (RTC_SECCFGR) . . . . . . . . . . . . 2621"
+ },
+ "RTC_SHIFTR": {
+  "section": "63.6.12",
+  "title": "RTC shift control register (RTC_SHIFTR) . . . . . . . . . . . . . . . . . . . . . 2624"
+ },
+ "RTC_SMISR": {
+  "section": "63.6.22",
+  "title": "RTC secure masked interrupt status register (RTC_SMISR) . . . . . . 2634"
+ },
+ "RTC_SR": {
+  "section": "63.6.20",
+  "title": "RTC status register (RTC_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263"
+ },
+ "RTC_SSR": {
+  "section": "63.6.3",
+  "title": "RTC subsecond register (RTC_SSR) . . . . . . . . . . . . . . . . . . . . . . . . 2611"
+ },
+ "RTC_TR": {
+  "section": "63.6.1",
+  "title": "RTC time register (RTC_TR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+ },
+ "RTC_TSDR": {
+  "section": "63.6.14",
+  "title": "RTC timestamp date register (RTC_TSDR) . . . . . . . . . . . . . . . . . . . 2626"
+ },
+ "RTC_TSSSR": {
+  "section": "63.6.15",
+  "title": "RTC timestamp subsecond register (RTC_TSSSR) . . . . . . . . . . . . . 2627"
+ },
+ "RTC_TSTR": {
+  "section": "63.6.13",
+  "title": "RTC timestamp time register (RTC_TSTR) . . . . . . . . . . . . . . . . . . . . 2625"
+ },
+ "RTC_WPR": {
+  "section": "63.6.10",
+  "title": "RTC write protection register (RTC_WPR) . . . . . . . . . . . . . . . . . . . . 2622"
+ },
+ "RTC_WUTR": {
+  "section": "63.6.6",
+  "title": "RTC wake-up timer register (RTC_WUTR) . . . . . . . . . . . . . . . . . . . . 2615"
+ },
+ "SAES_CR": {
+  "section": "50.7.1",
+  "title": "SAES control register (SAES_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . 2001"
+ },
+ "SAES_DINR": {
+  "section": "50.7.3",
+  "title": "SAES data input register (SAES_DINR) . . . . . . . . . . . . . . . . . . . . . . 2006"
+ },
+ "SAES_DOUTR": {
+  "section": "50.7.4",
+  "title": "SAES data output register (SAES_DOUTR) . . . . . . . . . . . . . . . . . . . 2006"
+ },
+ "SAES_ICR": {
+  "section": "50.7.19",
+  "title": "SAES interrupt clear register (SAES_ICR) . . . . . . . . . . . . . . . . . . . . 2013"
+ },
+ "SAES_IER": {
+  "section": "50.7.17",
+  "title": "SAES interrupt enable register (SAES_IER) . . . . . . . . . . . . . . . . . . . 2011"
+ },
+ "SAES_ISR": {
+  "section": "50.7.18",
+  "title": "SAES interrupt status register (SAES_ISR) . . . . . . . . . . . . . . . . . . . 2012"
+ },
+ "SAES_IVR0": {
+  "section": "50.7.9",
+  "title": "SAES initialization vector register 0 (SAES_IVR0) . . . . . . . . . . . . . . 2008"
+ },
+ "SAES_IVR1": {
+  "section": "50.7.10",
+  "title": "SAES initialization vector register 1 (SAES_IVR1) . . . . . . . . . . . . . . 2009"
+ },
+ "SAES_IVR2": {
+  "section": "50.7.11",
+  "title": "SAES initialization vector register 2 (SAES_IVR2) . . . . . . . . . . . . . . 2009"
+ },
+ "SAES_IVR3": {
+  "section": "50.7.12",
+  "title": "SAES initialization vector register 3 (SAES_IVR3) . . . . . . . . . . . . . . 2009"
+ },
+ "SAES_KEYR0": {
+  "section": "50.7.5",
+  "title": "SAES key register 0 (SAES_KEYR0) . . . . . . . . . . . . . . . . . . . . . . . . 2007"
+ },
+ "SAES_KEYR1": {
+  "section": "50.7.6",
+  "title": "SAES key register 1 (SAES_KEYR1) . . . . . . . . . . . . . . . . . . . . . . . . 2007"
+ },
+ "SAES_KEYR2": {
+  "section": "50.7.7",
+  "title": "SAES key register 2 (SAES_KEYR2) . . . . . . . . . . . . . . . . . . . . . . . . 2008"
+ },
+ "SAES_KEYR3": {
+  "section": "50.7.8",
+  "title": "SAES key register 3 (SAES_KEYR3) . . . . . . . . . . . . . . . . . . . . . . . . 2008"
+ },
+ "SAES_KEYR4": {
+  "section": "50.7.13",
+  "title": "SAES key register 4 (SAES_KEYR4) . . . . . . . . . . . . . . . . . . . . . . . . 2010"
+ },
+ "SAES_KEYR5": {
+  "section": "50.7.14",
+  "title": "SAES key register 5 (SAES_KEYR5) . . . . . . . . . . . . . . . . . . . . . . . . 2010"
+ },
+ "SAES_KEYR6": {
+  "section": "50.7.15",
+  "title": "SAES key register 6 (SAES_KEYR6) . . . . . . . . . . . . . . . . . . . . . . . . 2010"
+ },
+ "SAES_KEYR7": {
+  "section": "50.7.16",
+  "title": "SAES key register 7 (SAES_KEYR7) . . . . . . . . . . . . . . . . . . . . . . . . 2011"
+ },
+ "SAES_SR": {
+  "section": "50.7.2",
+  "title": "SAES status register (SAES_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 2004"
+ },
+ "SAI_ACLRFR": {
+  "section": "69.6.8",
+  "title": "SAI clear flag register (SAI_ACLRFR) . . . . . . . . . . . . . . . . . . . . . . . . 3002"
+ },
+ "SAI_ACR1": {
+  "section": "69.6.2",
+  "title": "SAI configuration register 1 (SAI_ACR1) . . . . . . . . . . . . . . . . . . . . . . 2992"
+ },
+ "SAI_ACR2": {
+  "section": "69.6.3",
+  "title": "SAI configuration register 2 (SAI_ACR2) . . . . . . . . . . . . . . . . . . . . . . 2995"
+ },
+ "SAI_ADR": {
+  "section": "69.6.9",
+  "title": "SAI data register (SAI_ADR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+ },
+ "SAI_AFRCR": {
+  "section": "69.6.4",
+  "title": "SAI frame configuration register (SAI_AFRCR) . . . . . . . . . . . . . . . . . 2997"
+ },
+ "SAI_AIM": {
+  "section": "69.6.6",
+  "title": "SAI interrupt mask register (SAI_AIM) . . . . . . . . . . . . . . . . . . . . . . . . 2999"
+ },
+ "SAI_ASLOTR": {
+  "section": "69.6.5",
+  "title": "SAI slot register (SAI_ASLOTR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 299"
+ },
+ "SAI_ASR": {
+  "section": "69.6.7",
+  "title": "SAI status register (SAI_ASR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+ },
+ "SAI_BCLRFR": {
+  "section": "69.6.16",
+  "title": "SAI clear flag register (SAI_BCLRFR) . . . . . . . . . . . . . . . . . . . . . . . . 3014"
+ },
+ "SAI_BCR1": {
+  "section": "69.6.10",
+  "title": "SAI configuration register 1 (SAI_BCR1) . . . . . . . . . . . . . . . . . . . . . . 3004 R"
+ },
+ "SAI_BCR2": {
+  "section": "69.6.11",
+  "title": "SAI configuration register 2 (SAI_BCR2) . . . . . . . . . . . . . . . . . . . . . . 3006"
+ },
+ "SAI_BDR": {
+  "section": "69.6.17",
+  "title": "SAI data register (SAI_BDR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+ },
+ "SAI_BFRCR": {
+  "section": "69.6.12",
+  "title": "SAI frame configuration register (SAI_BFRCR) . . . . . . . . . . . . . . . . . 3008"
+ },
+ "SAI_BIM": {
+  "section": "69.6.14",
+  "title": "SAI interrupt mask register (SAI_BIM) . . . . . . . . . . . . . . . . . . . . . . . . 3010"
+ },
+ "SAI_BSLOTR": {
+  "section": "69.6.13",
+  "title": "SAI slot register (SAI_BSLOTR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300"
+ },
+ "SAI_BSR": {
+  "section": "69.6.15",
+  "title": "SAI status register (SAI_BSR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+ },
+ "SAI_GCR": {
+  "section": "69.6.1",
+  "title": "SAI global configuration register (SAI_GCR) . . . . . . . . . . . . . . . . . . . 2992"
+ },
+ "SAI_PDMCR": {
+  "section": "69.6.18",
+  "title": "SAI PDM control register (SAI_PDMCR) . . . . . . . . . . . . . . . . . . . . . . 3015"
+ },
+ "SAI_PDMDLY": {
+  "section": "69.6.19",
+  "title": "SAI PDM delay register (SAI_PDMDLY) . . . . . . . . . . . . . . . . . . . . . . 3016"
+ },
+ "SDMMC_ACKTIMER": {
+  "section": "31.10.14",
+  "title": "SDMMC acknowledgment timer register (SDMMC_ACKTIMER) . . . 1253"
+ },
+ "SDMMC_ARGR": {
+  "section": "31.10.3",
+  "title": "SDMMC argument register (SDMMC_ARGR) . . . . . . . . . . . . . . . . . . 1238"
+ },
+ "SDMMC_CLKCR": {
+  "section": "31.10.2",
+  "title": "SDMMC clock control register (SDMMC_CLKCR) . . . . . . . . . . . . . . 1236"
+ },
+ "SDMMC_CMDR": {
+  "section": "31.10.4",
+  "title": "SDMMC command register (SDMMC_CMDR) . . . . . . . . . . . . . . . . . 1238"
+ },
+ "SDMMC_DCNTR": {
+  "section": "31.10.10",
+  "title": "SDMMC data counter register (SDMMC_DCNTR) . . . . . . . . . . . . . . 1244"
+ },
+ "SDMMC_DCTRL": {
+  "section": "31.10.9",
+  "title": "SDMMC data control register (SDMMC_DCTRL) . . . . . . . . . . . . . . . 1243"
+ },
+ "SDMMC_DLENR": {
+  "section": "31.10.8",
+  "title": "SDMMC data length register (SDMMC_DLENR) . . . . . . . . . . . . . . . 1242"
+ },
+ "SDMMC_DTIMER": {
+  "section": "31.10.7",
+  "title": "SDMMC data timer register (SDMMC_DTIMER) . . . . . . . . . . . . . . . 1241"
+ },
+ "SDMMC_FIFORx": {
+  "section": "31.10.20",
+  "title": "SDMMC data FIFO registers x (SDMMC_FIFORx) . . . . . . . . . . . . . . 1257"
+ },
+ "SDMMC_ICR": {
+  "section": "31.10.12",
+  "title": "SDMMC interrupt clear register (SDMMC_ICR) . . . . . . . . . . . . . . . . 1248"
+ },
+ "SDMMC_IDMABAR": {
+  "section": "31.10.19",
+  "title": "SDMMC IDMA linked list memory base register (SDMMC_IDMABAR) . . . . . . . . . . . . . . . "
+ },
+ "SDMMC_IDMABASER": {
+  "section": "31.10.17",
+  "title": "SDMMC IDMA buffer base address register (SDMMC_IDMABASER) . . . . . . . . . . . . . . . . "
+ },
+ "SDMMC_IDMABSIZER": {
+  "section": "31.10.16",
+  "title": "SDMMC IDMA buffer size register (SDMMC_IDMABSIZER) . . . . . . 1254"
+ },
+ "SDMMC_IDMACTRLR": {
+  "section": "31.10.15",
+  "title": "SDMMC DMA control register (SDMMC_IDMACTRLR) . . . . . . . . . . 1253 RM0456 Rev 6 33/3653"
+ },
+ "SDMMC_IDMALAR": {
+  "section": "31.10.18",
+  "title": "SDMMC IDMA linked list address register (SDMMC_IDMALAR) . . . 1255"
+ },
+ "SDMMC_MASKR": {
+  "section": "31.10.13",
+  "title": "SDMMC mask register (SDMMC_MASKR) . . . . . . . . . . . . . . . . . . . . 1250"
+ },
+ "SDMMC_POWER": {
+  "section": "31.10.1",
+  "title": "SDMMC power control register (SDMMC_POWER) . . . . . . . . . . . . . 1235"
+ },
+ "SDMMC_RESPCMDR": {
+  "section": "31.10.5",
+  "title": "SDMMC command response register (SDMMC_RESPCMDR) . . . . 1240"
+ },
+ "SDMMC_RESPxR": {
+  "section": "31.10.6",
+  "title": "SDMMC response x register (SDMMC_RESPxR) . . . . . . . . . . . . . . 1241"
+ },
+ "SDMMC_STAR": {
+  "section": "31.10.11",
+  "title": "SDMMC status register (SDMMC_STAR) . . . . . . . . . . . . . . . . . . . . . 1245"
+ },
+ "SPI_AUTOCR": {
+  "section": "68.8.8",
+  "title": "SPI autonomous mode control register (SPI_AUTOCR) . . . . . . . . . . 2948"
+ },
+ "SPI_CFG1": {
+  "section": "68.8.3",
+  "title": "SPI configuration register 1 (SPI_CFG1) . . . . . . . . . . . . . . . . . . . . . . 2938"
+ },
+ "SPI_CFG2": {
+  "section": "68.8.4",
+  "title": "SPI configuration register 2 (SPI_CFG2) . . . . . . . . . . . . . . . . . . . . . . 2941"
+ },
+ "SPI_CR1": {
+  "section": "68.8.1",
+  "title": "SPI control register 1 (SPI_CR1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+ },
+ "SPI_CR2": {
+  "section": "68.8.2",
+  "title": "SPI control register 2 (SPI_CR2) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+ },
+ "SPI_CRCPOLY": {
+  "section": "68.8.11",
+  "title": "SPI polynomial register (SPI_CRCPOLY) . . . . . . . . . . . . . . . . . . . . . 2949"
+ },
+ "SPI_IER": {
+  "section": "68.8.5",
+  "title": "SPI interrupt enable register (SPI_IER) . . . . . . . . . . . . . . . . . . . . . . . 2943"
+ },
+ "SPI_IFCR": {
+  "section": "68.8.7",
+  "title": "SPI interrupt/status flags clear register (SPI_IFCR) . . . . . . . . . . . . . 2947"
+ },
+ "SPI_RXCRC": {
+  "section": "68.8.13",
+  "title": "SPI receiver CRC register (SPI_RXCRC) . . . . . . . . . . . . . . . . . . . . . 2951 76/36"
+ },
+ "SPI_RXDR": {
+  "section": "68.8.10",
+  "title": "SPI receive data register (SPI_RXDR) . . . . . . . . . . . . . . . . . . . . . . . 2949"
+ },
+ "SPI_SR": {
+  "section": "68.8.6",
+  "title": "SPI status register (SPI_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+ },
+ "SPI_TXCRC": {
+  "section": "68.8.12",
+  "title": "SPI transmitter CRC register (SPI_TXCRC) . . . . . . . . . . . . . . . . . . . 2950"
+ },
+ "SPI_TXDR": {
+  "section": "68.8.9",
+  "title": "SPI transmit data register (SPI_TXDR) . . . . . . . . . . . . . . . . . . . . . . . 2948"
+ },
+ "SPI_UDRDR": {
+  "section": "68.8.14",
+  "title": "SPI underrun data register (SPI_UDRDR) . . . . . . . . . . . . . . . . . . . . 2951"
+ },
+ "SYSCFG_CCCR": {
+  "section": "15.3.10",
+  "title": "SYSCFG compensation cell code register (SYSCFG_CCCR) . . . . . . 662"
+ },
+ "SYSCFG_CCCSR": {
+  "section": "15.3.8",
+  "title": "SYSCFG compensation cell control/status register (SYSCFG_CCCSR) . . . . . . . . . . . . . "
+ },
+ "SYSCFG_CCVR": {
+  "section": "15.3.9",
+  "title": "SYSCFG compensation cell value register (SYSCFG_CCVR) . . . . . . 661"
+ },
+ "SYSCFG_CFGR1": {
+  "section": "15.3.2",
+  "title": "SYSCFG configuration register 1 (SYSCFG_CFGR1) . . . . . . . . . . . . 653"
+ },
+ "SYSCFG_CFGR2": {
+  "section": "15.3.6",
+  "title": "SYSCFG configuration register 2 (SYSCFG_CFGR2) . . . . . . . . . . . . 657"
+ },
+ "SYSCFG_CNSLCKR": {
+  "section": "15.3.4",
+  "title": "SYSCFG CPU nonsecure lock register (SYSCFG_CNSLCKR) . . . . . 655"
+ },
+ "SYSCFG_CSLCKR": {
+  "section": "15.3.5",
+  "title": "SYSCFG CPU secure lock register (SYSCFG_CSLCKR) . . . . . . . . . 656"
+ },
+ "SYSCFG_FPUIMR": {
+  "section": "15.3.3",
+  "title": "SYSCFG FPU interrupt mask register (SYSCFG_FPUIMR) . . . . . . . . 655"
+ },
+ "SYSCFG_MESR": {
+  "section": "15.3.7",
+  "title": "SYSCFG memory erase status register (SYSCFG_MESR) . . . . . . . . 658"
+ },
+ "SYSCFG_OTGHSPHYCR": {
+  "section": "15.3.12",
+  "title": "SYSCFG OTG_HS PHY register (SYSCFG_OTGHSPHYCR) . . . . . . 664"
+ },
+ "SYSCFG_OTGHSPHYTUNER2": {
+  "section": "15.3.13",
+  "title": "SYSCFG OTG_HS PHY tune register 2 (SYSCFG_OTGHSPHYTUNER2) . . . . . . . . . . . . . . . . "
+ },
+ "SYSCFG_RSSCMDR": {
+  "section": "15.3.11",
+  "title": "SYSCFG RSS command register (SYSCFG_RSSCMDR) . . . . . . . . . 663"
+ },
+ "SYSCFG_SECCFGR": {
+  "section": "15.3.1",
+  "title": "SYSCFG secure configuration register (SYSCFG_SECCFGR) . . . . . 652"
+ },
+ "TAMP_ATCR1": {
+  "section": "64.7.5",
+  "title": "TAMP active tamper control register 1 (TAMP_ATCR1) . . . . . . . . . . 2665"
+ },
+ "TAMP_ATCR2": {
+  "section": "64.7.8",
+  "title": "TAMP active tamper control register 2 (TAMP_ATCR2) . . . . . . . . . . 2669"
+ },
+ "TAMP_ATOR": {
+  "section": "64.7.7",
+  "title": "TAMP active tamper output register (TAMP_ATOR) . . . . . . . . . . . . . 2668"
+ },
+ "TAMP_ATSEEDR": {
+  "section": "64.7.6",
+  "title": "TAMP active tamper seed register (TAMP_ATSEEDR) . . . . . . . . . . . 2667"
+ },
+ "TAMP_BKPxR": {
+  "section": "64.7.18",
+  "title": "TAMP backup x register (TAMP_BKPxR) . . . . . . . . . . . . . . . . . . . . . 2685"
+ },
+ "TAMP_COUNT1R": {
+  "section": "64.7.16",
+  "title": "TAMP monotonic counter 1 register (TAMP_COUNT1R) . . . . . . . . . 2684"
+ },
+ "TAMP_CR1": {
+  "section": "64.7.1",
+  "title": "TAMP control register 1 (TAMP_CR1) . . . . . . . . . . . . . . . . . . . . . . . . 2658"
+ },
+ "TAMP_CR2": {
+  "section": "64.7.2",
+  "title": "TAMP control register 2 (TAMP_CR2) . . . . . . . . . . . . . . . . . . . . . . . . 2660"
+ },
+ "TAMP_CR3": {
+  "section": "64.7.3",
+  "title": "TAMP control register 3 (TAMP_CR3) . . . . . . . . . . . . . . . . . . . . . . . . 2662"
+ },
+ "TAMP_ERCFGR": {
+  "section": "64.7.17",
+  "title": "TAMP erase configuration register (TAMP_ERCFGR) . . . . . . . . . . . 2684"
+ },
+ "TAMP_FLTCR": {
+  "section": "64.7.4",
+  "title": "TAMP filter control register (TAMP_FLTCR) . . . . . . . . . . . . . . . . . . . 2663"
+ },
+ "TAMP_IER": {
+  "section": "64.7.11",
+  "title": "TAMP interrupt enable register (TAMP_IER) . . . . . . . . . . . . . . . . . . . 2675"
+ },
+ "TAMP_MISR": {
+  "section": "64.7.13",
+  "title": "TAMP nonsecure masked interrupt status register (TAMP_MISR) . . 2679 RM0456 Rev 6 71/3653"
+ },
+ "TAMP_PRIVCFGR": {
+  "section": "64.7.10",
+  "title": "TAMP privilege configuration register (TAMP_PRIVCFGR) . . . . . . . 2674"
+ },
+ "TAMP_SCR": {
+  "section": "64.7.15",
+  "title": "TAMP status clear register (TAMP_SCR) . . . . . . . . . . . . . . . . . . . . . 2682"
+ },
+ "TAMP_SECCFGR": {
+  "section": "64.7.9",
+  "title": "TAMP secure configuration register (TAMP_SECCFGR) . . . . . . . . . 2672"
+ },
+ "TAMP_SMISR": {
+  "section": "64.7.14",
+  "title": "TAMP secure masked interrupt status register (TAMP_SMISR) . . . . 2680"
+ },
+ "TAMP_SR": {
+  "section": "64.7.12",
+  "title": "TAMP status register (TAMP_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 2677"
+ },
+ "TIM15_AF1": {
+  "section": "56.7.19",
+  "title": "TIM15 alternate function register 1 (TIM15_AF1) . . . . . . . . . . . . . . . 2423"
+ },
+ "TIM15_AF2": {
+  "section": "56.7.20",
+  "title": "TIM15 alternate function register 2 (TIM15_AF2) . . . . . . . . . . . . . . . 2425"
+ },
+ "TIM15_ARR": {
+  "section": "56.7.12",
+  "title": "TIM15 autoreload register (TIM15_ARR) . . . . . . . . . . . . . . . . . . . . . 2416 RM045"
+ },
+ "TIM15_BDTR": {
+  "section": "56.7.16",
+  "title": "TIM15 break and dead-time register (TIM15_BDTR) . . . . . . . . . . . . 2418"
+ },
+ "TIM15_CCER": {
+  "section": "56.7.9",
+  "title": "TIM15 capture/compare enable register (TIM15_CCER) . . . . . . . . . 2412"
+ },
+ "TIM15_CCMR1": {
+  "section": "56.7.7",
+  "title": "TIM15 capture/compare mode register 1 (TIM15_CCMR1) . . . . . . . 2408"
+ },
+ "TIM15_CCR1": {
+  "section": "56.7.14",
+  "title": "TIM15 capture/compare register 1 (TIM15_CCR1) . . . . . . . . . . . . . . 2417"
+ },
+ "TIM15_CCR2": {
+  "section": "56.7.15",
+  "title": "TIM15 capture/compare register 2 (TIM15_CCR2) . . . . . . . . . . . . . . 2418"
+ },
+ "TIM15_CNT": {
+  "section": "56.7.10",
+  "title": "TIM15 counter (TIM15_CNT) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24"
+ },
+ "TIM15_CR1": {
+  "section": "56.7.1",
+  "title": "TIM15 control register 1 (TIM15_CR1) . . . . . . . . . . . . . . . . . . . . . . . 2399"
+ },
+ "TIM15_CR2": {
+  "section": "56.7.2",
+  "title": "TIM15 control register 2 (TIM15_CR2) . . . . . . . . . . . . . . . . . . . . . . . 2400"
+ },
+ "TIM15_DCR": {
+  "section": "56.7.21",
+  "title": "TIM15 DMA control register (TIM15_DCR) . . . . . . . . . . . . . . . . . . . . 2426"
+ },
+ "TIM15_DIER": {
+  "section": "56.7.4",
+  "title": "TIM15 DMA/interrupt enable register (TIM15_DIER) . . . . . . . . . . . . 2404"
+ },
+ "TIM15_DMAR": {
+  "section": "56.7.22",
+  "title": "TIM15 DMA address for full transfer (TIM15_DMAR) . . . . . . . . . . . . 2427"
+ },
+ "TIM15_DTR2": {
+  "section": "56.7.17",
+  "title": "TIM15 timer deadtime register 2 (TIM15_DTR2) . . . . . . . . . . . . . . . . 2421"
+ },
+ "TIM15_EGR": {
+  "section": "56.7.6",
+  "title": "TIM15 event generation register (TIM15_EGR) . . . . . . . . . . . . . . . . 2407"
+ },
+ "TIM15_PSC": {
+  "section": "56.7.11",
+  "title": "TIM15 prescaler (TIM15_PSC) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2415"
+ },
+ "TIM15_RCR": {
+  "section": "56.7.13",
+  "title": "TIM15 repetition counter register (TIM15_RCR) . . . . . . . . . . . . . . . . 2416"
+ },
+ "TIM15_SMCR": {
+  "section": "56.7.3",
+  "title": "TIM15 slave mode control register (TIM15_SMCR) . . . . . . . . . . . . . 2402"
+ },
+ "TIM15_SR": {
+  "section": "56.7.5",
+  "title": "TIM15 status register (TIM15_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . 2405"
+ },
+ "TIM15_TISEL": {
+  "section": "56.7.18",
+  "title": "TIM15 input selection register (TIM15_TISEL) . . . . . . . . . . . . . . . . . 2422"
+ },
+ "TIMx_AF1": {
+  "section": "54.6.27",
+  "title": "TIMx alternate function option register 1 (TIMx_AF1)(x = 1, 8) . . . . . 2227"
+ },
+ "TIMx_AF2": {
+  "section": "54.6.28",
+  "title": "TIMx alternate function register 2 (TIMx_AF2)(x = 1, 8) . . . . . . . . . . 2230"
+ },
+ "TIMx_ARR": {
+  "section": "54.6.14",
+  "title": "TIMx autoreload register (TIMx_ARR)(x = 1, 8) . . . . . . . . . . . . . . . . . 2213"
+ },
+ "TIMx_BDTR": {
+  "section": "54.6.20",
+  "title": "TIMx break and dead-time register (TIMx_BDTR)(x = 1, 8) . . . . . . . 2217"
+ },
+ "TIMx_CCER": {
+  "section": "54.6.11",
+  "title": "TIMx capture/compare enable register (TIMx_CCER)(x = 1, 8) . . . . 2208"
+ },
+ "TIMx_CCMR1": {
+  "section": "54.6.7",
+  "title": "TIMx capture/compare mode register 1 (TIMx_CCMR1) (x = 1, 8) . . . . . . . . . . . . . . ."
+ },
+ "TIMx_CCMR2": {
+  "section": "54.6.9",
+  "title": "TIMx capture/compare mode register 2 (TIMx_CCMR2) (x = 1, 8) . . . . . . . . . . . . . . ."
+ },
+ "TIMx_CCMR3": {
+  "section": "54.6.23",
+  "title": "TIMx capture/compare mode register 3 (TIMx_CCMR3) (x = 1, 8) . . . . . . . . . . . . . . ."
+ },
+ "TIMx_CCR1": {
+  "section": "54.6.16",
+  "title": "TIMx capture/compare register 1 (TIMx_CCR1)(x = 1, 8) . . . . . . . . . 2214"
+ },
+ "TIMx_CCR2": {
+  "section": "54.6.17",
+  "title": "TIMx capture/compare register 2 (TIMx_CCR2)(x = 1, 8) . . . . . . . . . 2214"
+ },
+ "TIMx_CCR3": {
+  "section": "54.6.18",
+  "title": "TIMx capture/compare register 3 (TIMx_CCR3)(x = 1, 8) . . . . . . . . . 2215"
+ },
+ "TIMx_CCR4": {
+  "section": "54.6.19",
+  "title": "TIMx capture/compare register 4 (TIMx_CCR4)(x = 1, 8) . . . . . . . . . 2216"
+ },
+ "TIMx_CCR5": {
+  "section": "54.6.21",
+  "title": "TIMx capture/compare register 5 (TIMx_CCR5)(x = 1, 8) . . . . . . . . . 2221"
+ },
+ "TIMx_CCR6": {
+  "section": "54.6.22",
+  "title": "TIMx capture/compare register 6 (TIMx_CCR6)(x = 1, 8) . . . . . . . . . 2222"
+ },
+ "TIMx_CNT": {
+  "section": "54.6.12",
+  "title": "TIMx counter (TIMx_CNT)(x = 1, 8) . . . . . . . . . . . . . . . . . . . . . . . . . . 2212"
+ },
+ "TIMx_CR1": {
+  "section": "54.6.1",
+  "title": "TIMx control register 1 (TIMx_CR1)(x = 1, 8) . . . . . . . . . . . . . . . . . . 2185"
+ },
+ "TIMx_CR2": {
+  "section": "54.6.2",
+  "title": "TIMx control register 2 (TIMx_CR2)(x = 1, 8) . . . . . . . . . . . . . . . . . . 2186"
+ },
+ "TIMx_DCR": {
+  "section": "54.6.29",
+  "title": "TIMx DMA control register (TIMx_DCR)(x = 1, 8) . . . . . . . . . . . . . . . 2232"
+ },
+ "TIMx_DIER": {
+  "section": "54.6.4",
+  "title": "TIMx DMA/interrupt enable register (TIMx_DIER)(x = 1, 8) . . . . . . . . 2194"
+ },
+ "TIMx_DMAR": {
+  "section": "54.6.30",
+  "title": "TIMx DMA address for full transfer (TIMx_DMAR)(x = 1, 8) . . . . . . . 2234"
+ },
+ "TIMx_DTR2": {
+  "section": "54.6.24",
+  "title": "TIMx timer deadtime register 2 (TIMx_DTR2)(x = 1, 8) . . . . . . . . . . . 2224"
+ },
+ "TIMx_ECR": {
+  "section": "54.6.25",
+  "title": "TIMx timer encoder control register (TIMx_ECR)(x = 1, 8) . . . . . . . . 2225"
+ },
+ "TIMx_EGR": {
+  "section": "54.6.6",
+  "title": "TIMx event generation register (TIMx_EGR)(x = 1, 8) . . . . . . . . . . . . 2198"
+ },
+ "TIMx_OR1": {
+  "section": "56.8.19",
+  "title": "TIMx option register 1 (TIMx_OR1)(x = 16 to 17) . . . . . . . . . . . . . . . 2451"
+ },
+ "TIMx_PSC": {
+  "section": "54.6.13",
+  "title": "TIMx prescaler (TIMx_PSC)(x = 1, 8) . . . . . . . . . . . . . . . . . . . . . . . . 2212"
+ },
+ "TIMx_RCR": {
+  "section": "54.6.15",
+  "title": "TIMx repetition counter register (TIMx_RCR)(x = 1, 8) . . . . . . . . . . . 2213"
+ },
+ "TIMx_SMCR": {
+  "section": "54.6.3",
+  "title": "TIMx slave mode control register (TIMx_SMCR)(x = 1, 8) . . . . . . . . 2190 RM0456 Rev 6 5"
+ },
+ "TIMx_SR": {
+  "section": "54.6.5",
+  "title": "TIMx status register (TIMx_SR)(x = 1, 8) . . . . . . . . . . . . . . . . . . . . . . 2195"
+ },
+ "TIMx_TISEL": {
+  "section": "54.6.26",
+  "title": "TIMx timer input selection register (TIMx_TISEL)(x = 1, 8) . . . . . . . . 2226"
+ },
+ "TSC_CR": {
+  "section": "47.6.1",
+  "title": "TSC control register (TSC_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18"
+ },
+ "TSC_ICR": {
+  "section": "47.6.3",
+  "title": "TSC interrupt clear register (TSC_ICR) . . . . . . . . . . . . . . . . . . . . . . . 1899"
+ },
+ "TSC_IER": {
+  "section": "47.6.2",
+  "title": "TSC interrupt enable register (TSC_IER) . . . . . . . . . . . . . . . . . . . . . 1898"
+ },
+ "TSC_IOASCR": {
+  "section": "47.6.6",
+  "title": "TSC I/O analog switch control register (TSC_IOASCR) . . . . . . . . . . . . . . . . . . . "
+ },
+ "TSC_IOCCR": {
+  "section": "47.6.8",
+  "title": "TSC I/O channel control register (TSC_IOCCR) . . . . . . . . . . . . . . . . 1901"
+ },
+ "TSC_IOGCSR": {
+  "section": "47.6.9",
+  "title": "TSC I/O group control status register (TSC_IOGCSR) . . . . . . . . . . . 1902"
+ },
+ "TSC_IOGxCR": {
+  "section": "47.6.10",
+  "title": "TSC I/O group x counter register (TSC_IOGxCR) . . . . . . . . . . . . . . . 1902"
+ },
+ "TSC_IOHCR": {
+  "section": "47.6.5",
+  "title": "TSC I/O hysteresis control register (TSC_IOHCR) . . . . . . . . . . . . . . 1900"
+ },
+ "TSC_IOSCR": {
+  "section": "47.6.7",
+  "title": "TSC I/O sampling control register (TSC_IOSCR) . . . . . . . . . . . . . . . 1901"
+ },
+ "TSC_ISR": {
+  "section": "47.6.4",
+  "title": "TSC interrupt status register (TSC_ISR) . . . . . . . . . . . . . . . . . . . . . . 1899"
+ },
+ "UCPD_CFGR1": {
+  "section": "74.8.1",
+  "title": "UCPD configuration register 1 (UCPD_CFGR1) . . . . . . . . . . . . . . . . 3482"
+ },
+ "UCPD_CFGR2": {
+  "section": "74.8.2",
+  "title": "UCPD configuration register 2 (UCPD_CFGR2) . . . . . . . . . . . . . . . . 3484"
+ },
+ "UCPD_CFGR3": {
+  "section": "74.8.3",
+  "title": "UCPD configuration register 3 (UCPD_CFGR3) . . . . . . . . . . . . . . . . 3484"
+ },
+ "UCPD_CR": {
+  "section": "74.8.4",
+  "title": "UCPD control register (UCPD_CR) . . . . . . . . . . . . . . . . . . . . . . . . . . 3485"
+ },
+ "UCPD_ICR": {
+  "section": "74.8.7",
+  "title": "UCPD interrupt clear register (UCPD_ICR) . . . . . . . . . . . . . . . . . . . . 3492"
+ },
+ "UCPD_IMR": {
+  "section": "74.8.5",
+  "title": "UCPD interrupt mask register (UCPD_IMR) . . . . . . . . . . . . . . . . . . . 3487"
+ },
+ "UCPD_RXDR": {
+  "section": "74.8.13",
+  "title": "UCPD receive data register (UCPD_RXDR) . . . . . . . . . . . . . . . . . . . 3496"
+ },
+ "UCPD_RX_ORDEXTR1": {
+  "section": "74.8.14",
+  "title": "UCPD Rx ordered set extension register 1 (UCPD_RX_ORDEXTR1) . . . . . . . . . . . . . . . "
+ },
+ "UCPD_RX_ORDEXTR2": {
+  "section": "74.8.15",
+  "title": "UCPD Rx ordered set extension register 2 (UCPD_RX_ORDEXTR2) . . . . . . . . . . . . . . . "
+ },
+ "UCPD_RX_ORDSETR": {
+  "section": "74.8.11",
+  "title": "UCPD Rx ordered set register (UCPD_RX_ORDSETR) . . . . . . . . . . 3494"
+ },
+ "UCPD_RX_PAYSZR": {
+  "section": "74.8.12",
+  "title": "UCPD Rx payload size register (UCPD_RX_PAYSZR) . . . . . . . . . . . 3495"
+ },
+ "UCPD_SR": {
+  "section": "74.8.6",
+  "title": "UCPD status register (UCPD_SR) . . . . . . . . . . . . . . . . . . . . . . . . . . 3489"
+ },
+ "UCPD_TXDR": {
+  "section": "74.8.10",
+  "title": "UCPD Tx data register (UCPD_TXDR) . . . . . . . . . . . . . . . . . . . . . . . 3494"
+ },
+ "UCPD_TX_ORDSETR": {
+  "section": "74.8.8",
+  "title": "UCPD Tx ordered set type register (UCPD_TX_ORDSETR) . . . . . . 3493"
+ },
+ "UCPD_TX_PAYSZR": {
+  "section": "74.8.9",
+  "title": "UCPD Tx payload size register (UCPD_TX_PAYSZR) . . . . . . . . . . . 3493"
+ },
+ "USART_AUTOCR": {
+  "section": "66.8.16",
+  "title": "USART autonomous mode control register (USART_AUTOCR) . . . . 2843"
+ },
+ "USART_BRR": {
+  "section": "66.8.6",
+  "title": "USART baud rate register (USART_BRR) . . . . . . . . . . . . . . . . . . . . 2825"
+ },
+ "USART_CR1": {
+  "section": "66.8.1",
+  "title": "USART control register 1 (USART_CR1) . . . . . . . . . . . . . . . . . . . . . 2807"
+ },
+ "USART_CR2": {
+  "section": "66.8.3",
+  "title": "USART control register 2 (USART_CR2) . . . . . . . . . . . . . . . . . . . . . 2814"
+ },
+ "USART_CR3": {
+  "section": "66.8.4",
+  "title": "USART control register 3 (USART_CR3) . . . . . . . . . . . . . . . . . . . . . 2818"
+ },
+ "USART_GTPR": {
+  "section": "66.8.7",
+  "title": "USART guard time and prescaler register (USART_GTPR) . . . . . . . 2826"
+ },
+ "USART_ICR": {
+  "section": "66.8.12",
+  "title": "USART interrupt flag clear register (USART_ICR) . . . . . . . . . . . . . . 2840"
+ },
+ "USART_ISR": {
+  "section": "66.8.10",
+  "title": "USART interrupt and status register (USART_ISR) . . . . . . . . . . . . . 2829"
+ },
+ "USART_PRESC": {
+  "section": "66.8.15",
+  "title": "USART prescaler register (USART_PRESC) . . . . . . . . . . . . . . . . . . 2842"
+ },
+ "USART_RDR": {
+  "section": "66.8.13",
+  "title": "USART receive data register (USART_RDR) . . . . . . . . . . . . . . . . . . 2841"
+ },
+ "USART_RQR": {
+  "section": "66.8.9",
+  "title": "USART request register (USART_RQR) . . . . . . . . . . . . . . . . . . . . . . 2828"
+ },
+ "USART_RTOR": {
+  "section": "66.8.8",
+  "title": "USART receiver timeout register (USART_RTOR) . . . . . . . . . . . . . . 2827"
+ },
+ "USART_TDR": {
+  "section": "66.8.14",
+  "title": "USART transmit data register (USART_TDR) . . . . . . . . . . . . . . . . . . 2842"
+ },
+ "USB_BCDR": {
+  "section": "71.6.6",
+  "title": "USB battery charging detector (USB_BCDR) . . . . . . . . . . . . . . . . . . 3118"
+ },
+ "USB_CHEP_RXTXBD_n": {
+  "section": "71.7.3",
+  "title": "Channel/endpoint receive buffer descriptor n (USB_CHEP_RXTXBD_n) . . . . . . . . . . . . ."
+ },
+ "USB_CHEP_TXRXBD_n": {
+  "section": "71.7.1",
+  "title": "Channel/endpoint transmit buffer descriptor n (USB_CHEP_TXRXBD_n) . . . . . . . . . . . . "
+ },
+ "USB_CHEPnR": {
+  "section": "71.6.7",
+  "title": "USB endpoint/channel n register (USB_CHEPnR) . . . . . . . . . . . . . . 3119"
+ },
+ "USB_CNTR": {
+  "section": "71.6.1",
+  "title": "USB control register (USB_CNTR) . . . . . . . . . . . . . . . . . . . . . . . . . . 3109"
+ },
+ "USB_DADDR": {
+  "section": "71.6.4",
+  "title": "USB Device address (USB_DADDR) . . . . . . . . . . . . . . . . . . . . . . . . 3116"
+ },
+ "USB_FNR": {
+  "section": "71.6.3",
+  "title": "USB frame number register (USB_FNR) . . . . . . . . . . . . . . . . . . . . . . 3116"
+ },
+ "USB_ISTR": {
+  "section": "71.6.2",
+  "title": "USB interrupt status register (USB_ISTR) . . . . . . . . . . . . . . . . . . . . . 3112"
+ },
+ "USB_LPMCSR": {
+  "section": "71.6.5",
+  "title": "USB LPM control and status register (USB_LPMCSR) . . . . . . . . . . . 3117"
+ },
+ "VREFBUF_CCR": {
+  "section": "36.5.2",
+  "title": "VREFBUF calibration control register (VREFBUF_CCR) . . . . . . . . . 1489"
+ },
+ "VREFBUF_CSR": {
+  "section": "36.5.1",
+  "title": "VREFBUF control and status register (VREFBUF_CSR) . . . . . . . . . 1488"
+ },
+ "WWDG_CFR": {
+  "section": "62.6.2",
+  "title": "WWDG configuration register (WWDG_CFR) . . . . . . . . . . . . . . . . . . 2583"
+ },
+ "WWDG_CR": {
+  "section": "62.6.1",
+  "title": "WWDG control register (WWDG_CR) . . . . . . . . . . . . . . . . . . . . . . . . 2582"
+ },
+ "WWDG_SR": {
+  "section": "62.6.3",
+  "title": "WWDG status register (WWDG_SR) . . . . . . . . . . . . . . . . . . . . . . . . 2584"
+ }
+}
