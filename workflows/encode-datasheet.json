@@ -1,6 +1,9 @@
 {
   "name": "encode-datasheet",
   "description": "Encode a chip's datasheet (SVD + reference manual under datasheets/<chip>/) into the OpenDatasheet part format via the build pipeline, register it, query the live MCP to prove it serves, and verify it against the source docs. Agent nodes run on the local Claude Code CLI (free, subscription). Run: `va workflow run encode-datasheet --var chip=stm32u575`.",
+  "vars": {
+    "chip": "stm32u575"
+  },
   "nodes": [
     {
       "id": "generate",
