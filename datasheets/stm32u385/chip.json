@@ -1,0 +1,35 @@
+{
+  "id": "stm32u385",
+  "mpn": "STM32U385RG",
+  "manufacturer": "STMicroelectronics",
+  "family": "STM32U3",
+  "core": "Cortex-M33",
+  "revision": "rev-X",
+  "lifecycle": "active",
+  "packages": [
+    "LQFP64"
+  ],
+  "out": "data/stm32u385rg.json",
+  "tiers": [
+    1,
+    2
+  ],
+  "svd": "STM32U385.svd",
+  "reference_manual": {
+    "doc": "RM0487",
+    "kind": "reference-manual",
+    "rev": "3",
+    "pdf": "rm0487.pdf",
+    "toc_pages": 75,
+    "url": "https://www.st.com/resource/en/reference_manual/rm0487-stm32u3-series-armbased-32bit-mcus-stmicroelectronics.pdf"
+  },
+  "datasheet": {
+    "doc": "DS14830",
+    "kind": "datasheet",
+    "rev": "3",
+    "pdf": "stm32u385rg.pdf",
+    "url": "https://www.st.com/resource/en/datasheet/stm32u385rg.pdf"
+  },
+  "_notes": "Inputs for encode-datasheet. SVD STM32U385.svd from STM32CubeCLT (U3 series). RM0487 Rev 3, DS14830 Rev 3. RM0487 TOC ends ~p70 so toc_pages 75. Verify silicon `revision` and `packages` against the DS.",
+  "drop_secure_aliases": true
+}

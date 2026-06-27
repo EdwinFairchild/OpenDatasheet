@@ -1,8 +1,8 @@
 {
   "name": "encode-datasheet",
-  "description": "Encode a chip's datasheet (SVD + reference manual under datasheets/<chip>/) into the OpenDatasheet part format via the build pipeline, register it, query the live MCP to prove it serves, and verify it against the source docs. Agent nodes run on the local Claude Code CLI (free, subscription). Run: `va workflow run encode-datasheet --var chip=stm32u575`.",
+  "description": "",
   "vars": {
-    "chip": "stm32u575"
+    "chip": "stm32u385"
   },
   "nodes": [
     {
@@ -12,28 +12,21 @@
       "prompt": "You are encoding an STM32 microcontroller into the OpenDatasheet part format. This is the STRUCTURAL step: produce a complete, registered-precise register-map (Tier 1) with provenance on every leaf.\n\nINPUTS \u2014 read the manifest first:\n  cat datasheets/{{chip}}/chip.json\nIt gives: mpn, family, packages, revision, `out` (where the part JSON must land), `svd` filename, reference_manual {doc, rev, pdf, toc_pages, url}, datasheet {doc, rev, pdf}.\n\nREAD THE PROJECT'S OWN GUIDE before doing anything else \u2014 it is the source of truth for this pipeline:\n  cat tools/ADDING-A-CHIP.md\nAlso skim a known-good chip module for the exact shape to mirror:\n  sed -n '1,60p' tools/chips/stm32g474.py\n\nSTEPS (follow ADDING-A-CHIP.md; commands are relative to the repo root, which is your cwd):\n1. Copy the template module and the SVD into the toolchain:\n     cp tools/chips/stm32g474.py tools/chips/{{chip}}.py\n     cp datasheets/{{chip}}/<svd-from-manifest> tools/chips/{{chip}}.svd\n2. Sanity-check the SVD parses (note the register NAMING convention you see \u2014 e.g. are register names prefixed like `RCC_CR`, or bare like `CR`? this affects section mapping):\n     python3 tools/svd2od.py tools/chips/{{chip}}.svd RCC | head -40\n3. Build the provenance section map from the reference manual. THIS RM's table of contents is long \u2014 use the manifest's `toc_pages` value (do NOT rely on the default 72):\n     python3 tools/make_sections.py datasheets/{{chip}}/<rm-pdf> tools/chips/{{chip}}.sections.json --toc-pages <toc_pages-from-manifest>\n   Confirm it produced hundreds of keys: python3 -c \"import json;d=json.load(open('tools/chips/{{chip}}.sections.json'));print(len(d),'keys'); print([k for k in d if 'RCC' in k][:6])\"\n4. Edit tools/chips/{{chip}}.py descriptor from the manifest: ID, SVD_FILE, SECTIONS_FILE, OUT (= manifest `out`), EMIT_ALL=True, DOC_RM (= reference_manual.doc), RM_REV (= reference_manual.rev), PART (mpn/manufacturer/family/revision/lifecycle/packages), DOCUMENTS (one entry per the manifest's reference_manual AND datasheet \u2014 id/kind/rev/url). Set TIERS=[1] for now.\n   CRITICAL: the template is the STM32G474 module \u2014 it is full of G474-SPECIFIC curation that is WRONG for this chip. You MUST strip it to a clean auto-mode baseline before building: set PERIPHERALS=[], AUTO_PREFIX_OVERRIDE={}, CHAPTER_FALLBACK={}, ACCESS_FIX={}, EXTRA_PERIPHERALS=[], and remove/blank the G474 LIMITS/ELECTRICAL and the hand-written enum/peripheral dicts (EN_*, GPIO/RCC/USART/... spec dicts). Do not let G474 register names, enums, or access values leak into this chip. Keep only the generic auto-mode machinery (CLEAR_SUFFIX=\"ICR\", CLEAR_NAMES={\"SCR\",\"IFCR\"}) and the build helpers the module needs.\n5. First build and READ THE STDERR COVERAGE REPORT:\n     python3 tools/build.py {{chip}}\n   It prints: N peripherals, M registers, and provenance: X register-precise, Y chapter-level, Z TBD.\n6. DRIVE `TBD` TO 0. For each peripheral still TBD or chapter-level, reason about WHY its registers didn't resolve to a section, then fix with the smallest mechanism (per ADDING-A-CHIP.md \u00a7\"close provenance gaps\"):\n     - AUTO_PREFIX_OVERRIDE: when the SVD peripheral base (e.g. SPI1) differs from the RM's generic TOC placeholder (e.g. SPIx) \u2014 map \"SPI\":\"SPIx\", \"GPIO\":\"GPIOx\", \"TIM\":\"TIMx\" as needed. Inspect the sections.json keys to learn the placeholders.\n     - CHAPTER_FALLBACK: when the RM documents the peripheral only at chapter granularity (no per-register TOC entry) \u2014 map the prefix to its chapter number (find it in the sections.json or via the RM).\n     - A curated section_map on a per-peripheral spec for collisions.\n   Rebuild after each change; the TBD count must drop. Iterate until `0 TBD`.\n7. FIX STATUS/CLEAR REGISTER ACCESS. The SVD mis-types write-1-to-clear/read-clear registers as plain read-write. For the interrupt/status registers of the main peripherals, verify the real access in the RM:\n     python3 tools/rm_inspect.py datasheets/{{chip}}/<rm-pdf> ADC_ISR\n   (it prints access tokens -> schema access). Encode the corrections in ACCESS_FIX, e.g. {\"ADC\":{\"ISR\":\"w1c\"}, \"EXTI\":{\"PR1\":\"w1c\"}}. Check at least: ADC ISR, EXTI pending, any *ICR/*SCR/*IFCR (the CLEAR_SUFFIX/CLEAR_NAMES rule should already handle most clear registers \u2014 confirm).\nSECURE-WORLD ALIASES (TrustZone parts \u2014 STM32U5/L5/H5). If the SVD exposes every peripheral a SECOND time as a `SEC_<name>` duplicate with identical registers (just the secure address space) \u2014 and the manifest sets `drop_secure_aliases: true` \u2014 DROP the duplicates: set `SKIP_PREFIXES = (\"SEC_\",)` in tools/chips/{{chip}}.py (build.py honors it in auto-mode AND in curated `emit` lists). Do NOT add any `SEC_` instance to a curated peripheral's `emit` list. After building, confirm zero remain: `python3 -c \"import json;d=json.load(open('<out>'));print(sum(1 for p in d['profiles']['register-map']['peripherals'] if p['name'].startswith('SEC_')),'SEC_ remain (want 0)')\"`.\n\n8. Final rebuild. Then run the deterministic validator and make sure it passes:\n     python3 tools/check_conformance.py <out-from-manifest>\n\nWork autonomously: run the tools, read their output, edit the module, rebuild, repeat. Do NOT hand-write the register JSON \u2014 the build pipeline generates it from the SVD + your curation.\n\nWhen done, OUTPUT a concise report: final peripheral/register counts, the final provenance line (must be 0 TBD), every AUTO_PREFIX_OVERRIDE / CHAPTER_FALLBACK / ACCESS_FIX you added (with the reasoning), the SVD naming convention you observed, and the check_conformance result.",
       "agent": {
         "profile": "claude-cli",
-        "model": "sonnet",
-        "budget": {
-          "max_turns": 90,
-          "max_tokens_output": 4000
-        }
-      },
-      "on_error": "stop"
+        "tools": [],
+        "use_subagents": false
+      }
     },
     {
       "id": "curate",
       "title": "Curate hero peripherals + Tier 2",
+      "on_error": "continue",
       "kind": "agent",
       "prompt": "You raised the STRUCTURAL register-map for this STM32 (see datasheets/{{chip}}/chip.json for the MPN and the datasheet PDF). Now RAISE FIDELITY on the peripherals people actually program, and add the Tier 2 parametric slice. The chip module is tools/chips/{{chip}}.py; the part JSON is the manifest's `out`.\n\nA) HERO PERIPHERALS (verified access + real enums). Pick the handful most-programmed on this family: RCC, GPIO, the USART/UART, a general-purpose TIM, SPI, and ADC. For each, add a curated spec to the PERIPHERALS list of tools/chips/{{chip}}.py following the exact shape documented in tools/ADDING-A-CHIP.md (svd_name, description, section_keyfn or section_map, registers{access overrides}, fields{enums + access}, emit[...]). Read the real bit/enum meanings from the reference manual, do not invent them:\n     python3 tools/rm_inspect.py datasheets/{{chip}}/<rm-pdf> RCC_CFGR1 --text   # shows the \"00: .. 01: ..\" bit descriptions\nMirror how tools/chips/stm32g474.py wrote its RCC/GPIO/USART specs \u2014 but use THIS chip's sections, enums, and register names (U5 differs from G4: e.g. RCC register names/bits, GPIO is the same MODER pattern). Rebuild after each peripheral and confirm it still builds 0 TBD.\n\nB) TIER 2 (electrical / limits) from the datasheet PDF (datasheets/{{chip}}/<ds-pdf>, doc id + rev are in the manifest). Hand-curate a HERO SLICE \u2014 do not attempt the whole datasheet:\n     - LIMITS.absolute_maximum: VDD\u2013VSS, VIN, storage/junction temperature.\n     - LIMITS.recommended_operating: VDD range, operating temperature range.\n     - ELECTRICAL: max core/AHB clock f_HCLK, and 1\u20132 key supply currents (Run, Stop).\n   EVERY value needs a `conditions` object (even if it just states the mode/voltage/temperature) and a `provenance` citing the datasheet doc id + rev. Use `null` for any min/typ/max the datasheet does not state \u2014 never guess a number. Set TIERS=[1, 2] in the module.\n\nRebuild a final time (python3 tools/build.py {{chip}}) and run python3 tools/check_conformance.py <out-from-manifest> \u2014 it must stay green.\n\nThis step is best-effort quality polish: if a particular enum or value is unclear in the docs, leave it auto/null rather than guessing. OUTPUT a summary of which peripherals you curated, which enums you added, and the Tier 2 values you encoded (with their datasheet sections).",
       "agent": {
         "profile": "claude-cli",
-        "model": "sonnet",
-        "budget": {
-          "max_turns": 70,
-          "max_tokens_output": 4000
-        }
-      },
-      "on_error": "continue"
+        "tools": [],
+        "use_subagents": false
+      }
     },
     {
       "id": "register",
@@ -42,19 +35,15 @@
       "prompt": "Register the freshly-encoded STM32 part so the OpenDatasheet MCP worker serves it. Read datasheets/{{chip}}/chip.json for the MPN and the `out` path (e.g. data/stm32u575zi.json).\n\n1. Make the build:data script build this chip too. In package.json, the \"build:data\" script currently runs `python3 tools/build.py stm32g474`; append this chip's id so it builds both, e.g. `python3 tools/build.py stm32g474 {{chip}}`.\n2. Register the part in src/lib.ts (read its top \u2014 it documents the exact pattern):\n     - add an import: `import u575 from \"../data/<out-basename>.json\";` (use a sensible local name; the path is the manifest `out`).\n     - add an entry to the PARTS map keyed by the EXACT MPN from the manifest, e.g. `\"STM32U575ZI\": u575 as Part,`.\n   (No errata overlay for this part \u2014 leave ERRATA alone.)\n3. Rebuild and typecheck:\n     npm run build:data\n     npm run typecheck      # tsc --noEmit \u2014 must be clean\n4. Confirm the part JSON exists at the manifest `out` and the MPN now appears in the registry.\n\nDo NOT deploy (no `npm run deploy`, no wrangler deploy) \u2014 registration + local build only. OUTPUT: confirm the package.json + src/lib.ts edits, that build:data and typecheck pass, and the final part JSON path + size.",
       "agent": {
         "profile": "claude-cli",
-        "model": "sonnet",
-        "budget": {
-          "max_turns": 30,
-          "max_tokens_output": 4000
-        }
-      },
-      "on_error": "stop"
+        "tools": [],
+        "use_subagents": false
+      }
     },
     {
       "id": "conformance",
       "title": "Conformance gate (deterministic)",
-      "kind": "tool",
       "auto_approve": true,
+      "kind": "tool",
       "tool": {
         "name": "bash",
         "args": {
@@ -69,13 +58,9 @@
       "prompt": "Verify the newly-registered STM32 part is actually QUERYABLE through the OpenDatasheet MCP server (the whole point of the project), by running the worker locally and querying it. Read datasheets/{{chip}}/chip.json for the MPN (e.g. STM32U575ZI) and `out` (e.g. data/stm32u575zi.json \u2192 raw path /parts/stm32u575zi.json, lowercase).\n\n1. Start the worker locally in the background on port 8787:\n     npx wrangler dev --port 8787 >/tmp/wrangler-{{chip}}.log 2>&1 &\n   Then POLL until it is ready (up to ~60s): loop `curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8787/` until it returns 200/426/405 (any response means it's up). If wrangler fails to start (check /tmp/wrangler-{{chip}}.log), say so and fall back to validating the JSON directly with jq/python, then SKIP to step 4.\n2. Query via the MCP tools using the helper (tools/query.sh local <cmd> <MPN>):\n     ./tools/query.sh local list                 # the MPN must appear in the list\n     ./tools/query.sh local describe <MPN>        # must return the full part document, not an error\n     ./tools/query.sh local raw /parts/<mpn-lowercase>.json   # the static raw route\n   Confirm describe returns real content: it should include the register-map profile with peripherals like RCC and GPIO, the conformance tiers, and provenance. Pull out and show one concrete register (e.g. grep RCC_CR or a GPIO MODER) with its fields + provenance to prove the data is real and cited.\n3. Kill the wrangler dev process you started (e.g. `kill %1` or pkill -f \"wrangler dev\").\n4. OUTPUT: paste the key query results \u2014 the list_parts hit, a trimmed describe excerpt showing a real cited register, and the raw-route status \u2014 so it is evident the MCP serves this part end to end. If anything failed (worker wouldn't start, MPN missing, describe errored), report it clearly as a FAILURE.",
       "agent": {
         "profile": "claude-cli",
-        "model": "sonnet",
-        "budget": {
-          "max_turns": 40,
-          "max_tokens_output": 4000
-        }
-      },
-      "on_error": "stop"
+        "tools": [],
+        "use_subagents": false
+      }
     },
     {
       "id": "verify",
@@ -84,19 +69,15 @@
       "prompt": "You are the independent VERIFY step: cross-check that the encoded STM32 part faithfully matches its source reference manual + datasheet, beyond the structural validator. Read datasheets/{{chip}}/chip.json for the MPN, `out` path, and the RM/DS pdf names + doc ids + revisions.\n\nDo these checks:\n1. Re-run the deterministic validator and require it green:\n     python3 tools/check_conformance.py <out-from-manifest>\n2. REGISTER-LEVEL SPOT CHECK (the important part). Pick ~8 registers spread across DIFFERENT peripherals (include at least: an RCC clock register, a GPIO register, a USART register, a TIM register, an ADC status register, and any *ICR/*SCR clear register). For each, compare the ENCODED entry in the part JSON (its `access`, its `provenance.section`, and a field or two) against the reference manual:\n     python3 tools/rm_inspect.py datasheets/{{chip}}/<rm-pdf> <REG>            # access tokens\n     python3 tools/rm_inspect.py datasheets/{{chip}}/<rm-pdf> <REG> --text | head -60   # to read the section number + bit meanings\n   Flag any MISMATCH: wrong access (e.g. a status/clear register encoded read-write when the RM says rc_w1 \u2192 should be w1c), a provenance.section that points at the wrong chapter, or an enum value that contradicts the RM.\n3. TIER 2 SPOT CHECK (if the part declares tier 2): pick 1\u20132 electrical/limit values and confirm the number + unit + cited section match the datasheet (datasheets/{{chip}}/<ds-pdf>).\n\nKNOWN PROJECT CONVENTIONS \u2014 DO NOT FLAG THESE AS DISCREPANCIES (they are correct per tools/ADDING-A-CHIP.md):\n  - A CLEAR REGISTER (name ends ICR/SCR/IFCR/FCR/CLRFR, or whose RM access is shown as plain `w`) encoded as `w1c` (or `w0c`). ST marks write-1-to-clear registers as `w` in the RM, but `w1c`/`w0c` is the CORRECT, more-informative encoding \u2014 not an error.\n  - A register-level `access` SUMMARY that differs from the RM WHEN the register's individual FIELDS are correctly typed. Consumers and check_conformance use field-level access; the register-level value is only a coarse summary. Only flag register-level access for a register that has NO fields.\nFlag ONLY genuine FIELD-LEVEL errors: a status/data field whose access contradicts the RM (e.g. a status flag left `read-write` when the RM says `rc_w1`/`rc_w0` \u2192 should be `w1c`/`w0c`), or an enum value that contradicts the RM.\n\nTHEN WRITE YOUR FINDINGS to a gate file the next step reads:\n   - Create the file build/verify-issues.txt (mkdir -p build first).\n   - Write ONE LINE PER GENUINE FACTUAL DISCREPANCY you found (wrong access / wrong section / illegal or contradicted enum / wrong Tier-2 number). Be specific: \"REG: encoded X, RM says Y\".\n   - If the encoding is faithful and you found NO genuine discrepancies, create build/verify-issues.txt EMPTY (e.g. `: > build/verify-issues.txt`). Do NOT write style nitpicks or \"could be improved\" notes \u2014 only real errors that make the data WRONG.\n\nFinally, OUTPUT a human-readable verdict: which registers you checked, the evidence, and end with a line exactly of the form `VERDICT: PASS \u2014 <summary>` (if build/verify-issues.txt is empty) or `VERDICT: FAIL \u2014 <count> discrepancies` (if not).",
       "agent": {
         "profile": "claude-cli",
-        "model": "sonnet",
-        "budget": {
-          "max_turns": 60,
-          "max_tokens_output": 4000
-        }
-      },
-      "on_error": "stop"
+        "tools": [],
+        "use_subagents": false
+      }
     },
     {
       "id": "gate",
       "title": "Verify gate",
-      "kind": "tool",
       "auto_approve": true,
+      "kind": "tool",
       "tool": {
         "name": "bash",
         "args": {
@@ -130,5 +111,39 @@
       "source": "verify",
       "target": "gate"
     }
-  ]
+  ],
+  "ui": {
+    "positions": {
+      "generate": {
+        "x": 0,
+        "y": 0
+      },
+      "curate": {
+        "x": 280,
+        "y": 0
+      },
+      "register": {
+        "x": 560,
+        "y": 0
+      },
+      "conformance": {
+        "x": 840,
+        "y": 0
+      },
+      "query": {
+        "x": 1120,
+        "y": 0
+      },
+      "verify": {
+        "x": 1400,
+        "y": 0
+      },
+      "gate": {
+        "x": 1680,
+        "y": 0
+      }
+    },
+    "monitors": [],
+    "frames": []
+  }
 }

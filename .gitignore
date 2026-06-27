@@ -26,3 +26,4 @@ datasheets/**/*.svd
 # Workflow runtime output (gate files, run logs)
 build/
 .va/runs/
+.va/studio/
