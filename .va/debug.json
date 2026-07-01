@@ -1,0 +1,10 @@
+{
+  "backend": "vacore",
+  "gdbPath": "",
+  "elf": "/media/eddie/Engineering/Projects/etm-tracer-pico/Nucleo_U575/build/Debug-va/Nucleo_U575.elf",
+  "svd": "/opt/st/stm32cubeclt_1.21.0/STMicroelectronics_CMSIS_SVD/STM32U575.svd",
+  "chip": "",
+  "flm": "",
+  "buildDir": "build",
+  "tcpPort": 2331
+}

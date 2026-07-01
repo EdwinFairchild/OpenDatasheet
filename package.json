@@ -6,7 +6,7 @@
   "description": "An MCP server that serves machine-readable embedded-part documentation (OpenDatasheet) over Streamable HTTP. Runs on Cloudflare Workers.",
   "scripts": {
     "dev": "wrangler dev",
-    "build:data": "python3 tools/build.py stm32g474 stm32u575",
+    "build:data": "python3 tools/build.py stm32g474 stm32u575 stm32u385",
     "predeploy": "npm run build:data",
     "deploy": "wrangler deploy",
     "typecheck": "tsc --noEmit"
