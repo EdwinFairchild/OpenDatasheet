@@ -4,6 +4,12 @@ name = "opendatasheet-mcp"
 main = "src/index.ts"
 compatibility_date = "2025-05-01"
 
-# This Worker uses only standard Web APIs (fetch, Request, Response, URL, JSON),
-# so it needs no Node compatibility flag, no Durable Objects, and no database.
-# The part data is plain JSON imported at build time (see src/lib.ts).
+# This Worker uses only standard Web APIs (fetch, Request, Response, URL, JSON)
+# plus one D1 database. The part data stays plain JSON imported at build time
+# (see src/lib.ts); D1 holds only the ingested reference-manual sections
+# (schema/refman.sql, imported via tools/refman_ingest.py output — see DEV.md).
+
+[[d1_databases]]
+binding = "REFMAN_DB"
+database_name = "refman"
+database_id = "e1adae7e-0af6-46f0-94ab-0205ca0aec6c"

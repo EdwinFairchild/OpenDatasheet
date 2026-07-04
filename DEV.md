@@ -286,3 +286,51 @@ opendatasheet-mcp/
 ```
 
 The two ACME parts are **fictional**, synthetic examples chosen to exercise every feature (two composed profiles, a cross-profile link, and both kinds of errata). Swap in real parts when you're ready.
+
+---
+
+## refman: hosting reference-manual sections
+
+Besides parts, the worker serves **reference-manual prose** from a D1 database: `GET /refman/index.json`, `/refman/{doc}/toc`, `/refman/{doc}/section/{id}`, `/refman/{doc}/search?q=…`, plus the `refman_search` / `refman_read` / `refman_toc` MCP tools. Parts stay build-time static JSON; only refman uses D1.
+
+### One-time setup
+
+```bash
+npx wrangler d1 create refman          # then put the printed id in wrangler.toml
+npx wrangler d1 execute refman --file schema/refman.sql --local
+npx wrangler d1 execute refman --file schema/refman.sql --remote
+```
+
+### Ingest → import → verify (per document)
+
+1. **Licensing gate:** add the doc to `tools/refman_allowlist.json` (deliberately — hosting ingested vendor text is a licensing decision, see the note in that file's neighbors). The ingest CLI refuses docs that aren't listed.
+
+2. **Ingest** (offline; needs `pypdf` + `pdftotext`):
+
+   ```bash
+   python3 tools/refman_ingest.py datasheets/stm32u575/RM0456.pdf \
+       --doc RM0456 --rev 6 \
+       --title "STM32U5 series Arm-based 32-bit MCUs reference manual"
+   ```
+
+   Outputs land in `build/refman/` (git-ignored): a manifest, a sections JSONL, and `{doc}.import.sql`.
+
+3. **Import** — always `--local` first as the dry run, then `--remote`:
+
+   ```bash
+   npx wrangler d1 execute refman --file build/refman/RM0456.import.sql --local
+   npx wrangler d1 execute refman --file build/refman/RM0456.import.sql --remote
+   ```
+
+   The SQL file for a full RM is tens of MB; the remote import can take minutes. It starts with per-doc `DELETE`s, so re-importing the same doc is idempotent.
+
+4. **Verify** (against `npm run dev` locally, then your deployed URL):
+
+   ```bash
+   curl -s localhost:8787/refman/index.json
+   curl -s 'localhost:8787/refman/RM0456/toc?depth=1'
+   curl -s 'localhost:8787/refman/RM0456/search?q=RCC_CFGR1'
+   curl -s localhost:8787/refman/RM0456/section/11.4.9
+   ```
+
+   A register-name query should return its register section as the top hit; a section read should return the page-granular text (a section's first/last page may include a neighbor's tail — that's expected fidelity, not a bug).
