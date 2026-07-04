@@ -12,12 +12,13 @@ import {
   conditionMatches,
   profile,
 } from "./lib";
+import { refmanSearch, refmanSection, refmanToc, type Env } from "./refman";
 
 export type Tool = {
   name: string;
   description: string;
   inputSchema: Record<string, unknown>;
-  run: (args: Record<string, any>) => unknown;
+  run: (args: Record<string, any>, env: Env) => Promise<string | object>;
 };
 
 function fail(msg: string): never {
@@ -39,7 +40,7 @@ export const TOOLS: Tool[] = [
         family: str("Optional family filter."),
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const q = (a.query ?? "").toString().toLowerCase();
       const parts = listMpns()
         .map((mpn) => getRawPart(mpn))
@@ -68,7 +69,7 @@ export const TOOLS: Tool[] = [
       required: ["mpn"],
       properties: { mpn: str("Manufacturer part number, e.g. ACME-IMU6.") },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}. Try list_parts.`);
       const part = res.part;
       const profiles: string[] = part.conformance?.profiles ?? [];
@@ -115,7 +116,7 @@ export const TOOLS: Tool[] = [
         peripheral: str("Peripheral name from describe_part, e.g. SPI1 or CONFIG."),
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}.`);
       const rm = profile(res.part, "register-map") ?? fail(`Part ${a.mpn} has no 'register-map' profile.`);
       const p =
@@ -149,7 +150,7 @@ export const TOOLS: Tool[] = [
         register: str("Register name, e.g. CR1."),
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}.`);
       const rm = profile(res.part, "register-map") ?? fail(`Part ${a.mpn} has no 'register-map' profile.`);
       const p =
@@ -182,7 +183,7 @@ export const TOOLS: Tool[] = [
         },
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}.`);
       const e =
         (res.part.electrical ?? []).find((x: any) => x.symbol === a.parameter || x.parameter === a.parameter) ??
@@ -210,7 +211,7 @@ export const TOOLS: Tool[] = [
       required: ["mpn"],
       properties: { mpn: str("Manufacturer part number, e.g. ACME-IMU6.") },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}.`);
       const s = profile(res.part, "sensor") ?? fail(`Part ${a.mpn} has no 'sensor' profile.`);
       return {
@@ -248,7 +249,7 @@ export const TOOLS: Tool[] = [
         range: str("Optional range name, e.g. FS_8G. If omitted, all ranges are returned."),
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}.`);
       const s = profile(res.part, "sensor") ?? fail(`Part ${a.mpn} has no 'sensor' profile.`);
       const m =
@@ -306,7 +307,7 @@ export const TOOLS: Tool[] = [
         diagram_id: str("Timing diagram id, e.g. spi_master_timing."),
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}.`);
       const t =
         (res.part.timing ?? []).find((x: any) => x.diagram_id === a.diagram_id) ??
@@ -328,7 +329,7 @@ export const TOOLS: Tool[] = [
         pin: str("Pin number or name, e.g. 23 or PA5."),
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}.`);
       const pkg =
         (res.part.pinout ?? []).find((x: any) => x.package === a.package) ??
@@ -352,7 +353,7 @@ export const TOOLS: Tool[] = [
         revision: str("Optional silicon revision filter, e.g. rev-B."),
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const overlays = getErrataOverlays(a.mpn);
       const filtered = a.revision ? overlays.filter((o) => o.applies_to?.revision === a.revision) : overlays;
       const overrides = filtered.flatMap((o) =>
@@ -386,7 +387,7 @@ export const TOOLS: Tool[] = [
         },
       },
     },
-    run: (a) => {
+    run: async (a) => {
       const res = getResolvedPart(a.mpn) ?? fail(`Unknown part: ${a.mpn}.`);
       const cfg = a.config ?? {};
       const violations: any[] = [];
@@ -431,5 +432,56 @@ export const TOOLS: Tool[] = [
 
       return { mpn: a.mpn, ok: violations.length === 0, violations, warnings, checked: cfg };
     },
+  },
+
+  // refman_* — reference-manual prose from the hosted refman service (D1).
+  // These are thin skins over the same query layer the GET /refman/* routes
+  // use; part provenance citations ({doc, section}) resolve here.
+
+  {
+    name: "refman_search",
+    description:
+      "Full-text search one reference manual's sections. Lexical (FTS5): exact register/peripheral tokens like RCC_CFGR1 or FDCAN_NBTP rank best. Returns cited hits (section id, title, pages, snippet). Find doc ids via a part's documents[] or refman_toc.",
+    inputSchema: {
+      type: "object",
+      required: ["doc", "query"],
+      properties: {
+        doc: str("Document id, e.g. RM0456."),
+        query: str("Search query. Exact register/peripheral tokens work best."),
+        limit: { type: "integer", description: "Max hits (default 5, max 20)." },
+      },
+    },
+    run: (a, env) => refmanSearch(env, String(a.doc ?? ""), String(a.query ?? ""), Number(a.limit ?? 5)),
+  },
+
+  {
+    name: "refman_read",
+    description:
+      "Read one reference-manual section's full text by doc + section id (e.g. RM0456 §11.8.3) — this resolves a datasheet provenance citation to its prose. Long sections are paginated (page_count in the result); a parent id like '11.8' returns its intro plus child section ids.",
+    inputSchema: {
+      type: "object",
+      required: ["doc", "section"],
+      properties: {
+        doc: str("Document id, e.g. RM0456."),
+        section: str("Section id, e.g. 11.8.3 (or a parent like 11.8)."),
+        page: { type: "integer", description: "Text page for long sections (default 1)." },
+      },
+    },
+    run: (a, env) => refmanSection(env, String(a.doc ?? ""), String(a.section ?? ""), Number(a.page ?? 1)),
+  },
+
+  {
+    name: "refman_toc",
+    description:
+      "A reference manual's section tree (table of contents) with page ranges. Use it to orient before refman_read/refman_search when you don't have a section id.",
+    inputSchema: {
+      type: "object",
+      required: ["doc"],
+      properties: {
+        doc: str("Document id, e.g. RM0456."),
+        depth: { type: "integer", description: "Tree depth (default 2, max 6)." },
+      },
+    },
+    run: (a, env) => refmanToc(env, String(a.doc ?? ""), Number(a.depth ?? 2)),
   },
 ];

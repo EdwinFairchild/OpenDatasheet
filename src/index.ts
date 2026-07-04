@@ -14,6 +14,7 @@
 
 import { TOOLS } from "./tools";
 import { getStaticFile, getCatalog } from "./lib";
+import { handleRefmanGet, type Env } from "./refman";
 
 const PROTOCOL_VERSION = "2025-06-18";
 const SERVER_INFO = { name: "opendatasheet-mcp", version: "0.1.0" };
@@ -41,7 +42,7 @@ function rpcErr(id: unknown, code: number, message: string) {
 
 // Handle one JSON-RPC message. Returns a response object, or null for notifications
 // (notifications carry no `id` and must not receive a JSON-RPC reply).
-function handleMessage(msg: any): object | null {
+async function handleMessage(msg: any, env: Env): Promise<object | null> {
   if (!msg || typeof msg !== "object" || Array.isArray(msg)) {
     return rpcErr(null, -32600, "Invalid Request");
   }
@@ -82,7 +83,7 @@ function handleMessage(msg: any): object | null {
         return ok(id, { content: [{ type: "text", text: `Unknown tool: ${name}` }], isError: true });
       }
       try {
-        const out = tool.run(args);
+        const out = await tool.run(args, env);
         const text = typeof out === "string" ? out : JSON.stringify(out, null, 2);
         return ok(id, { content: [{ type: "text", text }] });
       } catch (e: any) {
@@ -99,7 +100,7 @@ function handleMessage(msg: any): object | null {
 }
 
 export default {
-  async fetch(request: Request): Promise<Response> {
+  async fetch(request: Request, env: Env): Promise<Response> {
     const { method } = request;
 
     // CORS preflight.
@@ -134,6 +135,11 @@ export default {
         return json(doc, 200, { "cache-control": "public, max-age=86400" });
       }
 
+      // Reference-manual sections (hosted refman service) — served from D1,
+      // same consumer story as /parts/*: plain cacheable GETs, no MCP needed.
+      const refman = await handleRefmanGet(url, env, json);
+      if (refman) return refman;
+
       const accept = request.headers.get("accept") ?? "";
       // A client probing for a server->client SSE stream. This stateless server
       // doesn't provide one; 405 tells compliant clients to proceed without it.
@@ -165,12 +171,13 @@ export default {
 
     // Support a JSON-RPC batch (array) or a single message.
     if (Array.isArray(payload)) {
-      const responses = payload.map(handleMessage).filter((r): r is object => r !== null);
+      const all = await Promise.all(payload.map((m) => handleMessage(m, env)));
+      const responses = all.filter((r): r is object => r !== null);
       if (responses.length === 0) return new Response(null, { status: 202, headers: CORS });
       return json(responses);
     }
 
-    const response = handleMessage(payload);
+    const response = await handleMessage(payload, env);
     if (response === null) return new Response(null, { status: 202, headers: CORS });
     return json(response);
   },
