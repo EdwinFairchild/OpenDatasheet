@@ -3,6 +3,12 @@
 Repeat these steps per PDF. Worker code never changes for a new doc — data goes
 to D1, so **no deploy is needed** (deploy only when `src/` changes).
 
+**Scope:** this is only the prose side (`refman` search/read/toc). It needs no
+SVD and no chip JSON. A brand-new *chip* additionally needs its part document
+(SVD + RM → `data/<mpn>.json` + deploy) — see `tools/ADDING-A-CHIP.md`. The two
+pipelines are linked only by the doc id (`RM0456`) that the part's `documents[]`
+and provenance cite.
+
 Prereqs (once per machine): `pip3 install pypdf`, `sudo apt install poppler-utils`,
 wrangler logged in. One-time infra (already done): `wrangler d1 create refman`,
 binding in `wrangler.toml`, `schema/refman.sql` applied `--local` and `--remote`.
