@@ -2,5 +2,9 @@
   "RM0456": {
     "vendor_pdf_url": "https://www.st.com/resource/en/reference_manual/rm0456-stm32u5-series-armbased-32bit-mcus-stmicroelectronics.pdf",
     "note": "STM32U5 RM"
+  },
+  "RM0440": {
+    "vendor_pdf_url": "https://www.st.com/resource/en/reference_manual/rm0440-stm32g4-series-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+    "note": "STM32G4 RM"
   }
 }
