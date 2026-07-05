@@ -9,6 +9,10 @@ SVD and no chip JSON. A brand-new *chip* additionally needs its part document
 pipelines are linked only by the doc id (`RM0456`) that the part's `documents[]`
 and provenance cite.
 
+In practice: onboarding a new *family* = both pipelines (part JSON + this RM
+ingest). Every further chip of the same family = part JSON only — the RM is
+per-family and is already in D1.
+
 Prereqs (once per machine): `pip3 install pypdf`, `sudo apt install poppler-utils`,
 wrangler logged in. One-time infra (already done): `wrangler d1 create refman`,
 binding in `wrangler.toml`, `schema/refman.sql` applied `--local` and `--remote`.
