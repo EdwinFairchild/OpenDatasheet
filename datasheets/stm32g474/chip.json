@@ -1,0 +1,35 @@
+{
+  "id": "stm32g474",
+  "mpn": "STM32G474",
+  "manufacturer": "STMicroelectronics",
+  "family": "STM32G4",
+  "core": "Cortex-M4",
+  "revision": "rev-X",
+  "lifecycle": "active",
+  "packages": [
+    "LQFP144"
+  ],
+  "out": "data/stm32g474.json",
+  "tiers": [
+    1,
+    2
+  ],
+  "svd": "STM32G474.svd",
+  "reference_manual": {
+    "doc": "RM0440",
+    "kind": "reference-manual",
+    "rev": "8",
+    "pdf": "RM0440.pdf",
+    "toc_pages": 72,
+    "url": "https://www.st.com/resource/en/reference_manual/rm0440-stm32g4-series-advanced-armbased-32bit-mcus-stmicroelectronics.pdf"
+  },
+  "datasheet": {
+    "doc": "DS12288 ",
+    "kind": "datasheet",
+    "rev": "6",
+    "pdf": "DS_STM32G474.pdf",
+    "url": "https://www.st.com/resource/en/datasheet/stm32g474re.pdf"
+  },
+  "_notes": "Inputs for the encode-datasheet workflow. The SVD came from STM32CubeCLT; RM0440 Rev 8 and DS12288 Rev 6 are the source PDFs. make_sections needs --toc-pages 72 for this RM (its TOC runs to ~page 70). `revision` (silicon rev) is provisional \u2014 the scaffold step should confirm it against the docs.",
+  "drop_secure_aliases": true
+}

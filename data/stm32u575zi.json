@@ -35,6 +35,19 @@
       }
     ]
   },
+  "mcu": {
+    "core": "cortex-m33",
+    "cmsis_device": "stm32u575xx",
+    "cpp_define": "STM32U575xx",
+    "cpu_flags": "-mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard",
+    "memory": {
+      "flash": { "origin": "0x08000000", "size": "2048K" },
+      "ram": { "origin": "0x20000000", "size": "768K" },
+      "extra": [
+        { "name": "SRAM4", "origin": "0x28000000", "size": "16K", "access": "xrw" }
+      ]
+    }
+  },
   "pinout": [],
   "electrical": [],
   "timing": [],
